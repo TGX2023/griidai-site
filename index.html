@@ -80,39 +80,40 @@
   </section>
 
   <!-- EARLY ACCESS FORM -->
-  <section id="early-access" class="container form-section">
-    <h2>Request Early Access</h2>
-    <p>We’re onboarding early adopters. Tell us who you are and how you plan to use GriidAi.</p>
-    <!-- NOTE: replace the action with your Formspree / Google Form endpoint when ready -->
-    <form class="access-form" method="POST" action="https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec">
-      <div class="form-group">
-        <label for="name">Full Name *</label>
-        <input type="text" id="name" name="name" required placeholder="Your name">
-      </div>
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required placeholder="you@griidai.com">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone (optional)</label>
-        <input type="text" id="phone" name="phone" placeholder="+1 (___) ___-____">
-      </div>
-      <div class="form-group">
-        <label for="org">Organization / Company</label>
-        <input type="text" id="org" name="org" placeholder="Your organization">
-      </div>
-      <div class="form-group">
-        <label for="role">Role / Designation</label>
-        <input type="text" id="role" name="role" placeholder="e.g. GIS Lead, Founder, Analyst">
-      </div>
-      <div class="form-group">
-        <label for="usage">How do you plan to use GriidAi? (optional)</label>
-        <textarea id="usage" name="usage" rows="3" placeholder="e.g. automate SLR workflows, clip large rasters, run spatial joins at scale"></textarea>
-      </div>
-      <button type="submit" class="btn">Submit Request</button>
-      <p class="form-note">* We’ll review and get back to you on your @griidai.com or business email.</p>
-    </form>
-  </section>
+<section id="early-access" class="container form-section">
+  <h2>Request Early Access</h2>
+  <p>We’re onboarding early adopters. Tell us who you are and how you plan to use GriidAi.</p>
+
+  <form class="access-form" method="POST" action="https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec">
+    <div class="form-group">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required placeholder="Your name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required placeholder="you@griidai.com">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone (optional)</label>
+      <input type="text" id="phone" name="phone" placeholder="+1 (___) ___-____">
+    </div>
+    <div class="form-group">
+      <label for="org">Organization / Company</label>
+      <input type="text" id="org" name="org" placeholder="Your organization">
+    </div>
+    <div class="form-group">
+      <label for="role">Role / Designation</label>
+      <input type="text" id="role" name="role" placeholder="e.g. GIS Lead, Founder, Analyst">
+    </div>
+    <div class="form-group">
+      <label for="usage">How do you plan to use GriidAi? (optional)</label>
+      <textarea id="usage" name="usage" rows="3" placeholder="e.g. automate SLR workflows, clip large rasters"></textarea>
+    </div>
+    <button type="submit" class="btn">Submit Request</button>
+    <p class="form-note">* Your details will be reviewed by the GriidAi team.</p>
+  </form>
+</section>
+
 
   <!-- CONTACT -->
   <section id="contact" class="contact container">

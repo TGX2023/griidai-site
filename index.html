@@ -84,7 +84,13 @@
   <h2>Request Early Access</h2>
   <p>We’re onboarding early adopters. Tell us who you are and how you plan to use GriidAi.</p>
 
-  <form class="access-form" method="POST" action="https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec">
+  <form id="earlyAccessForm" class="access-form">
+    <!-- honeypot: hidden from humans -->
+    <div style="display:none;">
+      <label>Leave this field empty</label>
+      <input type="text" name="website" id="website" value="">
+    </div>
+
     <div class="form-group">
       <label for="name">Full Name *</label>
       <input type="text" id="name" name="name" required placeholder="Your name">
@@ -109,11 +115,18 @@
       <label for="usage">How do you plan to use GriidAi? (optional)</label>
       <textarea id="usage" name="usage" rows="3" placeholder="e.g. automate SLR workflows, clip large rasters"></textarea>
     </div>
+
+    <!-- simple math captcha -->
+    <div class="form-group">
+      <label id="captchaLabel" for="captchaAnswer">What is <span id="numA"></span> + <span id="numB"></span>? *</label>
+      <input type="number" id="captchaAnswer" name="captchaAnswer" required>
+      <input type="hidden" id="captchaExpected" name="captchaExpected">
+    </div>
+
     <button type="submit" class="btn">Submit Request</button>
-    <p class="form-note">* Your details will be reviewed by the GriidAi team.</p>
+    <p class="form-note" id="formMessage" style="margin-top:10px;"></p>
   </form>
 </section>
-
 
   <!-- CONTACT -->
   <section id="contact" class="contact container">
@@ -128,5 +141,75 @@
     © 2025 TECHG-X LLC | GriidAi powered by TECHG-X
   </footer>
 
+<script>
+// 1) generate simple math captcha
+function setCaptcha() {
+  const a = Math.floor(Math.random() * 5) + 2;  // 2–6
+  const b = Math.floor(Math.random() * 5) + 2;  // 2–6
+  document.getElementById('numA').textContent = a;
+  document.getElementById('numB').textContent = b;
+  document.getElementById('captchaExpected').value = a + b;
+}
+setCaptcha();
+
+// 2) handle form submit via fetch so we stay on the page
+const form = document.getElementById('earlyAccessForm');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formMsg = document.getElementById('formMessage');
+
+  // honeypot check
+  const honey = document.getElementById('website').value;
+  if (honey && honey.trim() !== '') {
+    formMsg.textContent = "Submission blocked.";
+    formMsg.style.color = "red";
+    return;
+  }
+
+  // captcha check (client-side)
+  const userAns = document.getElementById('captchaAnswer').value;
+  const expected = document.getElementById('captchaExpected').value;
+  if (userAns !== expected) {
+    formMsg.textContent = "Incorrect answer. Please try again.";
+    formMsg.style.color = "red";
+    setCaptcha();
+    return;
+  }
+
+  // build form data
+  const data = new FormData(form);
+
+  // IMPORTANT: replace with your Apps Script URL
+  const endpoint = "YOUR_APPS_SCRIPT_WEB_APP_URL";
+
+  fetch(endpoint, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: data
+  }).then(() => {
+    // we can't read response in no-cors, so just show success
+    formMsg.textContent = "Thank you! Your request has been received. We will get back to you shortly.";
+    formMsg.style.color = "#ffffff";
+    form.reset();
+    setCaptcha();
+  }).catch(err => {
+    formMsg.textContent = "There was an error submitting your request. Please try again.";
+    formMsg.style.color = "red";
+  });
+});
+
+// 3) handle QR-friendly link like https://griidai.com/?form=early
+const params = new URLSearchParams(window.location.search);
+if (params.get('form') === 'early') {
+  const el = document.getElementById('early-access');
+  if (el) {
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  }
+}
+</script>
+ 
 </body>
 </html>

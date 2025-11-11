@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GriidAi – Agentic AI to Simplify Geospatial Engineering </title>
+  <title>GriidAi – Agentic AI for Geospatial Data</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,11 +13,15 @@
   <!-- NAV -->
   <nav>
     <div class="nav-container">
-      <div class="logo"><a href="#">GriidAi</a></div>
+      <div class="logo-wrap">
+        <img src="assets/favicon.png" alt="GriidAi logo" class="logo-img">
+        <a href="#">GriidAi</a>
+      </div>
       <div>
         <a href="#about">Who We Are</a>
         <a href="#platform">Platform</a>
         <a href="#vision">Vision</a>
+        <a href="#early-access">Request Access</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -23,9 +29,9 @@
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Agentic AI to Simplify Geospatial Engineering</h1>
-    <p>From Hours to Seconds — GriidAi transforms massive geospatial workflows into seamless AI-powered processes.</p>
-    <a href="#contact" class="btn">Join Our Beta</a>
+    <h1>Agentic AI for Geospatial Data</h1>
+    <p>GriidAi simplifies large geospatial workflows using AI, so teams can process, transform, and visualize spatial data faster.</p>
+    <a href="#early-access" class="btn">Request Early Access</a>
   </section>
 
   <!-- WHO WE ARE -->
@@ -33,11 +39,11 @@
     <div class="about">
       <div class="about-text">
         <h2>Who We Are</h2>
-        <p>GriidAi is a flagship initiative of <strong>TECHG-X LLC</strong>, a climate-tech company pioneering asset risk profiling and geospatial analytics.</p>
-        <p>We focus on solving one of the hardest challenges in geospatial intelligence: making massive datasets easy to access, process, and use through AI-driven automation.</p>
+        <p>GriidAi is a flagship initiative of <strong>TECHG-X LLC</strong>, built on our climate-tech and geospatial engineering experience.</p>
+        <p>We are building a prompt-driven spatial data engineering layer so organizations don’t have to hand-code every workflow.</p>
       </div>
       <div class="about-img">
-        <img src="https://via.placeholder.com/200x80?text=TECHG-X+%2B+GriidAi" alt="Logos">
+        <img src="assets/favicon.png" alt="GriidAi" style="max-width:180px;">
       </div>
     </div>
   </section>
@@ -49,17 +55,17 @@
       <div class="feature">
         <div class="feature-icon">⚡</div>
         <h3>Faster Workflows</h3>
-        <p>Ingest and process multi-GB files in minutes using optimized cloud + AI pipelines.</p>
+        <p>Run heavy spatial tasks (clip, reproject, join, extract) without writing code each time.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🗺️</div>
         <h3>Prompt-Driven</h3>
-        <p>Describe what you want in plain language and let GriidAi handle the workflows.</p>
+        <p>Describe what you want. Our AI mediator translates that into reusable geoprocessing workflows.</p>
       </div>
       <div class="feature">
         <div class="feature-icon">🤖</div>
-        <h3>AI + HPC</h3>
-        <p>Hybrid AI orchestration with high-performance geospatial engines ensures scalability.</p>
+        <h3>AI + Geospatial</h3>
+        <p>Combines LLMs with Python/GeoPandas/Rasterio engines so results are accurate and reproducible.</p>
       </div>
     </div>
   </section>
@@ -68,9 +74,44 @@
   <section id="vision" class="vision">
     <div class="container">
       <h2>Vision & Early Traction</h2>
-      <p>Our vision is to democratize geospatial data engineering, making complex workflows as simple as a conversation.</p>
-      <p>Early prototypes processed Florida’s 30GB Sea Level Rise rasters in minutes, proving feasibility of massive-scale AI-driven spatial automation.</p>
+      <p>We want to make geospatial data engineering as simple as a conversation.</p>
+      <p>We’ve already tested the approach on SLR / coastal datasets and large Florida layers to prove it’s feasible.</p>
     </div>
+  </section>
+
+  <!-- EARLY ACCESS FORM -->
+  <section id="early-access" class="container form-section">
+    <h2>Request Early Access</h2>
+    <p>We’re onboarding early adopters. Tell us who you are and how you plan to use GriidAi.</p>
+    <!-- NOTE: replace the action with your Formspree / Google Form endpoint when ready -->
+    <form class="access-form" method="POST" action="#">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required placeholder="you@griidai.com">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone (optional)</label>
+        <input type="text" id="phone" name="phone" placeholder="+1 (___) ___-____">
+      </div>
+      <div class="form-group">
+        <label for="org">Organization / Company</label>
+        <input type="text" id="org" name="org" placeholder="Your organization">
+      </div>
+      <div class="form-group">
+        <label for="role">Role / Designation</label>
+        <input type="text" id="role" name="role" placeholder="e.g. GIS Lead, Founder, Analyst">
+      </div>
+      <div class="form-group">
+        <label for="usage">How do you plan to use GriidAi? (optional)</label>
+        <textarea id="usage" name="usage" rows="3" placeholder="e.g. automate SLR workflows, clip large rasters, run spatial joins at scale"></textarea>
+      </div>
+      <button type="submit" class="btn">Submit Request</button>
+      <p class="form-note">* We’ll review and get back to you on your @griidai.com or business email.</p>
+    </form>
   </section>
 
   <!-- CONTACT -->
@@ -79,7 +120,6 @@
     <p>📧 <a href="mailto:info@griidai.com">info@griidai.com</a></p>
     <p>🌐 <a href="https://griidai.com">griidai.com</a></p>
     <p>👤 Founder: <a href="https://linkedin.com/in/udaypatil" target="_blank">Uday Patil</a></p>
-    <a href="mailto:info@griidai.com" class="btn">Request Beta Access</a>
   </section>
 
   <!-- FOOTER -->

@@ -10,10 +10,10 @@ body { font-family: 'Open Sans', Arial, sans-serif; line-height: 1.6; background
 :root {
   --primary: #2C798C;
   --dark-bg: #0a0f1c;
-  --nav-bg: #0a0f1c;
+  --nav-bg: #ffffff; /*#0a0f1c;+/
   --card-bg: #12323a;
   --accent: #ffffff;
-  --text: #ffffff;
+  --text: #2C798C; /*#ffffff;*/
   --muted: #dbe3e5;
 }
 

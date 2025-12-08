@@ -1,337 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>GriidAi – GeoAI for Everyone</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="GriidAi is a GeoAI orchestration platform that turns complex geospatial workflows into simple, prompt-driven experiences."
-  />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GriidAi - Agentic AI for Geospatial Engineering</title>
+  <meta name="description" content="Transform complex geospatial workflows into simple, prompt-driven experiences. GriidAi makes spatial analysis accessible without coding.">
+  <meta property="og:title" content="GriidAi - Spatial Intelligence For Everyone">
+  <meta property="og:description" content="Transform complex geospatial workflows into simple, prompt-driven experiences. GriidAi makes spatial analysis accessible without coding.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <!-- Top navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo-wrap">
-       <div class="logo-mark">
-            <img src="assets/favicon.png" alt="GriidAi logo" class="logo-img">
-       </div>
-        <div class="logo-text">
-          <span class="logo-title">GriidAi</span>
-          <span class="logo-subtitle">Powered by TECHG-X</span>
-        </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="#">
+          <img src="assets/images/logo.png" alt="GriidAi" class="logo">
+        </a>
+
+        <nav class="nav">
+          <button class="nav-link" data-scroll-to="benefits">Benefits</button>
+          <button class="nav-link" data-scroll-to="use-cases">Use Cases</button>
+          <button class="nav-link" data-scroll-to="platform">How It Works</button>
+          <button class="btn btn-primary" data-scroll-to="early-access">Get Early Access</button>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <svg id="menu-icon" class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
       </div>
-      <nav class="nav-links">
-        <a href="#benefits">Why GriidAi</a>
-        <a href="#use-cases">Use cases</a>
-        <a href="#early-access" class="nav-cta">Request access</a>
+
+      <nav class="mobile-nav" id="mobile-nav">
+        <button class="mobile-nav-link" data-scroll-to="benefits">Benefits</button>
+        <button class="mobile-nav-link" data-scroll-to="use-cases">Use Cases</button>
+        <button class="mobile-nav-link" data-scroll-to="platform">How It Works</button>
+        <button class="mobile-nav-link" data-scroll-to="early-access">Get Early Access</button>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Hero section -->
-    <section class="hero" id="top">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/images/hero.png" alt="Geospatial AI visualization" loading="eager">
       <div class="hero-overlay"></div>
-      <div class="container hero-inner">
-        <div class="hero-text">
-         <h1>
-            <span class="first-line">
-              Simplifying&nbsp;Spatial&nbsp;Engineering
-            </span><br />
-              <span class="accent">For Everyone Everywhere</span>
-          </h1>
+    </div>
 
-          <p class="hero-tagline">
-            Transform complex geospatial workflows into simple, prompt-driven experiences.
-            GriidAi makes spatial analysis accessible without coding — turning months of work into minutes.
-          </p>
-          <div class="hero-actions">
-            <a href="#early-access" class="btn btn-primary">Request Early Access</a>
-            <a href="#benefits" class="btn btn-ghost">Learn more</a>
+    <div class="hero-content">
+      <h1 class="font-display">
+        Spatial Intelligence<br>
+        <span>For Everyone</span>
+      </h1>
+
+      <p class="hero-description">
+        Transform complex geospatial workflows into simple, prompt-driven experiences.
+        GriidAi makes spatial analysis accessible without coding — turning months of work into minutes.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-primary btn-lg" data-scroll-to="early-access">
+          Get Early Access
+          <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </button>
+        <button class="btn btn-outline btn-lg">
+          <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          Watch Demo
+        </button>
+      </div>
+
+      <div class="hero-badges">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <span>No-Code Platform</span>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <span>AI-Powered Workflows</span>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <span>Real-Time Analysis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title font-display">Why Choose GriidAi?</h2>
+        <p class="section-description">
+          Unlock spatial intelligence with a platform built for accessibility, scalability, and innovation.
+        </p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="card">
+          <div class="benefit-icon">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
           </div>
-          <div class="hero-badges">
-            <span>No-code GeoAI</span>
-            <span>Works with your data & tools</span>
-            <span>Built for global users</span>
+          <h3 class="benefit-title font-display">100% No-Code, Prompt-Driven</h3>
+          <p class="benefit-description">Perform advanced geospatial analytics conversationally. No coding required — just describe what you need.</p>
+        </div>
+
+        <div class="card">
+          <div class="benefit-icon">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title font-display">Technology & Data Agnostic</h3>
+          <p class="benefit-description">Works with any LLM, any geospatial engine, and any data format. Bring your own data and tools.</p>
+        </div>
+
+        <div class="card">
+          <div class="benefit-icon">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title font-display">Human-in-the-Loop Intelligence</h3>
+          <p class="benefit-description">Expert validation at every step ensures scientific and analytical accuracy in all workflows.</p>
+        </div>
+
+        <div class="card">
+          <div class="benefit-icon">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title font-display">Reusable Workflows</h3>
+          <p class="benefit-description">Build once, use everywhere. Contributors can share logic blocks and receive recognition for innovation.</p>
+        </div>
+
+        <div class="card">
+          <div class="benefit-icon">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title font-display">Real-Time Integration & Scalability</h3>
+          <p class="benefit-description">Simple APIs enable real-time processing. Scales to handle 200 GB+ datasets with enterprise reliability.</p>
+        </div>
+
+        <div class="card">
+          <div class="benefit-icon">
+            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="benefit-title font-display">Accessible & Deployable Anywhere</h3>
+          <p class="benefit-description">Cloud or on-premise deployment. Designed for individual users and enterprises alike.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="use-cases" class="section section-muted">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title font-display">See GriidAi in Action</h2>
+        <p class="section-description">
+          Real-world use cases demonstrating how GriidAi transforms complex spatial engineering into guided workflows.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Use Case 1 -->
+        <div class="card use-case-card">
+          <div class="use-case-grid">
+            <div>
+              <span class="use-case-badge">Use Case 1</span>
+              <h3 class="use-case-title font-display">Fire Station Coverage Analysis</h3>
+
+              <div class="use-case-approach">
+                <div class="approach-icon problem">
+                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="approach-label">Traditional Approach</p>
+                </div>
+              </div>
+              <p class="approach-text">Manual GIS workflows take days to identify underserved areas and gaps in emergency response coverage.</p>
+
+              <div class="use-case-approach mt-4">
+                <div class="approach-icon solution">
+                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="approach-label">GriidAi Solution</p>
+                </div>
+              </div>
+              <p class="approach-text solution">GriidAi's AI breaks down the analysis into subtasks, executes spatial buffer analysis, and delivers an interactive heatmap with recommendations — all in minutes.</p>
+            </div>
+
+            <div>
+              <div class="metrics-grid">
+                <div class="metric-card">
+                  <p class="metric-label">Time Saved</p>
+                  <p class="metric-value font-display">Days → Minutes</p>
+                </div>
+                <div class="metric-card">
+                  <p class="metric-label">Complexity</p>
+                  <p class="metric-value font-display">Expert → Anyone</p>
+                </div>
+              </div>
+
+              <div class="progress-flow">
+                <div class="progress-step">
+                  <div class="progress-bar"><div class="progress-fill step-1"></div></div>
+                  <span class="progress-label">Prompt</span>
+                </div>
+                <div class="progress-arrow">↓</div>
+                <div class="progress-step">
+                  <div class="progress-bar"><div class="progress-fill step-2"></div></div>
+                  <span class="progress-label">Analysis</span>
+                </div>
+                <div class="progress-arrow">↓</div>
+                <div class="progress-step">
+                  <div class="progress-bar"><div class="progress-fill step-3"></div></div>
+                  <span class="progress-label">Insights</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Use Case 2 -->
+        <div class="card use-case-card">
+          <div class="use-case-grid">
+            <div>
+              <span class="use-case-badge">Use Case 2</span>
+              <h3 class="use-case-title font-display">Sea Level Rise Impact Assessment</h3>
+
+              <div class="use-case-approach">
+                <div class="approach-icon problem">
+                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="approach-label">Traditional Approach</p>
+                </div>
+              </div>
+              <p class="approach-text">Combining multiple raster datasets to produce classified depth maps requires specialized GIS expertise and lengthy processing.</p>
+
+              <div class="use-case-approach mt-4">
+                <div class="approach-icon solution">
+                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="approach-label">GriidAi Solution</p>
+                </div>
+              </div>
+              <p class="approach-text solution">Prompt-driven workflows automatically fetch data, execute raster processing, and generate interactive visualizations showing high-risk coastal areas.</p>
+            </div>
+
+            <div>
+              <div class="metrics-grid">
+                <div class="metric-card">
+                  <p class="metric-label">Dataset Size</p>
+                  <p class="metric-value font-display">200+ GB</p>
+                </div>
+                <div class="metric-card">
+                  <p class="metric-label">Processing</p>
+                  <p class="metric-value font-display">Real-time</p>
+                </div>
+              </div>
+
+              <div class="progress-flow">
+                <div class="progress-step">
+                  <div class="progress-bar"><div class="progress-fill step-1"></div></div>
+                  <span class="progress-label">Prompt</span>
+                </div>
+                <div class="progress-arrow">↓</div>
+                <div class="progress-step">
+                  <div class="progress-bar"><div class="progress-fill step-2"></div></div>
+                  <span class="progress-label">Analysis</span>
+                </div>
+                <div class="progress-arrow">↓</div>
+                <div class="progress-step">
+                  <div class="progress-bar"><div class="progress-fill step-3"></div></div>
+                  <span class="progress-label">Insights</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Benefits -->
-    <section id="benefits" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Why Choose GriidAi?</h2>
-          <p>
-            Unlock spatial intelligence with a GeoAI platform built for accessibility, scalability, and real-world impact.
-          </p>
+  <!-- Platform Architecture Section -->
+  <section id="platform" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title font-display">How GriidAi Works</h2>
+        <p class="section-description">
+          An agentic AI platform that orchestrates complex GIS tasks through a simple, intelligent pipeline.
+        </p>
+      </div>
+
+      <!-- Desktop Flow -->
+      <div class="architecture-flow">
+        <div class="architecture-step">
+          <div class="architecture-card step-1">
+            <p class="architecture-title step-1 font-display">Prompt</p>
+            <p class="architecture-desc">Natural language query</p>
+          </div>
+          <span class="architecture-arrow">→</span>
         </div>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Prompt-Driven Workflows</h3>
-            <p>Describe what you need in plain language — GriidAi turns prompts into repeatable geospatial workflows.</p>
-          </article>
-          <article class="card">
-            <h3>Bring Your Own Stack</h3>
-            <p>Use your preferred LLMs, engines, and data formats. GriidAi orchestrates them behind the scenes.</p>
-          </article>
-          <article class="card">
-            <h3>Built for Large Files</h3>
-            <p>Designed for heavy geospatial datasets, background processing, and real progress tracking.</p>
-          </article>
+
+        <div class="architecture-step">
+          <div class="architecture-card step-2">
+            <p class="architecture-title step-2 font-display">AI Mediator</p>
+            <p class="architecture-desc">Breaks down complex tasks</p>
+          </div>
+          <span class="architecture-arrow">→</span>
+        </div>
+
+        <div class="architecture-step">
+          <div class="architecture-card step-3">
+            <p class="architecture-title step-3 font-display">Spatial Engine</p>
+            <p class="architecture-desc">Executes GIS operations</p>
+          </div>
+          <span class="architecture-arrow">→</span>
+        </div>
+
+        <div class="architecture-step">
+          <div class="architecture-card step-4">
+            <p class="architecture-title step-4 font-display">Workflows</p>
+            <p class="architecture-desc">Modular, reusable tools</p>
+          </div>
+          <span class="architecture-arrow">→</span>
+        </div>
+
+        <div class="architecture-step">
+          <div class="architecture-card step-5">
+            <p class="architecture-title step-5 font-display">Insights</p>
+            <p class="architecture-desc">Interactive visualizations</p>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Use cases -->
-    <section id="use-cases" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>Who Is GriidAi For?</h2>
-          <p>
-            From students to enterprises, anyone working with maps, rasters, and spatial data can benefit from GeoAI automation.
-          </p>
+      <!-- Mobile Flow -->
+      <div class="architecture-mobile">
+        <div class="architecture-mobile-step">
+          <div class="architecture-card step-1">
+            <p class="architecture-title step-1 font-display">Prompt</p>
+            <p class="architecture-desc">Natural language query</p>
+          </div>
         </div>
-        <div class="grid-3">
-          <article class="card">
-            <h3>GIS & Geo Professionals</h3>
-            <p>Automate repetitive spatial workflows and focus on interpretation instead of tooling.</p>
-          </article>
-          <article class="card">
-            <h3>Engineers & Analysts</h3>
-            <p>Prototype, test, and scale spatial models without rebuilding pipelines from scratch.</p>
-          </article>
-          <article class="card">
-            <h3>Teams & Organizations</h3>
-            <p>Standardize best-practice workflows and share them across teams, projects, and regions.</p>
-          </article>
+        <div class="architecture-mobile-arrow">↓</div>
+
+        <div class="architecture-mobile-step">
+          <div class="architecture-card step-2">
+            <p class="architecture-title step-2 font-display">AI Mediator</p>
+            <p class="architecture-desc">Breaks down complex tasks</p>
+          </div>
+        </div>
+        <div class="architecture-mobile-arrow">↓</div>
+
+        <div class="architecture-mobile-step">
+          <div class="architecture-card step-3">
+            <p class="architecture-title step-3 font-display">Spatial Engine</p>
+            <p class="architecture-desc">Executes GIS operations</p>
+          </div>
+        </div>
+        <div class="architecture-mobile-arrow">↓</div>
+
+        <div class="architecture-mobile-step">
+          <div class="architecture-card step-4">
+            <p class="architecture-title step-4 font-display">Workflows</p>
+            <p class="architecture-desc">Modular, reusable tools</p>
+          </div>
+        </div>
+        <div class="architecture-mobile-arrow">↓</div>
+
+        <div class="architecture-mobile-step">
+          <div class="architecture-card step-5">
+            <p class="architecture-title step-5 font-display">Insights</p>
+            <p class="architecture-desc">Interactive visualizations</p>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Early Access / Request Access form -->
-    <section id="early-access" class="section section-form">
-      <div class="container form-layout">
-        <div class="form-copy">
-          <h2>Request Early Access</h2>
-          <p>
-            Join the early access list and be among the first to explore GriidAi. We’re onboarding a limited number of
-            early adopters worldwide.
-          </p>
-          <ul class="form-points">
-            <li>Priority access to the platform</li>
-            <li>Direct feedback channel with the product team</li>
-            <li>Early influence on features and workflows</li>
-          </ul>
+      <div class="card sustainability-card">
+        <h3 class="sustainability-title font-display">Sustainable AI in Action</h3>
+        <p class="sustainability-text">
+          Every reusable workflow reduces compute requirements and saves energy. 
+          By building modular, shareable spatial tools, GriidAi creates a sustainable ecosystem 
+          where innovation compounds without redundant processing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="section section-muted">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title font-display">A Game Changer</h2>
+        <p class="section-description">
+          See how GriidAi transforms the traditional GIS workflow into something extraordinary.
+        </p>
+      </div>
+
+      <div class="card comparison-card">
+        <div class="comparison-header">
+          <div class="comparison-header-cell">
+            <h3 class="comparison-header-title font-display">Aspect</h3>
+          </div>
+          <div class="comparison-header-cell">
+            <div class="comparison-header-title font-display">
+              <div class="comparison-icon traditional">
+                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </div>
+              Traditional GIS
+            </div>
+          </div>
+          <div class="comparison-header-cell">
+            <div class="comparison-header-title font-display">
+              <div class="comparison-icon griidai">
+                <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              GriidAi
+            </div>
+          </div>
         </div>
 
-        <div class="form-card">
+        <div class="comparison-row">
+          <div class="comparison-cell">User Experience</div>
+          <div class="comparison-cell traditional">Manual, expert-heavy workflows</div>
+          <div class="comparison-cell">Conversational, prompt-driven interface</div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-cell">Time to Results</div>
+          <div class="comparison-cell traditional">Days to weeks for complex analysis</div>
+          <div class="comparison-cell">Minutes with automated workflows</div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-cell">Tools Required</div>
+          <div class="comparison-cell traditional">Fragmented: QGIS, ArcGIS, Python scripts</div>
+          <div class="comparison-cell">Unified, agentic AI pipeline</div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-cell">Reusability</div>
+          <div class="comparison-cell traditional">Repetitive tasks, manual recreation</div>
+          <div class="comparison-cell">Reusable logic blocks and workflows</div>
+        </div>
+
+        <div class="comparison-row">
+          <div class="comparison-cell">Output Format</div>
+          <div class="comparison-cell traditional">Static reports and PDFs</div>
+          <div class="comparison-cell">Interactive insights and dashboards</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Early Access Section -->
+  <section id="early-access" class="section">
+    <div class="container" style="max-width: 56rem;">
+      <div class="section-header">
+        <h2 class="section-title font-display">Get Early Access</h2>
+        <p class="section-description">
+          Join the waitlist and be among the first to experience spatial intelligence reimagined.
+        </p>
+      </div>
+
+      <div class="card form-card">
+        <!-- Form Container -->
+        <div id="form-container">
           <form id="early-access-form">
-            <!-- Honeypot (spam trap) -->
-            <input
-              type="text"
-              id="website"
-              name="website"
-              autocomplete="off"
-              tabindex="-1"
-              class="honeypot"
-              aria-hidden="true"
-            />
-
-            <div class="field-group">
-              <label for="name">Full name<span class="required">*</span></label>
-              <input type="text" id="name" name="name" required placeholder="Your name" />
+            <!-- Honeypot field (hidden from humans) -->
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
             </div>
 
-            <div class="field-group">
-              <label for="email">Email<span class="required">*</span></label>
-              <input type="email" id="email" name="email" required placeholder="you@example.com" />
-            </div>
-
-            <div class="field-inline">
-              <div class="field-group">
-                <label for="phone">Phone (optional)</label>
-                <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" />
+            <div class="form-row form-row-2">
+              <div class="form-group">
+                <label for="full-name" class="form-label">Full Name *</label>
+                <input type="text" id="full-name" name="fullName" class="form-input" placeholder="John Doe" required>
+                <p id="full-name-error" class="form-error hidden"></p>
               </div>
-              <div class="field-group">
-                <label for="organization">Organization</label>
-                <input
-                  type="text"
-                  id="organization"
-                  name="organization"
-                  placeholder="Company / Institution"
-                />
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                <p id="email-error" class="form-error hidden"></p>
               </div>
             </div>
 
-            <div class="field-group">
-              <label for="role">Role</label>
-              <input
-                type="text"
-                id="role"
-                name="role"
-                placeholder="GIS Analyst, Engineer, Student, etc."
-              />
-            </div>
-
-            <div class="field-group">
-              <label for="usage">How do you plan to use GriidAi?</label>
-              <textarea
-                id="usage"
-                name="usage"
-                rows="3"
-                placeholder="Tell us briefly about your use case (max 50 words)."
-              ></textarea>
-            </div>
-
-            <!-- Simple math CAPTCHA -->
-            <div class="field-group">
-              <label>Security check<span class="required">*</span></label>
-              <div class="captcha-row">
-                <span id="captcha-question"></span>
-                <input
-                  type="number"
-                  id="captchaAnswer"
-                  name="captchaAnswer"
-                  inputmode="numeric"
-                  placeholder="Answer"
-                  required
-                />
+            <div class="form-row form-row-3">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
               </div>
-              <input type="hidden" id="captchaExpected" name="captchaExpected" />
-              <p class="helper-text">
-                This simple question helps us prevent automated spam.
-              </p>
+
+              <div class="form-group">
+                <label for="city" class="form-label">City</label>
+                <input type="text" id="city" name="city" class="form-input" placeholder="New York">
+              </div>
+
+              <div class="form-group">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" id="country" name="country" class="form-input" placeholder="United States">
+              </div>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-              Join the Early Access List
+            <div class="form-row form-row-2">
+              <div class="form-group">
+                <label for="organization" class="form-label">Organization</label>
+                <input type="text" id="organization" name="organization" class="form-input" placeholder="Your company or institution">
+              </div>
+
+              <div class="form-group">
+                <label for="role" class="form-label">Role</label>
+                <input type="text" id="role" name="role" class="form-input" placeholder="GIS Analyst, Urban Planner, etc.">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="gis-usage" class="form-label">How do you plan to use GIS?</label>
+              <textarea id="gis-usage" name="gisUsage" class="form-textarea" placeholder="Tell us about your use case... (max 50 words)"></textarea>
+              <div class="word-count">
+                <span id="word-count" class="word-count-text">0/50 words</span>
+                <span id="word-limit-warning" class="word-count-text error hidden">Please limit to 50 words</span>
+              </div>
+              <p id="gis-usage-error" class="form-error hidden"></p>
+            </div>
+
+            <div class="form-group">
+              <div class="captcha-box">
+                <div class="captcha-header">
+                  <label class="form-label" style="margin-bottom: 0;">Security Check *</label>
+                  <button type="button" id="refresh-captcha" class="btn btn-ghost btn-icon" aria-label="Refresh captcha">
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="captcha-question">
+                  <span id="captcha-text" class="captcha-text">Loading...</span>
+                  <input type="number" id="captcha-answer" name="captchaAnswer" class="form-input captcha-input" placeholder="Answer" required>
+                </div>
+                <p id="captcha-answer-error" class="form-error hidden"></p>
+              </div>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-lg" style="width: 100%;">
+              <span id="btn-text">Join the Waitlist</span>
+              <svg id="btn-spinner" class="icon-sm spinner hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
             </button>
 
-            <p id="form-status" class="form-status" aria-live="polite"></p>
-            <p class="privacy-note">
-              We respect your privacy. Your information will only be used to contact you about GriidAi.
+            <p class="form-note">
+              We respect your privacy. Your information will only be used to notify you about GriidAi.
             </p>
           </form>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> GriidAi · Powered by TECHG-X</span>
-      <span class="footer-links">
-        <a href="https://techg-x.com" target="_blank" rel="noopener noreferrer">techg-x.com</a>
-      </span>
+        <!-- Success State -->
+        <div id="success-container" class="hidden">
+          <div class="success-state">
+            <div class="success-icon">
+              <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="success-title font-display">You're on the list!</h3>
+            <p class="success-text">We'll send you an email when GriidAi is ready for early access.</p>
+            <button type="button" class="btn btn-outline" onclick="resetForm()">Register Another Email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/images/logo.png" alt="GriidAi" class="logo">
+            <p>Making geospatial data speak human. Reimagining spatial intelligence through agentic AI.</p>
+            <p class="company">A <span>TECHG-X</span> Product</p>
+          </div>
+
+          <div>
+            <h4 class="footer-title font-display">Platform</h4>
+            <ul class="footer-links">
+              <li><button data-scroll-to="benefits">Benefits</button></li>
+              <li><button data-scroll-to="use-cases">Use Cases</button></li>
+              <li><button data-scroll-to="platform">How It Works</button></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title font-display">Connect</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:Mohamed.Abdalhamid@techg-x.com">
+                  <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="icon-sm" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">© 2024 GriidAi by TECHG-X. All rights reserved.</p>
+          <div class="footer-legal">
+            <button>Privacy Policy</button>
+            <button>Terms of Service</button>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // 🔧 TODO: Replace this with your actual Google Apps Script URL
-    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec";
-
-    function generateCaptcha() {
-      const a = Math.floor(Math.random() * 8) + 2; // 2–9
-      const b = Math.floor(Math.random() * 8) + 2;
-      const questionEl = document.getElementById("captcha-question");
-      const expectedEl = document.getElementById("captchaExpected");
-      if (questionEl && expectedEl) {
-        questionEl.textContent = "What is " + a + " + " + b + "?";
-        expectedEl.value = String(a + b);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Year in footer
-      const yearEl = document.getElementById("year");
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-      // Scroll to form when ?form=early is used (for QR links)
-      const params = new URLSearchParams(window.location.search);
-      if (params.get("form") === "early") {
-        const el = document.getElementById("early-access");
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }
-
-      // Init captcha
-      generateCaptcha();
-
-      const form = document.getElementById("early-access-form");
-      const statusEl = document.getElementById("form-status");
-      const submitBtn = document.getElementById("submit-btn");
-
-      if (!form) return;
-
-      form.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        if (!statusEl || !submitBtn) return;
-
-        statusEl.textContent = "";
-        statusEl.className = "form-status";
-
-        // Honeypot: if filled, treat as spam and pretend success
-        const honeypot = document.getElementById("website");
-        if (honeypot && honeypot.value) {
-          form.reset();
-          generateCaptcha();
-          statusEl.textContent = "Thank you! Your request has been received.";
-          statusEl.classList.add("success");
-          return;
-        }
-
-        // Captcha check
-        const expected = parseInt(
-          document.getElementById("captchaExpected").value || "0",
-          10
-        );
-        const answer = parseInt(
-          document.getElementById("captchaAnswer").value || "0",
-          10
-        );
-
-        if (isNaN(answer) || answer !== expected) {
-          statusEl.textContent = "Please answer the security question correctly.";
-          statusEl.classList.add("error");
-          generateCaptcha();
-          return;
-        }
-
-        // Build payload for Apps Script (fields match name="" attributes)
-        const formData = new FormData(form);
-
-        // Disable button while submitting
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Submitting…";
-
-        try {
-          await fetch(APPS_SCRIPT_URL, {
-            method: "POST",
-            body: formData,
-            mode: "no-cors",
-          });
-
-          statusEl.textContent =
-            "Thank you! You’re on the GriidAi early access list.";
-          statusEl.classList.add("success");
-          form.reset();
-          generateCaptcha();
-        } catch (err) {
-          console.error(err);
-          statusEl.textContent =
-            "Something went wrong. Please try again in a moment.";
-          statusEl.classList.add("error");
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Join the Early Access List";
-        }
-      });
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

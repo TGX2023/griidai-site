@@ -2,217 +2,331 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>GriidAi – GeoAI for Everyone</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GriidAi – Agentic AI for Geospatial Data</title>
-  <!-- favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="style.css">
+  <meta
+    name="description"
+    content="GriidAi is a GeoAI orchestration platform that turns complex geospatial workflows into simple, prompt-driven experiences."
+  />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="nav-container">
+  <!-- Top navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
       <div class="logo-wrap">
-        <img src="assets/favicon.png" alt="GriidAi logo" class="logo-img">
-        <a href="#">GriidAi</a>
+        <div class="logo-mark">G</div>
+        <div class="logo-text">
+          <span class="logo-title">GriidAi</span>
+          <span class="logo-subtitle">Powered by TECHG-X</span>
+        </div>
       </div>
-      <div>
-        <a href="#about">Who We Are</a>
-        <a href="#platform">Platform</a>
-        <a href="#vision">Vision</a>
-        <a href="#early-access">Request Access</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links">
+        <a href="#benefits">Why GriidAi</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#early-access" class="nav-cta">Request access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero" id="top">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>
+            Spatial Intelligence<br />
+            <span class="accent">For Everyone</span>
+          </h1>
+          <p class="hero-tagline">
+            Transform complex geospatial workflows into simple, prompt-driven experiences.
+            GriidAi makes spatial analysis accessible without coding — turning months of work into minutes.
+          </p>
+          <div class="hero-actions">
+            <a href="#early-access" class="btn btn-primary">Request Early Access</a>
+            <a href="#benefits" class="btn btn-ghost">Learn more</a>
+          </div>
+          <div class="hero-badges">
+            <span>No-code GeoAI</span>
+            <span>Works with your data & tools</span>
+            <span>Built for global users</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>GeoAi for Spatial Data Engineering & Workflows</h1>
-    <p>GriidAi simplifies large geospatial workflows using AI, so teams can process, transform, and visualize spatial data faster.</p>
-    <a href="#early-access" class="btn">Request Early Access</a>
-  </section>
-
-  <!-- WHO WE ARE -->
-  <section id="about" class="container">
-    <div class="about">
-      <div class="about-text">
-        <h2>Who We Are</h2>
-        <p>GriidAi is a flagship initiative of <strong>TECHG-X</strong>, built on our geospatial engineering and GeoAi expertises.</p>
-        <p>We are building a prompt-driven spatial data engineering layer so organizations don’t have to hand-code every workflow.</p>
+    <!-- Benefits -->
+    <section id="benefits" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose GriidAi?</h2>
+          <p>
+            Unlock spatial intelligence with a GeoAI platform built for accessibility, scalability, and real-world impact.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Prompt-Driven Workflows</h3>
+            <p>Describe what you need in plain language — GriidAi turns prompts into repeatable geospatial workflows.</p>
+          </article>
+          <article class="card">
+            <h3>Bring Your Own Stack</h3>
+            <p>Use your preferred LLMs, engines, and data formats. GriidAi orchestrates them behind the scenes.</p>
+          </article>
+          <article class="card">
+            <h3>Built for Large Files</h3>
+            <p>Designed for heavy geospatial datasets, background processing, and real progress tracking.</p>
+          </article>
+        </div>
       </div>
-      <div class="about-img">
-        <img src="assets/favicon.png" alt="GriidAi" style="max-width:180px;">
+    </section>
+
+    <!-- Use cases -->
+    <section id="use-cases" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Who Is GriidAi For?</h2>
+          <p>
+            From students to enterprises, anyone working with maps, rasters, and spatial data can benefit from GeoAI automation.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>GIS & Geo Professionals</h3>
+            <p>Automate repetitive spatial workflows and focus on interpretation instead of tooling.</p>
+          </article>
+          <article class="card">
+            <h3>Engineers & Analysts</h3>
+            <p>Prototype, test, and scale spatial models without rebuilding pipelines from scratch.</p>
+          </article>
+          <article class="card">
+            <h3>Teams & Organizations</h3>
+            <p>Standardize best-practice workflows and share them across teams, projects, and regions.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHAT WE DO -->
-  <section id="platform" class="container">
-    <h2 style="text-align:center;">What GriidAi Does</h2>
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">⚡</div>
-        <h3>Faster Workflows</h3>
-        <p>Run heavy spatial tasks (clip, reproject, join, extract) without writing code each time.</p>
+    <!-- Early Access / Request Access form -->
+    <section id="early-access" class="section section-form">
+      <div class="container form-layout">
+        <div class="form-copy">
+          <h2>Request Early Access</h2>
+          <p>
+            Join the early access list and be among the first to explore GriidAi. We’re onboarding a limited number of
+            early adopters worldwide.
+          </p>
+          <ul class="form-points">
+            <li>Priority access to the platform</li>
+            <li>Direct feedback channel with the product team</li>
+            <li>Early influence on features and workflows</li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <form id="early-access-form">
+            <!-- Honeypot (spam trap) -->
+            <input
+              type="text"
+              id="website"
+              name="website"
+              autocomplete="off"
+              tabindex="-1"
+              class="honeypot"
+              aria-hidden="true"
+            />
+
+            <div class="field-group">
+              <label for="name">Full name<span class="required">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email<span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com" />
+            </div>
+
+            <div class="field-inline">
+              <div class="field-group">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000" />
+              </div>
+              <div class="field-group">
+                <label for="organization">Organization</label>
+                <input
+                  type="text"
+                  id="organization"
+                  name="organization"
+                  placeholder="Company / Institution"
+                />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="role">Role</label>
+              <input
+                type="text"
+                id="role"
+                name="role"
+                placeholder="GIS Analyst, Engineer, Student, etc."
+              />
+            </div>
+
+            <div class="field-group">
+              <label for="usage">How do you plan to use GriidAi?</label>
+              <textarea
+                id="usage"
+                name="usage"
+                rows="3"
+                placeholder="Tell us briefly about your use case (max 50 words)."
+              ></textarea>
+            </div>
+
+            <!-- Simple math CAPTCHA -->
+            <div class="field-group">
+              <label>Security check<span class="required">*</span></label>
+              <div class="captcha-row">
+                <span id="captcha-question"></span>
+                <input
+                  type="number"
+                  id="captchaAnswer"
+                  name="captchaAnswer"
+                  inputmode="numeric"
+                  placeholder="Answer"
+                  required
+                />
+              </div>
+              <input type="hidden" id="captchaExpected" name="captchaExpected" />
+              <p class="helper-text">
+                This simple question helps us prevent automated spam.
+              </p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              Join the Early Access List
+            </button>
+
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+            <p class="privacy-note">
+              We respect your privacy. Your information will only be used to contact you about GriidAi.
+            </p>
+          </form>
+        </div>
       </div>
-      <div class="feature">
-        <div class="feature-icon">🗺️</div>
-        <h3>Prompt-Driven</h3>
-        <p>Describe what you want. Our AI mediator translates that into reusable geoprocessing workflows.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🤖</div>
-        <h3>AI + Geospatial</h3>
-        <p>Combines LLMs with Python/GeoPandas/Rasterio engines so results are accurate and reproducible.</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- VISION -->
-  <section id="vision" class="vision">
-    <div class="container">
-      <h2>Vision & Early Traction</h2>
-      <p>We want to make geospatial data engineering as simple as a conversation.</p>
-      <p>We’ve already tested the approach on SLR / coastal datasets and large Florida layers to prove it’s feasible.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> GriidAi · Powered by TECHG-X</span>
+      <span class="footer-links">
+        <a href="https://techg-x.com" target="_blank" rel="noopener noreferrer">techg-x.com</a>
+      </span>
     </div>
-  </section>
-
-  <!-- EARLY ACCESS FORM -->
-<section id="early-access" class="container form-section">
-  <h2>Request Early Access</h2>
-  <p>We’re onboarding early adopters. Tell us who you are and how you plan to use GriidAi.</p>
-
-  <form id="earlyAccessForm" class="access-form">
-    <!-- honeypot: hidden from humans -->
-    <div style="display:none;">
-      <label>Leave this field empty</label>
-      <input type="text" name="website" id="website" value="">
-    </div>
-
-    <div class="form-group">
-      <label for="name">Full Name *</label>
-      <input type="text" id="name" name="name" required placeholder="Your name">
-    </div>
-    <div class="form-group">
-      <label for="email">Email *</label>
-      <input type="email" id="email" name="email" required placeholder="you@griidai.com">
-    </div>
-    <div class="form-group">
-      <label for="phone">Phone (optional)</label>
-      <input type="text" id="phone" name="phone" placeholder="+1 (___) ___-____">
-    </div>
-    <div class="form-group">
-      <label for="city-country">city,country</label>
-      <input type="text" id="city,country" name="city, country" required placeholder="your City, Country">
-    </div>
-        <div class="form-group">
-      <label for="org">Organization / Company</label>
-      <input type="text" id="org" name="org" placeholder="Your organization">
-    </div>
-    <div class="form-group">
-      <label for="role">Role / Designation</label>
-      <input type="text" id="role" name="role" placeholder="e.g. GIS Lead, Founder, Analyst">
-    </div>
-    <div class="form-group">
-      <label for="usage">How do you plan to use GIS? (optional)</label>
-      <textarea id="usage" name="usage" rows="3" placeholder="e.g. automate SLR workflows, clip large rasters"></textarea>
-    </div>
-
-    <!-- simple math captcha -->
-    <div class="form-group">
-      <label id="captchaLabel" for="captchaAnswer">What is <span id="numA"></span> + <span id="numB"></span>? *</label>
-      <input type="number" id="captchaAnswer" name="captchaAnswer" required>
-      <input type="hidden" id="captchaExpected" name="captchaExpected">
-    </div>
-
-    <button type="submit" class="btn">Submit Request</button>
-    <p class="form-note" id="formMessage" style="margin-top:10px;"></p>
-  </form>
-</section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact container">
-    <h2>Let’s Connect</h2>
-    <p>📧 <a href="mailto:contact@techg-x.com">contact@techg-x.com</a></p>
-    <p>🌐 <a href="https://griidai.com">griidai.com</a></p>    
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 TECHG-X LLC | GriidAi powered by TECHG-X
   </footer>
 
-<script>
-// 1) generate simple math captcha
-function setCaptcha() {
-  const a = Math.floor(Math.random() * 5) + 2;  // 2–6
-  const b = Math.floor(Math.random() * 5) + 2;  // 2–6
-  document.getElementById('numA').textContent = a;
-  document.getElementById('numB').textContent = b;
-  document.getElementById('captchaExpected').value = a + b;
-}
-setCaptcha();
+  <script>
+    // 🔧 TODO: Replace this with your actual Google Apps Script URL
+    const APPS_SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
 
-// 2) handle form submit via fetch so we stay on the page
-const form = document.getElementById('earlyAccessForm');
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
+    function generateCaptcha() {
+      const a = Math.floor(Math.random() * 8) + 2; // 2–9
+      const b = Math.floor(Math.random() * 8) + 2;
+      const questionEl = document.getElementById("captcha-question");
+      const expectedEl = document.getElementById("captchaExpected");
+      if (questionEl && expectedEl) {
+        questionEl.textContent = "What is " + a + " + " + b + "?";
+        expectedEl.value = String(a + b);
+      }
+    }
 
-  const formMsg = document.getElementById('formMessage');
+    document.addEventListener("DOMContentLoaded", function () {
+      // Year in footer
+      const yearEl = document.getElementById("year");
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // honeypot check
-  const honey = document.getElementById('website').value;
-  if (honey && honey.trim() !== '') {
-    formMsg.textContent = "Submission blocked.";
-    formMsg.style.color = "red";
-    return;
-  }
+      // Scroll to form when ?form=early is used (for QR links)
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("form") === "early") {
+        const el = document.getElementById("early-access");
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }
 
-  // captcha check (client-side)
-  const userAns = document.getElementById('captchaAnswer').value;
-  const expected = document.getElementById('captchaExpected').value;
-  if (userAns !== expected) {
-    formMsg.textContent = "Incorrect answer. Please try again.";
-    formMsg.style.color = "red";
-    setCaptcha();
-    return;
-  }
+      // Init captcha
+      generateCaptcha();
 
-  // build form data
-  const data = new FormData(form);
+      const form = document.getElementById("early-access-form");
+      const statusEl = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submit-btn");
 
-  // IMPORTANT: replace with your Apps Script URL
-  const endpoint = "https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec";
+      if (!form) return;
 
-  fetch(endpoint, {
-    method: 'POST',
-    mode: 'no-cors',
-    body: data
-  }).then(() => {
-    // we can't read response in no-cors, so just show success
-    formMsg.textContent = "Thank you! Your request has been received. We will get back to you shortly.";
-    formMsg.style.color = "#ffffff";
-    form.reset();
-    setCaptcha();
-  }).catch(err => {
-    formMsg.textContent = "There was an error submitting your request. Please try again.";
-    formMsg.style.color = "red";
-  });
-});
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        if (!statusEl || !submitBtn) return;
 
-// 3) handle QR-friendly link like https://griidai.com/?form=early
-const params = new URLSearchParams(window.location.search);
-if (params.get('form') === 'early') {
-  const el = document.getElementById('early-access');
-  if (el) {
-    setTimeout(() => {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }, 300);
-  }
-}
-</script>
- 
+        statusEl.textContent = "";
+        statusEl.className = "form-status";
+
+        // Honeypot: if filled, treat as spam and pretend success
+        const honeypot = document.getElementById("website");
+        if (honeypot && honeypot.value) {
+          form.reset();
+          generateCaptcha();
+          statusEl.textContent = "Thank you! Your request has been received.";
+          statusEl.classList.add("success");
+          return;
+        }
+
+        // Captcha check
+        const expected = parseInt(
+          document.getElementById("captchaExpected").value || "0",
+          10
+        );
+        const answer = parseInt(
+          document.getElementById("captchaAnswer").value || "0",
+          10
+        );
+
+        if (isNaN(answer) || answer !== expected) {
+          statusEl.textContent = "Please answer the security question correctly.";
+          statusEl.classList.add("error");
+          generateCaptcha();
+          return;
+        }
+
+        // Build payload for Apps Script (fields match name="" attributes)
+        const formData = new FormData(form);
+
+        // Disable button while submitting
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting…";
+
+        try {
+          await fetch(APPS_SCRIPT_URL, {
+            method: "POST",
+            body: formData,
+            mode: "no-cors",
+          });
+
+          statusEl.textContent =
+            "Thank you! You’re on the GriidAi early access list.";
+          statusEl.classList.add("success");
+          form.reset();
+          generateCaptcha();
+        } catch (err) {
+          console.error(err);
+          statusEl.textContent =
+            "Something went wrong. Please try again in a moment.";
+          statusEl.classList.add("error");
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Join the Early Access List";
+        }
+      });
+    });
+  </script>
 </body>
 </html>

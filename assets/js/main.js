@@ -246,23 +246,12 @@ function handleFormSubmit(e) {
     timestamp: new Date().toISOString()
   };
   
-  // Here you would integrate with Google Apps Script
-  // For now, we'll simulate a successful submission
-  // Replace this URL with your Google Apps Script web app URL
-  // const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+// Google Apps Script integration
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec';
   
-  // Simulate API call
-  setTimeout(function() {
-    showSuccessState();
-    
-    // Reset loading state
-    submitBtn.disabled = false;
-    btnText.textContent = 'Join the Waitlist';
-    btnSpinner.classList.add('hidden');
-  }, 1000);
+
   
   // Uncomment this when you have your Google Apps Script URL:
-  /*
   fetch(GOOGLE_SCRIPT_URL, {
     method: 'POST',
     mode: 'no-cors',
@@ -283,7 +272,7 @@ function handleFormSubmit(e) {
     btnText.textContent = 'Join the Waitlist';
     btnSpinner.classList.add('hidden');
   });
-  */
+  
 }
 
 function showSuccessState() {

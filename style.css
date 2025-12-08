@@ -149,7 +149,7 @@ img {
 }
 
 .hero-text {
-  max-width: 640px;
+  max-width: 720px;
 }
 
 .hero h1 {
@@ -160,6 +160,7 @@ img {
 
 .hero .accent {
   color: #a5f3fc;
+  white-space: nowrap;
 }
 
 .hero-tagline {

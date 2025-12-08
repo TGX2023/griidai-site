@@ -78,6 +78,25 @@ body {
   height: 40px;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.brand-name sup {
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
 .nav {
   display: none;
   align-items: center;

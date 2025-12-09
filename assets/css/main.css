@@ -270,14 +270,15 @@ body {
 .hero h1 {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   line-height: 1.1;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .hero h1 {
-    font-size: 3.75rem;
+    font-size: 3.25rem;
   }
 }
 
@@ -291,12 +292,13 @@ body {
 
 @media (min-width: 1024px) {
   .hero h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
 
 .hero h1 span {
   color: var(--primary);
+  font-size: 0.85em;
 }
 
 .hero-description {
@@ -1038,7 +1040,7 @@ body {
   align-items: center;
   gap: 1rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #ffffff;
 }
 
 .footer {
@@ -1079,7 +1081,7 @@ body {
 
 .footer-copyright {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: #ffffff;
 }
 
 .footer-legal {
@@ -1089,7 +1091,7 @@ body {
 
 .footer-legal button {
   font-size: 0.875rem;
-  color: var(--muted-foreground);
+  color: #ffffff;
   background: none;
   border: none;
   cursor: pointer;

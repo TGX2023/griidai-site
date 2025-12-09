@@ -281,6 +281,12 @@ body {
   }
 }
 
+@media (min-width: 768px) {
+  .hero h1 {
+    white-space: nowrap;
+  }
+}
+
 @media (min-width: 1024px) {
   .hero h1 {
     font-size: 4.5rem;

@@ -21,8 +21,8 @@
   --chart-4: hsl(32, 88%, 45%);
   --chart-5: hsl(345, 75%, 48%);
   --radius: 0.5rem;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Orbitron', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
 }
 
 * {

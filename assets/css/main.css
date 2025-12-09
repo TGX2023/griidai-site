@@ -86,7 +86,7 @@ body {
 }
 
 .brand-name {
-  font-family: var(--font-display);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: #ffffff;
@@ -284,6 +284,8 @@ body {
 @media (min-width: 768px) {
   .hero h1 {
     white-space: nowrap;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -1038,6 +1040,35 @@ body {
   padding-top: 2rem;
   border-top: 1px solid var(--border);
 }
+
+.footer {
+  border-top: 1px solid #1e5a6a;
+  background-color: #2A7486;
+}
+
+.footer-brand p,
+.footer-brand .company,
+.footer-copyright,
+.footer-links a,
+.footer-links button,
+.footer-legal button {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links a:hover,
+.footer-links button:hover,
+.footer-legal button:hover {
+  color: #ffffff;
+}
+
+.footer-title {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 
 @media (min-width: 768px) {
   .footer-bottom {

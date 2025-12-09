@@ -21,14 +21,13 @@
   --chart-4: hsl(32, 88%, 45%);
   --chart-5: hsl(345, 75%, 48%);
   --radius: 0.5rem;
-  --font-sans: 'Space Grotesk', sans-serif;<br>
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Raleway', sans-serif; 
+  --font-display: 'Raleway', sans-serif; 
 }
 
-/*  --font-sans: 'Raleway', sans-serif; 
-  --font-display: 'Raleway', sans-serif; 
-
-
+/*  
+  --font-sans: 'Space Grotesk', sans-serif;<br>
+  --font-display: 'Space Grotesk', sans-serif;
   --font-sans: 'Merriweather', serif;<br>
   --font-display: 'Merriweather', serif;
   --font-sans: 'Lora', serif;<br>

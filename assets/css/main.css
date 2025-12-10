@@ -32,6 +32,13 @@
   --font-display: 'Merriweather', serif;
   --font-sans: 'Lora', serif;<br>
   --font-display: 'Lora', serif;
+
+/*font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Space Grotesk';
+font-family: 'Raleway', sans-serif;
+font-family: 'Orbitron', sans-serif;
+*/
 */
 
 
@@ -94,14 +101,6 @@ body {
   gap: 0.75rem;
   text-decoration: none;
 }
-
-/*font-family: 'Poppins', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Space Grotesk';
-font-family: 'Raleway', sans-serif;
-font-family: 'Orbitron', sans-serif;
-*/
-
 
 .brand-name {
   font-family: 'Raleway', sans-serif;

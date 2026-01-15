@@ -242,6 +242,7 @@ function handleFormSubmit(e) {
     country: document.getElementById('country').value.trim(),
     organization: document.getElementById('organization').value.trim(),
     role: document.getElementById('role').value.trim(),
+    linkedin: document.getElementById('linkedin').value.trim(),
     gisUsage: document.getElementById('gis-usage').value.trim(),
     timestamp: new Date().toISOString()
   };

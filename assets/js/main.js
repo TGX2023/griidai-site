@@ -248,9 +248,9 @@ function handleFormSubmit(e) {
   };
   
 // Google Apps Script integration
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec';
+//const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPdqBc2O02PDhgsugcN8YIyEZUDdzO8j7zuXD8LjXrldvOl8cwURAsIwSaAbOC0Ddg/exec';
   
-
   
   // Uncomment this when you have your Google Apps Script URL:
   fetch(GOOGLE_SCRIPT_URL, {

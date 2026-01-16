@@ -1183,8 +1183,8 @@ body {
 /* Container for each row */
 .form-row {
   display: grid;
-  gap: 20px; /* This adds the horizontal and vertical gap you need */
-  margin-bottom: 20px; /* Space between the rows themselves */
+  gap: 10px; /* This adds the horizontal and vertical gap you need */
+  margin-bottom: 10px; /* Space between the rows themselves */
   width: 100%;
 }
 
@@ -1202,7 +1202,7 @@ body {
 @media (max-width: 640px) {
   .row-2-cols, .row-3-cols {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 10px;
   }
 }
 

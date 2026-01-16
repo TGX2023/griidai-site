@@ -1180,29 +1180,4 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* Container for each row */
-.form-row {
-  display: grid;
-  gap: 10px; /* This adds the horizontal and vertical gap you need */
-  margin-bottom: 10px; /* Space between the rows themselves */
-  width: 100%;
-}
-
-/* Row 1: 2 Columns (Full Name and Email) */
-.row-2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-/* Row 2: 3 Columns (Phone, City, Country) */
-.row-3-cols {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* Mobile Responsiveness: Stack them on very small screens */
-@media (max-width: 640px) {
-  .row-2-cols, .row-3-cols {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
 

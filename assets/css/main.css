@@ -1180,3 +1180,28 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* Update your form row container */
+.form-grid, .form-row {
+  display: grid;
+  grid-template-columns: 1fr; /* Stack on mobile */
+  gap: 1.5rem; /* This adds the missing space between columns and rows */
+  margin-bottom: 1.5rem;
+}
+
+/* For desktop: set columns for Row 1, Row 2, and Row 3 */
+@media (min-width: 768px) {
+  /* Row 1: Name and Email (2 columns) */
+  .row-1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Row 2: Phone, City, Country (3 columns) */
+  .row-2 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Row 3: Organization and Role (2 columns) */
+  .row-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

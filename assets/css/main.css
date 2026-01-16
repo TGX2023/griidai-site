@@ -1204,5 +1204,37 @@ body {
   to { transform: rotate(360deg); }
 }
 
+/* 1. Reset the rows to be modern Grids */
+.form-row-2, .form-row-3 {
+  display: grid !important; /* Forces grid mode */
+  gap: 20px;               /* This creates the gap you want */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* 2. Define the columns for Desktop */
+@media (min-width: 768px) {
+  .form-row-2 {
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+  }
+  
+  .form-row-3 {
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+  }
+}
+
+/* 3. Ensure form-input behaves inside the grid */
+.form-input {
+  width: 100% !important; /* Box fills its assigned grid slot */
+  box-sizing: border-box; /* Prevents padding from making the box too wide */
+  display: block;
+}
+
+/* 4. Mobile view: Stack them so they aren't squashed */
+@media (max-width: 767px) {
+  .form-row-2, .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
 
 

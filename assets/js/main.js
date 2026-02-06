@@ -303,3 +303,72 @@ function resetForm() {
   generateCaptcha();
   clearAllErrors();
 }
+
+const WP_BASE_URL = 'https://techg-x.com/blogs/wp-json/wp/v2';
+const CATEGORY_ID = '27'; // Replace XX with your GriidAi Category ID
+
+let allPosts = [];
+
+async function fetchBlogPosts() {
+  try {
+    // Fetch posts including featured media and author info
+    const response = await fetch(`${WP_BASE_URL}/posts?categories=${CATEGORY_ID}&_embed`);
+    allPosts = await response.json();
+    displayPosts(allPosts);
+  } catch (error) {
+    console.error('Error fetching WordPress posts:', error);
+    document.getElementById('blog-posts-grid').innerHTML = '<p>Failed to load posts.</p>';
+  }
+}
+
+function displayPosts(posts) {
+  const grid = document.getElementById('blog-posts-grid');
+  grid.innerHTML = posts.map(post => {
+    const featuredImg = post._embedded['wp:featuredmedia']?.[0]?.source_url || 'assets/images/placeholder.png';
+    const author = post._embedded['author']?.[0]?.name || 'Admin';
+    const date = new Date(post.date).toLocaleDateString();
+    
+    return `
+      <article class="card blog-card" id="post-${post.id}">
+        <img src="${featuredImg}" alt="${post.title.rendered}" class="blog-image">
+        <div class="p-6">
+          <small class="text-muted">${date} | By ${author}</small>
+          <h3 class="mt-2 mb-2">${post.title.rendered}</h3>
+          <div class="post-excerpt">${post.excerpt.rendered}</div>
+          <div class="post-full-content hidden">${post.content.rendered}</div>
+          <button class="btn btn-secondary mt-4" onclick="toggleReadMore(${post.id}, this)">Read More</button>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+// Search Logic
+document.getElementById('blog-search')?.addEventListener('input', (e) => {
+  const term = e.target.value.toLowerCase();
+  const filtered = allPosts.filter(post => 
+    post.title.rendered.toLowerCase().includes(term) || 
+    post.content.rendered.toLowerCase().includes(term)
+  );
+  displayPosts(filtered);
+});
+
+// Expand Content Logic
+function toggleReadMore(postId, btn) {
+  const postCard = document.getElementById(`post-${postId}`);
+  const excerpt = postCard.querySelector('.post-excerpt');
+  const fullContent = postCard.querySelector('.post-full-content');
+  
+  if (fullContent.classList.contains('hidden')) {
+    fullContent.classList.remove('hidden');
+    excerpt.classList.add('hidden');
+    btn.textContent = 'Show Less';
+  } else {
+    fullContent.classList.add('hidden');
+    excerpt.classList.remove('hidden');
+    btn.textContent = 'Read More';
+  }
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', fetchBlogPosts);

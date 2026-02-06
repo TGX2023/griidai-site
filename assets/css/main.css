@@ -183,6 +183,33 @@ body {
   text-align: left;
 }
 
+/* Ensure the mobile nav can handle the extra link height */
+.mobile-nav-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Adds consistent spacing between buttons */
+  padding: 2rem 1.5rem;
+}
+
+/* Ensure the Blog section itself is responsive */
+@media (max-width: 768px) {
+  #blog-posts-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1.5rem;
+  }
+  
+  .blog-image {
+    height: 180px; /* Slightly smaller image on mobile */
+  }
+  
+  .search-container {
+    padding: 0 1rem;
+    width: 100%;
+  }
+}
+
+
+
 /* Button */
 .btn {
   display: inline-flex;

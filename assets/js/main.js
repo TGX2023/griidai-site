@@ -329,46 +329,15 @@ function displayPosts(posts) {
     const date = new Date(post.date).toLocaleDateString();
     
     return `
-      <article class="card blog-card" id="post-${post.id}">
+      <article class="card blog-card">
         <img src="${featuredImg}" alt="${post.title.rendered}" class="blog-image">
-        <div class="p-6">
+        <div class="blog-card-content">
           <small class="text-muted">${date} | By ${author}</small>
           <h3 class="mt-2 mb-2">${post.title.rendered}</h3>
           <div class="post-excerpt">${post.excerpt.rendered}</div>
-          <div class="post-full-content hidden">${post.content.rendered}</div>
-          <button class="btn btn-secondary mt-4" onclick="toggleReadMore(${post.id}, this)">Read More</button>
+          <a href="post.html?id=${post.id}" class="btn btn-primary mt-4">Read Full Article</a>
         </div>
       </article>
     `;
   }).join('');
 }
-
-// Search Logic
-document.getElementById('blog-search')?.addEventListener('input', (e) => {
-  const term = e.target.value.toLowerCase();
-  const filtered = allPosts.filter(post => 
-    post.title.rendered.toLowerCase().includes(term) || 
-    post.content.rendered.toLowerCase().includes(term)
-  );
-  displayPosts(filtered);
-});
-
-// Expand Content Logic
-function toggleReadMore(postId, btn) {
-  const postCard = document.getElementById(`post-${postId}`);
-  const excerpt = postCard.querySelector('.post-excerpt');
-  const fullContent = postCard.querySelector('.post-full-content');
-  
-  if (fullContent.classList.contains('hidden')) {
-    fullContent.classList.remove('hidden');
-    excerpt.classList.add('hidden');
-    btn.textContent = 'Show Less';
-  } else {
-    fullContent.classList.add('hidden');
-    excerpt.classList.remove('hidden');
-    btn.textContent = 'Read More';
-  }
-}
-
-// Initialize on load
-document.addEventListener('DOMContentLoaded', fetchBlogPosts);

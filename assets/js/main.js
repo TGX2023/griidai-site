@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initSmoothScroll();
   initCaptcha();
   initForm();
+  fetchBlogPosts(); // <--- MAKE SURE THIS IS HERE
 });
 
 // Mobile Navigation
@@ -310,14 +311,23 @@ const CATEGORY_ID = '27'; // Replace XX with your GriidAi Category ID
 let allPosts = [];
 
 async function fetchBlogPosts() {
+  console.log("Attempting to fetch posts...");
   try {
-    // Fetch posts including featured media and author info
     const response = await fetch(`${WP_BASE_URL}/posts?categories=${CATEGORY_ID}&_embed`);
-    allPosts = await response.json();
-    displayPosts(allPosts);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const posts = await response.json();
+    console.log("Posts received:", posts);
+    
+    if (posts.length === 0) {
+      document.getElementById('blog-posts-grid').innerHTML = '<p>No posts found in this category.</p>';
+    } else {
+      displayPosts(posts);
+    }
   } catch (error) {
-    console.error('Error fetching WordPress posts:', error);
-    document.getElementById('blog-posts-grid').innerHTML = '<p>Failed to load posts.</p>';
+    console.error('Detailed Error:', error);
+    document.getElementById('blog-posts-grid').innerHTML = `<p>Error: ${error.message}</p>`;
   }
 }
 

@@ -1283,5 +1283,27 @@ body {
   display: block;
 }
 
+/* Styling for the standalone post page content */
+.blog-full-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--foreground);
+}
 
+.blog-full-body p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-full-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin: 1.5rem 0;
+}
+
+.blog-full-body h2, .blog-full-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+}
 

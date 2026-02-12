@@ -28,44 +28,63 @@
   </section>
 
   <script>
-    const WP_BASE_URL = 'https://yourwordpresssite.com/wp-json/wp/v2';
-    
-    async function loadFullPost() {
-      // Get the Post ID from the URL (e.g., post.html?id=123)
-      const urlParams = new URLSearchParams(window.location.search);
-      const postId = urlParams.get('id');
+// Ensure there is NO trailing slash at the end
+const WP_BASE_URL = 'https://techg-x.com/blogs/wp-json/wp/v2';
 
-      if (!postId) {
-        window.location.href = 'index.html';
-        return;
+async function loadFullPost() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const postId = urlParams.get('id');
+
+  if (!postId) {
+    window.location.href = 'index.html';
+    return;
+  }
+
+  try {
+    // Adding a cache-control header can sometimes bypass stuck connections
+    const response = await fetch(`${WP_BASE_URL}/posts/${postId}?_embed`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json'
       }
+    });
 
-      try {
-        const response = await fetch(`${WP_BASE_URL}/posts/${postId}?_embed`);
-        const post = await response.json();
-        
-        const featuredImg = post._embedded['wp:featuredmedia']?.[0]?.source_url || '';
-        const author = post._embedded['author']?.[0]?.name || 'Admin';
-        const date = new Date(post.date).toLocaleDateString();
-
-        document.getElementById('post-content').innerHTML = `
-          <div style="max-width: 800px; margin: 0 auto;">
-            <a href="index.html#blog" class="btn btn-sm btn-outline mb-4">← Back to Blog</a>
-            <h1 class="section-title" style="font-size: 2.5rem; line-height: 1.2;">${post.title.rendered}</h1>
-            <p class="text-muted mb-4">${date} | By ${author}</p>
-            ${featuredImg ? `<img src="${featuredImg}" style="width:100%; border-radius:8px; margin-bottom:2rem;">` : ''}
-            <div class="blog-full-body">
-              ${post.content.rendered}
-            </div>
-          </div>
-        `;
-        document.title = `${post.title.rendered} - GriidAi`;
-      } catch (error) {
-        document.getElementById('post-content').innerHTML = '<p>Error loading post.</p>';
-      }
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    document.addEventListener('DOMContentLoaded', loadFullPost);
+    const post = await response.json();
+    
+    // Check if the expected data exists before rendering
+    const featuredImg = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || '';
+    const author = post._embedded?.['author']?.[0]?.name || 'Admin';
+    const date = new Date(post.date).toLocaleDateString();
+
+    document.getElementById('post-content').innerHTML = `
+      <div style="max-width: 800px; margin: 0 auto; padding-top: 40px;">
+        <a href="index.html#blog" class="btn btn-sm btn-outline mb-4">← Back to Blog</a>
+        <h1 class="section-title" style="font-size: 2.5rem; line-height: 1.2; margin-bottom: 1rem;">${post.title.rendered}</h1>
+        <p class="text-muted mb-4">${date} | By ${author}</p>
+        ${featuredImg ? `<img src="${featuredImg}" style="width:100%; border-radius:8px; margin-bottom:2rem; height:auto;">` : ''}
+        <div class="blog-full-body">
+          ${post.content.rendered}
+        </div>
+      </div>
+    `;
+    document.title = `${post.title.rendered} - GriidAi`;
+  } catch (error) {
+    console.error('Detailed connection error:', error);
+    document.getElementById('post-content').innerHTML = `
+      <div class="text-center" style="padding: 50px;">
+        <h3>Unable to load article</h3>
+        <p>${error.message}</p>
+        <a href="index.html" class="btn btn-primary mt-4">Return Home</a>
+      </div>
+    `;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadFullPost);
   </script>
 </body>
 </html>

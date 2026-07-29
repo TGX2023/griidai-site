@@ -61,6 +61,13 @@ function initPricing() {
 
   let billingCycle = 'monthly';
 
+  function renderBillingLabels() {
+    pricingRoot.querySelectorAll('.billing-label[data-billing-label]').forEach(function(el) {
+      const isActive = el.getAttribute('data-billing-label') === billingCycle;
+      el.classList.toggle('is-active', isActive);
+    });
+  }
+
   function buildSignupUrl(plan) {
     const url = new URL(signupBase);
     url.searchParams.set('plan', plan);
@@ -108,6 +115,13 @@ function initPricing() {
       const isActive = btn.getAttribute('data-billing-cycle') === billingCycle;
       btn.classList.toggle('is-active', isActive);
     });
+
+    const billingSwitch = pricingRoot.querySelector('#billing-switch');
+    if (billingSwitch) {
+      billingSwitch.checked = billingCycle === 'yearly';
+    }
+
+    renderBillingLabels();
     renderPrices();
     renderSignupLinks();
   }
@@ -117,6 +131,13 @@ function initPricing() {
       setCycle(btn.getAttribute('data-billing-cycle'));
     });
   });
+
+  const billingSwitch = pricingRoot.querySelector('#billing-switch');
+  if (billingSwitch) {
+    billingSwitch.addEventListener('change', function() {
+      setCycle(billingSwitch.checked ? 'yearly' : 'monthly');
+    });
+  }
 
   // Initialize default state
   setCycle('monthly');

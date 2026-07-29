@@ -1,0 +1,78 @@
+/* Contact Sales page (adopts pricing.html UI/UX) */
+
+.contact-sales-page .contact-sales-inner {
+  max-width: 64rem;
+}
+
+.contact-sales-page .form-card.card {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  border-radius: 2rem;
+  box-shadow: 0 30px 90px rgba(226, 232, 240, 0.7);
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact-sales-page .form-card.card {
+    padding: 2rem;
+  }
+}
+
+.contact-sales-page .form-label {
+  font-weight: 800;
+  color: #374151;
+}
+
+.contact-sales-page .form-input,
+.contact-sales-page .form-textarea {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.9rem;
+}
+
+.contact-sales-page .form-input:focus,
+.contact-sales-page .form-textarea:focus {
+  border-color: rgba(44, 121, 140, 0.5);
+  box-shadow: 0 0 0 4px rgba(44, 121, 140, 0.12);
+}
+
+.contact-sales-page .captcha-box {
+  background: rgba(44, 121, 140, 0.04);
+  border-radius: 1rem;
+  border: 1px solid rgba(44, 121, 140, 0.12);
+}
+
+.contact-sales-page .btn.btn-primary {
+  background: rgba(44, 121, 140, 0.10);
+  color: #2c798c;
+  border-color: transparent;
+  border-radius: 0.75rem;
+  font-weight: 900;
+  padding: 0.95rem 1rem;
+}
+
+.contact-sales-page .btn.btn-primary:hover {
+  background: rgba(44, 121, 140, 0.14);
+}
+
+.contact-sales-page .btn.btn-outline {
+  background: #ffffff;
+  color: #2c798c;
+  border: 1px solid rgba(44, 121, 140, 0.30);
+  border-radius: 0.75rem;
+  font-weight: 900;
+}
+
+.contact-sales-page .btn.btn-outline:hover {
+  background: rgba(44, 121, 140, 0.05);
+  border-color: #2c798c;
+}
+
+.contact-sales-page .btn.btn-ghost {
+  border-radius: 0.75rem;
+}
+
+.contact-sales-page .success-state {
+  background: transparent;
+}
+

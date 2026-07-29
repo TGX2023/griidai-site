@@ -140,7 +140,7 @@ function initPricing() {
   }
 
   // Initialize default state
-  setCycle('monthly');
+  setCycle('yearly');
 }
 
 // Captcha

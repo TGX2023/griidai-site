@@ -134,7 +134,7 @@ function initCaptcha() {
   }
 }
 
-function generateCaptcha() {
+function generateCaptcha(opts) {
   captchaNum1 = Math.floor(Math.random() * 9) + 1;
   captchaNum2 = Math.floor(Math.random() * 9) + 1;
   captchaAnswer = captchaNum1 + captchaNum2;
@@ -149,7 +149,9 @@ function generateCaptcha() {
     captchaInput.value = '';
   }
   
-  clearError('captcha-answer');
+  if (!opts || opts.clearError !== false) {
+    clearError('captcha-answer');
+  }
 }
 
 function validateCaptcha() {
@@ -163,7 +165,7 @@ function validateCaptcha() {
   
   if (userAnswer !== captchaAnswer) {
     showError('captcha-answer', 'Incorrect answer. Please try again.');
-    generateCaptcha();
+    generateCaptcha({ clearError: false });
     return false;
   }
   
@@ -269,9 +271,36 @@ function validateForm() {
     showError('email', 'Please enter a valid email address');
     isValid = false;
   }
-  
-  // GIS Usage word limit
+
+  // Phone (required)
+  const phone = document.getElementById('phone');
+  if (phone && !phone.value.trim()) {
+    showError('phone', 'Phone number is required');
+    isValid = false;
+  }
+
+  // Organization (required)
+  const organization = document.getElementById('organization');
+  if (organization && !organization.value.trim()) {
+    showError('organization', 'Organization is required');
+    isValid = false;
+  }
+
+  // Role (required)
+  const role = document.getElementById('role');
+  if (role && !role.value.trim()) {
+    showError('role', 'Role is required');
+    isValid = false;
+  }
+
+  // Platform usage (required)
   const gisUsage = document.getElementById('gis-usage');
+  if (gisUsage && !gisUsage.value.trim()) {
+    showError('gis-usage', 'This field is required');
+    isValid = false;
+  }
+
+  // GIS Usage word limit
   if (gisUsage && countWords(gisUsage.value) > 50) {
     showError('gis-usage', 'Please limit to 50 words');
     isValid = false;
@@ -345,7 +374,7 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2UtaVCyxINO
   })
   .finally(function() {
     submitBtn.disabled = false;
-    btnText.textContent = 'Join the Waitlist';
+    btnText.textContent = 'Submit';
     btnSpinner.classList.add('hidden');
   });
   

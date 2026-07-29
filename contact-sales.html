@@ -83,8 +83,9 @@
 
             <div class="form-row form-row-3">
               <div class="form-group">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+                <label for="phone" class="form-label">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 123-4567" required>
+                <p id="phone-error" class="form-error hidden"></p>
               </div>
 
               <div class="form-group">
@@ -100,13 +101,15 @@
 
             <div class="form-row form-row-2">
               <div class="form-group">
-                <label for="organization" class="form-label">Organization</label>
-                <input type="text" id="organization" name="organization" class="form-input" placeholder="Your company or institution">
+                <label for="organization" class="form-label">Organization *</label>
+                <input type="text" id="organization" name="organization" class="form-input" placeholder="Your company or institution" required>
+                <p id="organization-error" class="form-error hidden"></p>
               </div>
 
               <div class="form-group">
-                <label for="role" class="form-label">Role</label>
-                <input type="text" id="role" name="role" class="form-input" placeholder="GIS Analyst, Urban Planner, etc.">
+                <label for="role" class="form-label">Role *</label>
+                <input type="text" id="role" name="role" class="form-input" placeholder="GIS Analyst, Urban Planner, etc." required>
+                <p id="role-error" class="form-error hidden"></p>
               </div>
             </div>
 
@@ -118,8 +121,8 @@
             </div>
 
             <div class="form-group">
-              <label for="gis-usage" class="form-label">How do you plan to use GriidAi platform?</label>
-              <textarea id="gis-usage" name="gisUsage" class="form-textarea" placeholder="Tell us about your use case... (max 50 words)"></textarea>
+              <label for="gis-usage" class="form-label">How do you plan to use GriidAi platform? *</label>
+              <textarea id="gis-usage" name="gisUsage" class="form-textarea" placeholder="Tell us about your use case... (max 50 words)" required></textarea>
               <div class="word-count">
                 <span id="word-count" class="word-count-text">0/50 words</span>
                 <span id="word-limit-warning" class="word-count-text error hidden">Please limit to 50 words</span>
@@ -146,7 +149,7 @@
             </div>
 
             <button type="submit" id="submit-btn" class="btn btn-primary btn-lg" style="width: 100%;">
-              <span id="btn-text">Join the Waitlist</span>
+              <span id="btn-text">Submit</span>
               <svg id="btn-spinner" class="icon-sm spinner hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
               </svg>

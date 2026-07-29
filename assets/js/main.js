@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   initMobileNav();
   initSmoothScroll();
+  initPricing();
   initCaptcha();
   initForm();
   fetchBlogPosts(); // <--- MAKE SURE THIS IS HERE
@@ -23,8 +24,8 @@ function initMobileNav() {
     });
 
     // Close menu when clicking a link
-    mobileNav.querySelectorAll('button').forEach(function(btn) {
-      btn.addEventListener('click', function() {
+    mobileNav.querySelectorAll('a, button').forEach(function(el) {
+      el.addEventListener('click', function() {
         mobileNav.classList.remove('active');
         menuIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
@@ -45,6 +46,80 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+// Pricing toggle (monthly/yearly) + signup URL query params
+function initPricing() {
+  const pricingRoot = document.getElementById('pricing');
+  if (!pricingRoot) return;
+
+  const grid = pricingRoot.querySelector('.pricing-grid');
+  if (!grid) return;
+
+  const signupBase = grid.getAttribute('data-signup-base');
+  if (!signupBase) return;
+
+  let billingCycle = 'monthly';
+
+  function buildSignupUrl(plan) {
+    const url = new URL(signupBase);
+    url.searchParams.set('plan', plan);
+    if (plan === 'analyst' || plan === 'pro') {
+      url.searchParams.set('cycle', billingCycle);
+    } else {
+      url.searchParams.delete('cycle');
+    }
+    url.searchParams.set('auto_start', '1');
+    return url.toString();
+  }
+
+  function renderPrices() {
+    pricingRoot.querySelectorAll('.pricing-amount[data-price-monthly][data-price-yearly]').forEach(function(el) {
+      const monthly = el.getAttribute('data-price-monthly');
+      const yearly = el.getAttribute('data-price-yearly');
+      const value = billingCycle === 'yearly' ? yearly : monthly;
+      el.textContent = '$' + value;
+    });
+
+    pricingRoot.querySelectorAll('.pricing-period[data-period-monthly][data-period-yearly]').forEach(function(el) {
+      const monthly = el.getAttribute('data-period-monthly') || '/ month';
+      const yearly = el.getAttribute('data-period-yearly') || '/ year';
+      el.textContent = billingCycle === 'yearly' ? yearly : monthly;
+    });
+
+    pricingRoot.querySelectorAll('.pricing-note[data-note-monthly][data-note-yearly]').forEach(function(el) {
+      const monthly = el.getAttribute('data-note-monthly') || '';
+      const yearly = el.getAttribute('data-note-yearly') || '';
+      el.textContent = billingCycle === 'yearly' ? yearly : monthly;
+    });
+  }
+
+  function renderSignupLinks() {
+    pricingRoot.querySelectorAll('a.pricing-cta[data-plan]').forEach(function(a) {
+      const plan = a.getAttribute('data-plan');
+      if (!plan) return;
+      a.setAttribute('href', buildSignupUrl(plan));
+    });
+  }
+
+  function setCycle(nextCycle) {
+    billingCycle = nextCycle === 'yearly' ? 'yearly' : 'monthly';
+    pricingRoot.querySelectorAll('.pricing-toggle-btn[data-billing-cycle]').forEach(function(btn) {
+      const isActive = btn.getAttribute('data-billing-cycle') === billingCycle;
+      btn.classList.toggle('is-active', isActive);
+    });
+    renderPrices();
+    renderSignupLinks();
+  }
+
+  pricingRoot.querySelectorAll('.pricing-toggle-btn[data-billing-cycle]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      setCycle(btn.getAttribute('data-billing-cycle'));
+    });
+  });
+
+  // Initialize default state
+  setCycle('monthly');
 }
 
 // Captcha
@@ -311,6 +386,9 @@ const CATEGORY_ID = '27'; // Replace XX with your GriidAi Category ID
 let allPosts = [];
 
 async function fetchBlogPosts() {
+  const grid = document.getElementById('blog-posts-grid');
+  if (!grid) return;
+
   console.log("Attempting to fetch posts...");
   try {
     const response = await fetch(`${WP_BASE_URL}/posts?categories=${CATEGORY_ID}&_embed`);
@@ -321,18 +399,19 @@ async function fetchBlogPosts() {
     console.log("Posts received:", posts);
     
     if (posts.length === 0) {
-      document.getElementById('blog-posts-grid').innerHTML = '<p>No posts found in this category.</p>';
+      grid.innerHTML = '<p>No posts found in this category.</p>';
     } else {
       displayPosts(posts);
     }
   } catch (error) {
     console.error('Detailed Error:', error);
-    document.getElementById('blog-posts-grid').innerHTML = `<p>Error: ${error.message}</p>`;
+    grid.innerHTML = `<p>Error: ${error.message}</p>`;
   }
 }
 
 function displayPosts(posts) {
   const grid = document.getElementById('blog-posts-grid');
+  if (!grid) return;
   grid.innerHTML = posts.map(post => {
     const featuredImg = post._embedded['wp:featuredmedia']?.[0]?.source_url || 'assets/images/placeholder.png';
     const author = post._embedded['author']?.[0]?.name || 'Admin';

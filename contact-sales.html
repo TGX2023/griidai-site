@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GriidAi - Contact Sales</title>
+  <meta name="description" content="Contact the GriidAi sales team for enterprise pricing and custom plans.">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo-container">
+          <img src="assets/images/logo.png" alt="GriidAi" class="logo">
+          <span class="brand-name">GriidAi<sup>TM</sup></span>
+        </a>
+
+        <nav class="nav">
+          <a class="nav-link" href="index.html#benefits">Benefits</a>
+          <a class="nav-link" href="index.html#use-cases">Use Cases</a>
+          <a class="nav-link" href="index.html#platform">How It Works</a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+          <a class="nav-link" href="index.html#blog">Blog</a>
+          <a class="nav-link" href="contact-sales.html">Contact Sales</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <svg id="menu-icon" class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav">
+        <a class="mobile-nav-link" href="index.html#benefits">Benefits</a>
+        <a class="mobile-nav-link" href="index.html#use-cases">Use Cases</a>
+        <a class="mobile-nav-link" href="index.html#platform">How It Works</a>
+        <a class="mobile-nav-link" href="pricing.html">Pricing</a>
+        <a class="mobile-nav-link" href="index.html#blog">Blog</a>
+        <a class="mobile-nav-link" href="contact-sales.html">Contact Sales</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="early-access" class="section section-top-offset">
+    <div class="container" style="max-width: 64rem;">
+      <div class="section-header">
+        <h1 class="section-title font-display">Contact Sales</h1>
+        <p class="section-description">
+          Join the waitlist and be among the first to experience spatial intelligence reimagined.
+        </p>
+      </div>
+
+      <div class="card form-card">
+        <!-- Form Container -->
+        <div id="form-container">
+          <form id="early-access-form">
+            <!-- Honeypot field (hidden from humans) -->
+            <div class="honeypot" aria-hidden="true">
+              <label for="website">Leave this field empty</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-row form-row-2">
+              <div class="form-group">
+                <label for="full-name" class="form-label">Full Name *</label>
+                <input type="text" id="full-name" name="fullName" class="form-input" placeholder="John Doe" required>
+                <p id="full-name-error" class="form-error hidden"></p>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                <p id="email-error" class="form-error hidden"></p>
+              </div>
+            </div>
+
+            <div class="form-row form-row-3">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 123-4567">
+              </div>
+
+              <div class="form-group">
+                <label for="city" class="form-label">City</label>
+                <input type="text" id="city" name="city" class="form-input" placeholder="New York">
+              </div>
+
+              <div class="form-group">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" id="country" name="country" class="form-input" placeholder="United States">
+              </div>
+            </div>
+
+            <div class="form-row form-row-2">
+              <div class="form-group">
+                <label for="organization" class="form-label">Organization</label>
+                <input type="text" id="organization" name="organization" class="form-input" placeholder="Your company or institution">
+              </div>
+
+              <div class="form-group">
+                <label for="role" class="form-label">Role</label>
+                <input type="text" id="role" name="role" class="form-input" placeholder="GIS Analyst, Urban Planner, etc.">
+              </div>
+            </div>
+
+            <div class="form-row form-row-1">
+              <div class="form-group">
+                <label for="linkedin" class="form-label">LinkedIn Profile</label>
+                <input type="url" id="linkedin" name="linkedin" class="form-input" placeholder="https://www.linkedin.com/in/yourname/">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="gis-usage" class="form-label">How do you plan to use GriidAi platform?</label>
+              <textarea id="gis-usage" name="gisUsage" class="form-textarea" placeholder="Tell us about your use case... (max 50 words)"></textarea>
+              <div class="word-count">
+                <span id="word-count" class="word-count-text">0/50 words</span>
+                <span id="word-limit-warning" class="word-count-text error hidden">Please limit to 50 words</span>
+              </div>
+              <p id="gis-usage-error" class="form-error hidden"></p>
+            </div>
+
+            <div class="form-group">
+              <div class="captcha-box">
+                <div class="captcha-header">
+                  <label class="form-label" style="margin-bottom: 0;">Security Check *</label>
+                  <button type="button" id="refresh-captcha" class="btn btn-ghost btn-icon" aria-label="Refresh captcha">
+                    <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="captcha-question">
+                  <span id="captcha-text" class="captcha-text">Loading...</span>
+                  <input type="number" id="captcha-answer" name="captchaAnswer" class="form-input captcha-input" placeholder="Answer" required>
+                </div>
+                <p id="captcha-answer-error" class="form-error hidden"></p>
+              </div>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-lg" style="width: 100%;">
+              <span id="btn-text">Join the Waitlist</span>
+              <svg id="btn-spinner" class="icon-sm spinner hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </button>
+
+            <p class="form-note">
+              We respect your privacy. Your information will only be used to notify you about GriidAi.
+            </p>
+          </form>
+        </div>
+
+        <!-- Success State -->
+        <div id="success-container" class="hidden">
+          <div class="success-state">
+            <div class="success-icon">
+              <svg class="icon-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <h3 class="success-title font-display">You're on the list!</h3>
+            <p class="success-text">We'll send you an email when GriidAi is ready for early access.</p>
+            <button type="button" class="btn btn-outline" onclick="resetForm()">Register Another Email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

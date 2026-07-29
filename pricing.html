@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GriidAi - Pricing</title>
+  <meta name="description" content="GriidAi pricing tiers for Explorer, Analyst, Pro, and Enterprise plans.">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo-container">
+          <img src="assets/images/logo.png" alt="GriidAi" class="logo">
+          <span class="brand-name">GriidAi<sup>TM</sup></span>
+        </a>
+
+        <nav class="nav">
+          <a class="nav-link" href="index.html#benefits">Benefits</a>
+          <a class="nav-link" href="index.html#use-cases">Use Cases</a>
+          <a class="nav-link" href="index.html#platform">How It Works</a>
+          <a class="nav-link" href="pricing.html">Pricing</a>
+          <a class="nav-link" href="index.html#blog">Blog</a>
+          <a class="nav-link" href="contact-sales.html">Contact Sales</a>
+        </nav>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+          <svg id="menu-icon" class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav">
+        <a class="mobile-nav-link" href="index.html#benefits">Benefits</a>
+        <a class="mobile-nav-link" href="index.html#use-cases">Use Cases</a>
+        <a class="mobile-nav-link" href="index.html#platform">How It Works</a>
+        <a class="mobile-nav-link" href="pricing.html">Pricing</a>
+        <a class="mobile-nav-link" href="index.html#blog">Blog</a>
+        <a class="mobile-nav-link" href="contact-sales.html">Contact Sales</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="pricing" class="section section-top-offset">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="section-title font-display">Pricing Options</h1>
+        <p class="section-description">
+          Geospatial AI workflows that scale. AI Credits cover LLM usage. Compute Credits cover processing runtime (CPU/RAM). Storage covers hosted datasets and outputs.
+        </p>
+              <p class="pricing-footnote">
+        Prices shown are in USD and are indicative for planning. Quotas can be tuned by region, usage, and support requirements.
+      </p>
+        <div class="pricing-toggle" role="group" aria-label="Billing cycle">
+          <button type="button" class="pricing-toggle-btn is-active" data-billing-cycle="monthly">Monthly</button>
+          <button type="button" class="pricing-toggle-btn" data-billing-cycle="yearly">
+            Yearly <span class="pricing-toggle-save">Save 20%</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pricing-grid" data-signup-base="https://pre-prod-app.griidai.com/signup?tab=register">
+        <div class="card pricing-card">
+          <div class="pricing-card-content">
+            <div class="pricing-card-header">
+              <h3 class="pricing-tier font-display">Explorer</h3>
+              <span class="pricing-badge pricing-badge-muted">Free</span>
+            </div>
+            <p class="pricing-subtitle">For learning, demos, and light analysis.</p>
+            <div class="pricing-price">
+              <span class="pricing-amount">$0</span>
+              <span class="pricing-period">/ month</span>
+            </div>
+            <p class="pricing-note">Includes a small monthly bundle of AI + compute credits.</p>
+            <ul class="pricing-features">
+              <li><strong>Storage:</strong> 5 GB</li>
+              <li><strong>AI + compute credits:</strong> small monthly bundle</li>
+            </ul>
+          </div>
+          <a class="btn btn-primary pricing-cta" data-plan="free" href="https://pre-prod-app.griidai.com/signup?tab=register&plan=free&auto_start=1">Continue with free</a>
+        </div>
+
+        <div class="card pricing-card pricing-card-featured">
+          <div class="pricing-card-content">
+            <div class="pricing-card-header">
+              <h3 class="pricing-tier font-display">Analyst</h3>
+              <span class="pricing-badge">Most Common</span>
+            </div>
+            <p class="pricing-subtitle">For independent analysts and small teams.</p>
+            <div class="pricing-price">
+              <span class="pricing-amount" data-price-monthly="20" data-price-yearly="192">$20</span>
+              <span class="pricing-period" data-period-monthly="/ month" data-period-yearly="/ year">/ month</span>
+            </div>
+            <p class="pricing-note" data-note-monthly="Or $192 billed annually (save 20%)." data-note-yearly="Billed annually (save 20% — equivalent $16/mo).">Or $192 billed annually (save 20%).</p>
+            <ul class="pricing-features">
+              <li><strong>Storage:</strong> 50 GB</li>
+              <li><strong>AI + compute credits:</strong> medium monthly bundle</li>
+            </ul>
+          </div>
+          <a class="btn btn-primary pricing-cta" data-plan="analyst" href="https://pre-prod-app.griidai.com/signup?tab=register&plan=analyst&cycle=monthly&auto_start=1">Choose Analyst</a>
+        </div>
+
+        <div class="card pricing-card">
+          <div class="pricing-card-content">
+            <div class="pricing-card-header">
+              <h3 class="pricing-tier font-display">Geospatial AI Pro</h3>
+              <span class="pricing-badge pricing-badge-muted">Pro Choice</span>
+            </div>
+            <p class="pricing-subtitle">For power users running bigger workloads.</p>
+            <div class="pricing-price">
+              <span class="pricing-amount" data-price-monthly="100" data-price-yearly="960">$100</span>
+              <span class="pricing-period" data-period-monthly="/ month" data-period-yearly="/ year">/ month</span>
+            </div>
+            <p class="pricing-note" data-note-monthly="Or $960 billed annually (save 20%)." data-note-yearly="Billed annually (save 20% — equivalent $80/mo).">Or $960 billed annually (save 20%).</p>
+            <ul class="pricing-features">
+              <li><strong>Storage:</strong> 500 GB</li>
+              <li><strong>AI + compute credits:</strong> large monthly bundle</li>
+            </ul>
+          </div>
+          <a class="btn btn-primary pricing-cta" data-plan="pro" href="https://pre-prod-app.griidai.com/signup?tab=register&plan=pro&cycle=monthly&auto_start=1">Choose Pro</a>
+        </div>
+
+        <div class="card pricing-card">
+          <div class="pricing-card-content">
+            <div class="pricing-card-header">
+              <h3 class="pricing-tier font-display">Enterprise</h3>
+              <span class="pricing-badge pricing-badge-muted">Custom</span>
+            </div>
+            <p class="pricing-subtitle">For governance, security, and custom scale.</p>
+            <div class="pricing-price">
+              <span class="pricing-amount">Custom</span>
+            </div>
+            <p class="pricing-note">Committed usage, custom quotas, and volume discounts.</p>
+            <ul class="pricing-features">
+              <li><strong>Custom quotas:</strong> storage, credits, concurrency</li>
+              <li><strong>SSO / SCIM:</strong> enterprise identity support</li>
+              <li><strong>Audit & governance:</strong> advanced RBAC, log audits</li>
+              <li><strong>Networking:</strong> private VPC options</li>
+            </ul>
+          </div>
+          <a class="btn btn-outline pricing-cta" href="contact-sales.html">Contact sales</a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

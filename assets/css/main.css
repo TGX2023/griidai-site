@@ -50,12 +50,7 @@ font-family: 'Orbitron', sans-serif;
 
 html {
   scrollbar-gutter: stable;
-}
-
-@supports not (scrollbar-gutter: stable) {
-  html {
-    overflow-y: scroll;
-  }
+  overflow-y: scroll;
 }
 
 body {

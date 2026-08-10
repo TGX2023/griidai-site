@@ -375,7 +375,7 @@ function handleFormSubmit(e) {
   
 // Google Apps Script integration
 //const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_DQVoka8Ng6l9N0phVPdWPNQGeIcnVzpxnjgfjSPXMZybS1QHhm1C1BgKo4Qbtpq6/exec';
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx2UtaVCyxINO1VJYY8Zv8PR_JzMeJ2I_eZea55AYtdhqT-0mY9ZWGyEPctV8YFkmoi/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwl36CRPJ8PA6PSJtMWOeWT6SA_4zq3S98WHrvecIyUMBMo-Kd5eWD63d_TUYvtH4flxw/exec';
     
   // Uncomment this when you have your Google Apps Script URL:
   fetch(GOOGLE_SCRIPT_URL, {

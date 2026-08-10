@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GriidAi - Pricing</title>
-  <meta name="description" content="GriidAi pricing tiers for Explorer, Analyst, Pro, and Enterprise plans.">
+  <meta name="description" content="GriidAi pricing tiers for Starter access, Analyst, Geospatial AI Pro, and Enterprise plans.">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/pricing-app.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
           <a class="nav-link" href="contact-sales.html">Contact Sales</a>
         </nav>
 
-        <a class="app-link" href="https://pre-prod-app.griidai.com/signup?tab=register"  target="_blank" rel="noopener noreferrer">Access Platform</a>
+        <a class="app-link" href="https://app.griidai.com/signup?tab=register"  target="_blank" rel="noopener noreferrer">Access Platform</a>
 
         <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
           <svg id="menu-icon" class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +61,7 @@
         </p>
 
         <div class="billing-toggle" role="group" aria-label="Billing cycle">
-          <span class="billing-label is-active" data-billing-label="monthly">Billed Monthly</span>
+          <span class="billing-label is-active" data-billing-label="monthly">Monthly pricing</span>
           <label class="billing-switch">
             <input id="billing-switch" type="checkbox" aria-label="Toggle annual billing">
             <span class="billing-switch-track">
@@ -69,83 +69,85 @@
             </span>
           </label>
           <span class="billing-label" data-billing-label="yearly">
-            Billed Annually <span class="billing-save">(Save 20%)</span>
+            Annual pricing <span class="billing-save">Save 20%</span>
           </span>
         </div>
-        <p class="billing-note">Billing cycle changes are not self-serve yet. Your unused credits stay in your account when upgrading.</p>
+        <p class="billing-note">Billing cycle applies to paid plans only.</p>
       </div>
 
-      <div class="pricing-grid plan-grid" data-signup-base="https://pre-prod-app.griidai.com/signup?tab=register">
+      <div class="pricing-grid plan-grid" data-signup-base="https://app.griidai.com/signup?tab=register">
         <div class="plan-card">
           <div class="plan-card-top">
             <div class="plan-card-header">
-              <h2 class="plan-name">Explorer</h2>
-              <span class="plan-badge">Free</span>
+              <h2 class="plan-name">Starter access</h2>
+              <span class="plan-badge">One time</span>
             </div>
-            <p class="plan-desc">For learning, demos, and light analysis.</p>
+            <p class="plan-desc">For learning, demos, and light analysis with a one-time starter credit bundle.</p>
             <div class="plan-price">
               <div class="plan-price-row">
                 <span class="plan-amount">$0</span>
-                <span class="plan-period">/ month</span>
+                <span class="plan-period">one-time access</span>
               </div>
             </div>
-            <p class="plan-note">Includes a small monthly bundle of AI + compute credits.</p>
+            <p class="plan-note">Starter access remains available until usable starter credits run out.</p>
             <hr class="plan-sep">
             <ul class="plan-features">
               <li><strong>Storage:</strong> 5 GB</li>
-              <li><strong>AI + compute credits:</strong> 200 credits</li>
+              <li><strong>AI + compute credits:</strong> 800 starter credits (one-time)</li>
             </ul>
           </div>
-          <a class="plan-cta is-primary pricing-cta" data-plan="free" href="https://pre-prod-app.griidai.com/signup?tab=register&plan=free&auto_start=1">Continue with free</a>
+          <a class="plan-cta is-primary pricing-cta" data-plan="free" href="https://app.griidai.com/signup?tab=register&plan=free&auto_start=1">Get started</a>
         </div>
 
         <div class="plan-card is-featured">
           <div class="plan-card-top">
             <div class="plan-card-header">
               <h2 class="plan-name">Analyst</h2>
-              <span class="plan-badge-accent">Most Common</span>
+              <span class="plan-badge-accent">Popular</span>
             </div>
             <p class="plan-desc">For individual analysts and small teams in production.</p>
             <div class="plan-price">
               <div class="plan-price-row">
-                <span class="plan-amount pricing-amount" data-price-monthly="20" data-price-yearly="192">$20</span>
-                <span class="plan-period pricing-period" data-period-monthly="/ month" data-period-yearly="/ year">/ month</span>
+                <span class="plan-amount pricing-amount" data-price-monthly="20" data-price-yearly="16">$20</span>
+                <span class="plan-period pricing-period" data-period-monthly="/ month" data-period-yearly="/ month">/ month</span>
               </div>
+              <p class="plan-billing-detail pricing-billing-detail" data-billing-monthly="" data-billing-yearly="Billed $192.00 annually · Save 20%"></p>
             </div>
-            <p class="plan-note pricing-note" data-note-monthly="Includes monthly AI + compute credits. Add-ons and overage available." data-note-yearly="Includes yearly AI + compute credits. Add-ons and overage available.">Includes monthly AI + compute credits. Add-ons and overage available.</p>
+            <p class="plan-note pricing-note" data-note-monthly="Includes monthly AI + compute credits. Add-ons and overage available." data-note-yearly="Includes monthly AI + compute credits. Add-ons and overage available.">Includes monthly AI + compute credits. Add-ons and overage available.</p>
             <hr class="plan-sep">
             <ul class="plan-features">
               <li><strong>Storage:</strong> 50 GB</li>
-              <li><strong>AI + compute credits:</strong> 5,000 credits</li>
+              <li><strong>AI + compute credits:</strong> 1,500 credits</li>
               <li><strong>Add-ons:</strong> extra credits, storage, limited batch pack</li>
             </ul>
           </div>
-          <a class="plan-cta is-primary pricing-cta" data-plan="analyst" href="https://pre-prod-app.griidai.com/signup?tab=register&plan=analyst&cycle=monthly&auto_start=1">Choose Analyst</a>
+          <a class="plan-cta is-primary pricing-cta" data-plan="analyst" href="https://app.griidai.com/signup?tab=register&plan=analyst&cycle=monthly&auto_start=1">Choose Analyst</a>
         </div>
 
         <div class="plan-card">
           <div class="plan-card-top">
             <div class="plan-card-header">
               <h2 class="plan-name">Geospatial AI Pro</h2>
-              <span class="plan-badge-accent">Pro Choice</span>
+              <span class="plan-badge-accent">Recommended</span>
             </div>
             <p class="plan-desc">For high-volume processing, automation, and collaboration.</p>
             <div class="plan-price">
               <div class="plan-price-row">
-                <span class="plan-amount pricing-amount" data-price-monthly="100" data-price-yearly="960">$100</span>
-                <span class="plan-period pricing-period" data-period-monthly="/ month" data-period-yearly="/ year">/ month</span>
+                <span class="plan-amount pricing-amount" data-price-monthly="100" data-price-yearly="80">$100</span>
+                <span class="plan-period pricing-period" data-period-monthly="/ month" data-period-yearly="/ month">/ month</span>
               </div>
+              <p class="plan-billing-detail pricing-billing-detail" data-billing-monthly="" data-billing-yearly="Billed $960.00 annually · Save 20%"></p>
             </div>
-            <p class="plan-note pricing-note" data-note-monthly="Includes larger monthly AI + compute bundles, with batch enabled." data-note-yearly="Includes larger yearly AI + compute bundles, with batch enabled.">Includes larger monthly AI + compute bundles, with batch enabled.</p>
+            <p class="plan-note pricing-note" data-note-monthly="Includes larger monthly AI + compute bundles, with batch enabled." data-note-yearly="Includes larger monthly AI + compute bundles, with batch enabled.">Includes larger monthly AI + compute bundles, with batch enabled.</p>
             <hr class="plan-sep">
             <ul class="plan-features">
               <li><strong>Storage:</strong> 200 GB</li>
-              <li><strong>AI + compute credits:</strong> 20,000 credits</li>
+              <li><strong>AI + compute credits:</strong> 7,500 credits</li>
               <li><strong>Batch:</strong> included for heavy processing</li>
               <li><strong>BYO LLM key:</strong> optional for cost control</li>
             </ul>
           </div>
-          <a class="plan-cta is-primary pricing-cta" data-plan="pro" href="https://pre-prod-app.griidai.com/signup?tab=register&plan=pro&cycle=monthly&auto_start=1">Choose Pro</a>
+          <a class="plan-cta is-primary pricing-cta" data-plan="pro" href="https://app.griidai.com/signup?tab=register&plan=pro&cycle=monthly&auto_start=1">Choose Pro</a>
         </div>
 
         <div class="plan-card">
@@ -174,8 +176,8 @@
       </div>
 
       <section class="addons" aria-labelledby="addons-title">
-        <h3 id="addons-title">Add-ons (as you grow)</h3>
-        <p>Keep your base plan predictable and add capacity only when you need it.</p>
+        <h3 id="addons-title">Capacity options (as you grow)</h3>
+        <p>Buy credit packs in Billing, or contact sales for other capacity add-ons.</p>
         <div class="addons-table">
           <table>
             <thead>

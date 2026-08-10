@@ -295,6 +295,13 @@ body.pricing-page {
   color: #111827;
 }
 
+.plan-billing-detail {
+  margin: 0.35rem 0 0;
+  color: #059669;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
 .plan-amount {
   font-size: 2.25rem;
   font-weight: 900;

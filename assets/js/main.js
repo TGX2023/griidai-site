@@ -99,6 +99,13 @@ function initPricing() {
       const yearly = el.getAttribute('data-note-yearly') || '';
       el.textContent = billingCycle === 'yearly' ? yearly : monthly;
     });
+
+    pricingRoot.querySelectorAll('.pricing-billing-detail[data-billing-monthly][data-billing-yearly]').forEach(function(el) {
+      const monthly = el.getAttribute('data-billing-monthly') || '';
+      const yearly = el.getAttribute('data-billing-yearly') || '';
+      el.textContent = billingCycle === 'yearly' ? yearly : monthly;
+      el.hidden = !el.textContent;
+    });
   }
 
   function renderSignupLinks() {
@@ -140,7 +147,7 @@ function initPricing() {
   }
 
   // Initialize default state
-  setCycle('yearly');
+  setCycle('monthly');
 }
 
 // Captcha

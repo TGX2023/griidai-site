@@ -203,14 +203,14 @@ body {
   padding: 1rem 0;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--foreground);
   background: none;
   border: none;
   text-decoration: none;
   cursor: pointer;
   width: 100%;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Adds subtle separation */
+  border-bottom: 1px solid var(--border);
 }
 
 /* Button */

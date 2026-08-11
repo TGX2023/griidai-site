@@ -68,7 +68,7 @@ body.pricing-page {
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
   color: #2c798c;
   margin-bottom: 0.75rem;
   font-family: var(--font-display);
@@ -76,7 +76,7 @@ body.pricing-page {
 
 .pricing-headline {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.02em;
   color: #0f172a; /* slate-900 */
   margin-bottom: 1rem;
@@ -95,7 +95,7 @@ body.pricing-page {
   max-width: 42rem;
   font-size: 0.95rem;
   line-height: 1.6;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
@@ -118,13 +118,14 @@ body.pricing-page {
 
 .billing-label {
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #9ca3af; /* gray-400 */
   white-space: nowrap;
 }
 
 .billing-label.is-active {
   color: #1f2937; /* gray-800 */
+  font-weight: 700;
 }
 
 .billing-save {
@@ -181,7 +182,7 @@ body.pricing-page {
   margin-top: 0.75rem;
   font-size: 0.75rem;
   color: #9ca3af;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .plan-grid {
@@ -244,7 +245,7 @@ body.pricing-page {
 
 .plan-name {
   font-family: var(--font-display);
-  font-weight: 900;
+  font-weight: 700;
   color: #111827;
   font-size: 1.125rem;
   line-height: 1.2;
@@ -257,7 +258,7 @@ body.pricing-page {
   border: 1px solid #e5e7eb;
   background: #f9fafb;
   color: #6b7280;
-  font-weight: 800;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -265,7 +266,7 @@ body.pricing-page {
   font-size: 0.625rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-weight: 900;
+  font-weight: 700;
   border-radius: 9999px;
   padding: 0.25rem 0.625rem;
   background: rgba(44, 121, 140, 0.1);
@@ -279,7 +280,7 @@ body.pricing-page {
   font-size: 0.75rem;
   line-height: 1.5;
   min-height: 36px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .plan-price {
@@ -299,12 +300,12 @@ body.pricing-page {
   margin: 0.35rem 0 0;
   color: #059669;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .plan-amount {
   font-size: 2.25rem;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: -0.02em;
 }
 
@@ -312,14 +313,14 @@ body.pricing-page {
   margin-left: 0.25rem;
   font-size: 0.9rem;
   color: #9ca3af;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .plan-note {
   font-size: 0.7rem;
   color: #9ca3af;
   min-height: 36px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.4;
 }
 
@@ -337,7 +338,7 @@ body.pricing-page {
   margin: 0;
   color: #4b5563;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -351,7 +352,7 @@ body.pricing-page {
   padding: 0.75rem 0.85rem;
   border-radius: 0.75rem;
   text-align: center;
-  font-weight: 900;
+  font-weight: 700;
   border: 1px solid transparent;
   text-decoration: none;
   font-size: 0.9rem;
@@ -403,7 +404,7 @@ body.pricing-page {
 
 .addons h3 {
   font-size: 1.125rem;
-  font-weight: 900;
+  font-weight: 700;
   color: #111827;
   margin-bottom: 0.5rem;
 }
@@ -411,7 +412,7 @@ body.pricing-page {
 .addons p {
   font-size: 0.95rem;
   color: #6b7280;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 1.25rem;
 }
 
@@ -432,7 +433,7 @@ body.pricing-page {
 .addons-table thead tr {
   background: #f9fafb;
   color: #6b7280;
-  font-weight: 900;
+  font-weight: 700;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -458,13 +459,13 @@ body.pricing-page {
 }
 
 .addons-table td:first-child {
-  font-weight: 900;
+  font-weight: 600;
   color: #111827;
 }
 
 .addons-table td:last-child {
   color: #6b7280;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .pricing-footer-note {
@@ -476,5 +477,5 @@ body.pricing-page {
   text-align: center;
   font-size: 0.75rem;
   color: #9ca3af;
-  font-weight: 800;
+  font-weight: 600;
 }

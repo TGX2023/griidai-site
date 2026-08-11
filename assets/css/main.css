@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --background: hsl(210, 4%, 98%);
@@ -21,8 +21,8 @@
   --chart-4: hsl(32, 88%, 45%);
   --chart-5: hsl(345, 75%, 48%);
   --radius: 0.5rem;
-  --font-sans: 'Raleway', sans-serif; 
-  --font-display: 'Raleway', sans-serif; 
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
 }
 
 /*  
@@ -108,7 +108,7 @@ body {
 }
 
 .brand-name {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: #ffffff;

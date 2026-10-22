@@ -1,7 +1,10 @@
 const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
+const {getPricingUrls, renderPricingHtml} = require('./scripts/env-config.cjs');
 const root = path.join(__dirname, 'dist');
+let pricingUrls;
+try {pricingUrls = getPricingUrls(__dirname);} catch(error) {console.error(error.message);process.exit(1);}
 const port = Number(process.env.PORT || 3000);
 const mime = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.svg':'image/svg+xml'};
 const server = http.createServer((req,res) => {
@@ -14,6 +17,9 @@ const server = http.createServer((req,res) => {
     if(!fs.statSync(target).isFile()) throw new Error('Not a file');
     res.writeHead(200, {'Content-Type':mime[path.extname(target)] || 'application/octet-stream'});
     if(req.method === 'HEAD') return res.end();
+    if(path.relative(root, target).replaceAll('\\', '/') === 'pricing/index.html') {
+      return res.end(renderPricingHtml(fs.readFileSync(target, 'utf8'), pricingUrls));
+    }
     const stream = fs.createReadStream(target); stream.on('error',()=>res.destroy()); stream.pipe(res);
   } catch {res.writeHead(404);res.end('Page not found');}
 });

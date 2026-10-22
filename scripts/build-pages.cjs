@@ -1,5 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const {getPricingUrls, renderPricingHtml} = require('./env-config.cjs');
 const project = path.resolve(__dirname, '..');
 const source = path.join(project, 'dist');
 const output = path.join(project, '.deploy');
@@ -8,6 +9,7 @@ const basePath = baseInput === '' || baseInput === '/' ? '/' : '/' + baseInput.r
 if (!/^\/(?:[A-Za-z0-9_-]+\/)*$/.test(basePath)) throw new Error('Invalid Pages base path');
 const siteUrl = (process.env.PAGES_SITE_URL || 'https://abdelrahmanembaby-oss.github.io/moh_web').replace(/\/$/, '');
 if (!/^https:\/\/[^\s]+$/.test(siteUrl)) throw new Error('Invalid Pages site URL');
+const pricingUrls = getPricingUrls(project);
 if (output !== path.resolve(project, '.deploy') || !output.startsWith(project + path.sep)) throw new Error('Unsafe output path');
 fs.rmSync(output, {recursive:true,force:true});
 fs.cpSync(source, output, {recursive:true});
@@ -19,6 +21,9 @@ function walk(folder) {
     if (entry.isDirectory()) {walk(file);continue;}
     if (!/\.(html|css|js|json|xml)$/.test(entry.name)) continue;
     let text = fs.readFileSync(file, 'utf8');
+    if (path.relative(output, file).replaceAll('\\', '/') === 'pricing/index.html') {
+      text = renderPricingHtml(text, pricingUrls);
+    }
     text = text.replaceAll(oldOrigin, siteUrl);
     text = text.replace(/(["'`])\/(?!\/)/g, (_, quote) => quote + basePath);
     text = text.replace(/(\b(?:srcset|imagesrcset)\s*=\s*)(["'])(.*?)\2/g, (_, name, quote, value) => {

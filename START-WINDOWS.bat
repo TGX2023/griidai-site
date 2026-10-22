@@ -6,6 +6,12 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
+node scripts/init-env.cjs
+if errorlevel 1 (
+  echo Could not prepare local environment configuration.
+  pause
+  exit /b 1
+)
 start "" http://localhost:3000
 node server.cjs
 pause

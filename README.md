@@ -100,6 +100,13 @@ YouTube videos and external links require an internet connection. Site images an
 Backend deployment and endpoint configuration instructions are documented in
 [`docs/pricing-backend-integration.md`](docs/pricing-backend-integration.md).
 
+Pricing URLs are supplied through `PRICING_EMBED_URL` and
+`PRICING_LOCAL_EMBED_URL`. For local work, run `npm run env:local` to create
+`.env` from `.env.example`, then edit the values as needed. `.env` is ignored by
+Git. For GitHub Pages builds, set both names as repository Actions variables;
+the workflow injects them into the static build. These are public endpoint URLs,
+not secrets, and are compiled into the generated site at build time.
+
 `dist/pricing/index.html` embeds the backend-rendered public catalog at
 `https://api.griidai.com/api/v1/public/pricing/embed?mode=public`.
 The backend owns the cards, prices, annual/monthly toggle, signup links, subscription

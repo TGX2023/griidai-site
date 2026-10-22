@@ -97,6 +97,9 @@ YouTube videos and external links require an internet connection. Site images an
 
 ## Shared pricing presentation
 
+Backend deployment and endpoint configuration instructions are documented in
+[`docs/pricing-backend-integration.md`](docs/pricing-backend-integration.md).
+
 `dist/pricing/index.html` embeds the backend-rendered public catalog at
 `https://api.griidai.com/api/v1/public/pricing/embed?mode=public`.
 The backend owns the cards, prices, annual/monthly toggle, signup links, subscription

@@ -1,0 +1,10 @@
+.qa/
+.deploy/
+node_modules/
+.local-server*.log
+.pricing-source.html
+.env
+.env.*
+!.env.example
+*.tar
+*.tar.gz

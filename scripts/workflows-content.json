@@ -1,0 +1,450 @@
+{
+  "source": {
+    "filename": "GriidAi_Workflows_Hub_Content_UX_Development_Specification_P0.docx",
+    "sha256": "f40be86b483441fc25d6b79156a58d50a4e1610672a5cca247f84f1c17b603a2",
+    "visualOverride": "User requested generated conceptual artwork instead of software screenshots."
+  },
+  "hero": {
+    "eyebrow": "Workflows",
+    "title": "Automate multi-step GIS workflows with GriidAi.",
+    "copy": "Explore real geospatial workflows that connect data, an inspectable execution plan, supported GIS operations, human review, validation, maps, and analytical outputs. Start from a spatial question, see the method, and inspect the result before it moves into the next decision."
+  },
+  "definition": {
+    "title": "What is a GriidAi geospatial workflow?",
+    "paragraphs": [
+      "A GriidAi workflow is an ordered sequence that connects a spatial question to the data, GIS operations, validation checkpoints and outputs needed to answer it. For supported tasks, GriidAi can propose the implementation plan, let the user review the inputs and method, execute the approved analysis, and keep the resulting layers, maps, tables or statistics available for inspection.",
+      "A workflow is more than a prompt and more than a single GIS tool. It should make the method visible enough for an expert to review what was used, what assumptions matter, what result was produced, and whether the output is fit for the intended decision."
+    ]
+  },
+  "anatomy": {
+    "title": "Question → Data → Plan → Operations → Validation → Result",
+    "stages": [
+      [
+        "Question",
+        "The real spatial or business problem being answered."
+      ],
+      [
+        "Data",
+        "Required user-provided or supported data and its spatial/temporal context."
+      ],
+      [
+        "Plan",
+        "The proposed analytical sequence before execution."
+      ],
+      [
+        "Operations",
+        "Supported GIS steps and parameters."
+      ],
+      [
+        "Validation",
+        "Checks before and after execution."
+      ],
+      [
+        "Result",
+        "Map, layer, table, statistics or exportable analytical output."
+      ],
+      [
+        "Continue / reuse",
+        "The next analytical step or reuse path where current release supports it."
+      ]
+    ]
+  },
+  "featuredTitle": "Featured launch workflows",
+  "browseTitle": "Find a workflow by task, domain, data and status",
+  "records": [
+    {
+      "id": "dem-hydrology-stream-network",
+      "name": "DEM Hydrology & Stream Network",
+      "question": "How can I extract drainage patterns and a stream network from a DEM?",
+      "copy": "Turn elevation data into reviewable terrain and drainage outputs through a multi-step hydrology sequence. The workflow should expose data preparation, projection/units where relevant, depression handling, flow direction and accumulation, stream extraction, and validation before the final map is accepted.",
+      "domain": "Terrain & Hydrology",
+      "input": "Digital elevation model + study area/AOI",
+      "output": "Flow/drainage layers, stream network, related map/analytical layers",
+      "useCaseName": "Hydrology Analysis",
+      "useCase": "hydrology",
+      "industries": [
+        0,
+        1,
+        2
+      ],
+      "industryText": "AEC & Environmental; Climate; Utilities / Infrastructure",
+      "method": "DEM → preparation → flow direction/accumulation → stream extraction → validated map.",
+      "methodSteps": [
+        "DEM",
+        "preparation",
+        "flow direction/accumulation",
+        "stream extraction",
+        "validated map."
+      ],
+      "image": "dem-hydrology",
+      "dataType": "Raster",
+      "status": "Example",
+      "publicationStatus": "Published",
+      "indexStatus": "Noindex",
+      "featured": true,
+      "order": 0,
+      "lastVerified": null,
+      "workflowVersion": null,
+      "productVersion": null
+    },
+    {
+      "id": "ndvi-analysis",
+      "name": "NDVI Analysis",
+      "question": "How can I calculate and map vegetation condition from imagery?",
+      "copy": "Use suitable red and near-infrared raster inputs to calculate NDVI, inspect the output, and summarize or export the resulting vegetation-index layer. The workflow should make band selection, data quality, date/season context, clouds or NoData considerations, and interpretation limits visible where they matter.",
+      "domain": "Remote Sensing & Raster",
+      "input": "Compatible imagery/bands or user-provided raster inputs",
+      "output": "NDVI raster, map/legend, optional summaries where supported",
+      "useCaseName": "Vegetation & NDVI",
+      "useCase": "vegetation",
+      "industries": [
+        0,
+        1
+      ],
+      "industryText": "AEC/Environmental; Climate; land/environment contexts",
+      "method": "Band/input check → raster calculation → output styling/summary → validation.",
+      "methodSteps": [
+        "Band/input check",
+        "raster calculation",
+        "output styling/summary",
+        "validation."
+      ],
+      "image": "ndvi",
+      "dataType": "Raster",
+      "status": "Example",
+      "publicationStatus": "Published",
+      "indexStatus": "Noindex",
+      "featured": true,
+      "order": 1,
+      "lastVerified": null,
+      "workflowVersion": null,
+      "productVersion": null
+    },
+    {
+      "id": "fire-station-coverage",
+      "name": "Fire Station Coverage",
+      "question": "Which areas or populations appear underserved by current fire-station coverage?",
+      "copy": "Combine facility locations with a clearly defined coverage method and the relevant demand, population or study-area context to identify areas that warrant deeper service review. The workflow must state whether coverage is based on straight-line distance, a supported network method, or another verified approach.",
+      "domain": "Network, Proximity & Coverage",
+      "input": "Station locations; study area; optional road/network and population/context data",
+      "output": "Coverage/gap map, affected areas or population/context summaries where supported",
+      "useCaseName": "Coverage Gap Analysis",
+      "useCase": "coverage",
+      "industries": [
+        2
+      ],
+      "industryText": "Utilities & Critical Infrastructure; public-service planning",
+      "method": "Station locations + explicit coverage method → gap result → optional population/context overlay.",
+      "methodSteps": [
+        "Station locations + explicit coverage method",
+        "gap result",
+        "optional population/context overlay."
+      ],
+      "image": "fire-station-coverage",
+      "dataType": "Mixed",
+      "status": "Example",
+      "publicationStatus": "Published",
+      "indexStatus": "Noindex",
+      "featured": true,
+      "order": 2,
+      "lastVerified": null,
+      "workflowVersion": null,
+      "productVersion": null
+    },
+    {
+      "id": "sea-level-rise",
+      "name": "Sea-Level Rise",
+      "question": "Which locations or assets are exposed under a defined sea-level-rise scenario?",
+      "copy": "Combine an approved sea-level-rise scenario or water-level condition with elevation, assets, population or study-area data as appropriate, then map and summarize spatial exposure. The scenario, vertical/elevation assumptions, source, resolution and limitations should remain visible to the expert reviewing the result.",
+      "domain": "Climate & Coastal Risk",
+      "input": "Scenario/water-level data, elevation/context, asset/location layers, AOI",
+      "output": "Scenario exposure map, affected locations/assets/areas, summary table where appropriate",
+      "useCaseName": "Flood & Coastal Risk",
+      "useCase": "flood-coastal",
+      "industries": [
+        1,
+        2
+      ],
+      "industryText": "Climate Resilience & Physical Risk; Utilities & Critical Infrastructure",
+      "method": "Scenario/elevation context → exposure overlay → summary → validation.",
+      "methodSteps": [
+        "Scenario/elevation context",
+        "exposure overlay",
+        "summary",
+        "validation."
+      ],
+      "image": "sea-level-rise",
+      "dataType": "Mixed",
+      "status": "Example",
+      "publicationStatus": "Published",
+      "indexStatus": "Noindex",
+      "featured": true,
+      "order": 3,
+      "lastVerified": null,
+      "workflowVersion": null,
+      "productVersion": null
+    },
+    {
+      "id": "storm-surge",
+      "name": "Storm Surge",
+      "question": "Which assets or areas intersect a defined storm-surge hazard or scenario?",
+      "copy": "Use authoritative storm-surge hazard or scenario data with assets, population or geography to create a reviewable exposure workflow. The page should show source provenance, event/scenario meaning, relevant elevation or resolution considerations, overlay logic, validation and mapped outputs.",
+      "domain": "Climate & Coastal Risk",
+      "input": "Storm-surge zone/surface, assets or population/context, AOI, terrain where relevant",
+      "output": "Exposure map, affected features/areas and supporting table/statistics",
+      "useCaseName": "Flood & Coastal Risk",
+      "useCase": "flood-coastal",
+      "industries": [
+        1,
+        2
+      ],
+      "industryText": "Climate Resilience & Physical Risk; coastal infrastructure",
+      "method": "Surge layer + assets/geography → overlay/intersect → exposure summary → map.",
+      "methodSteps": [
+        "Surge layer + assets/geography",
+        "overlay/intersect",
+        "exposure summary",
+        "map."
+      ],
+      "image": "storm-surge",
+      "dataType": "Mixed",
+      "status": "Example",
+      "publicationStatus": "Published",
+      "indexStatus": "Noindex",
+      "featured": true,
+      "order": 4,
+      "lastVerified": null,
+      "workflowVersion": null,
+      "productVersion": null
+    }
+  ],
+  "execution": {
+    "title": "See the method before the result",
+    "steps": [
+      [
+        "Define",
+        "Question, study area, time/scenario and expected outcome."
+      ],
+      [
+        "Bring / discover data",
+        "Workspace inputs and relevant source context."
+      ],
+      [
+        "Inspect",
+        "CRS, units, fields, resolution, NoData, coverage or other relevant context."
+      ],
+      [
+        "Plan",
+        "Supported operations, parameters, validation strategy and expected output."
+      ],
+      [
+        "Review",
+        "User checks Inputs / Method / Validation / Output and assumptions."
+      ],
+      [
+        "Execute",
+        "Approved GIS operations run in sequence."
+      ],
+      [
+        "Validate",
+        "Inspect maps, layers, tables, statistics and intermediate outputs."
+      ],
+      [
+        "Continue",
+        "Export, refine, chain another step, or reuse where the release supports it."
+      ]
+    ]
+  },
+  "validation": {
+    "title": "AI can propose the workflow. The expert still validates the method and result.",
+    "paragraph": "A plausible map can still be wrong if the input layer, projection, units, time window, raster alignment, threshold, scenario, source or analytical assumption is wrong. GriidAi should make review part of the workflow rather than treating validation as an afterthought.",
+    "checks": [
+      [
+        "Inputs",
+        "Are these the intended datasets, features, geography and period?"
+      ],
+      [
+        "Spatial context",
+        "Are CRS, units, scale/resolution, extent and NoData appropriate?"
+      ],
+      [
+        "Method",
+        "Do the selected GIS operations answer the actual question?"
+      ],
+      [
+        "Parameters",
+        "Are distances, thresholds, bands, flow settings or scenario values correct?"
+      ],
+      [
+        "Validation",
+        "What checks should pass before the output is accepted?"
+      ],
+      [
+        "Result",
+        "Does the geometry, map, statistic or table make sense against known context?"
+      ],
+      [
+        "Use",
+        "Is this output screening evidence, analytical evidence, or suitable for a downstream decision after expert review?"
+      ]
+    ]
+  },
+  "planAreas": [
+    [
+      "Inputs",
+      "Named layer/data inputs, AOI, relevant dataset identifiers."
+    ],
+    [
+      "Method",
+      "Ordered operations and important parameters."
+    ],
+    [
+      "Validation",
+      "Checks before/after processing; assumptions and sanity checks."
+    ],
+    [
+      "Output",
+      "Expected layer/map/table/file and naming/context."
+    ]
+  ],
+  "dataTitle": "Every workflow should make its data dependencies understandable.",
+  "relationships": [
+    [
+      "Workflow → Dataset",
+      "Hydrology → elevation dataset",
+      "Show the dataset when the workflow requires a specific public dataset; otherwise state generic DEM requirement."
+    ],
+    [
+      "Workflow → Provider",
+      "Climate workflow → approved scenario provider",
+      "Link only when provider integration/public usage is verified."
+    ],
+    [
+      "Workflow → Format",
+      "NDVI → GeoTIFF or supported raster input",
+      "Link to Supported Formats / GeoTIFF page when relevant."
+    ],
+    [
+      "Workflow → Upload",
+      "User-provided project data",
+      "Link to Bring Your Own Data for file-based paths."
+    ]
+  ],
+  "tools": {
+    "title": "A workflow combines GIS operations; it is not a synonym for one tool.",
+    "rows": [
+      [
+        "GIS Tool",
+        "A primitive operation and its input/output behavior.",
+        "Buffer, raster algebra, flow accumulation, nearest."
+      ],
+      [
+        "Workflow",
+        "An ordered analytical method using one or more tools.",
+        "DEM Hydrology & Stream Network."
+      ],
+      [
+        "Use Case",
+        "The problem/question the method helps address.",
+        "Hydrology analysis; coverage gap analysis."
+      ],
+      [
+        "Industry",
+        "The sector context in which the question matters.",
+        "AEC/environmental; utilities; climate resilience."
+      ],
+      [
+        "Dataset / Provider",
+        "The data entity/source used as input.",
+        "DEM/elevation source, imagery, station locations, scenario layers."
+      ]
+    ]
+  },
+  "outputs": {
+    "title": "What a workflow can return",
+    "rows": [
+      [
+        "Map / visualization",
+        "Thematic layer, raster view, exposure map, stream network, coverage map."
+      ],
+      [
+        "Analytical vector data",
+        "Selected/intersected features, derived polygons/lines/points, attributes."
+      ],
+      [
+        "Analytical raster data",
+        "Derived raster surfaces such as terrain/index outputs."
+      ],
+      [
+        "Table / statistics",
+        "Counts, areas, summaries, per-feature values."
+      ],
+      [
+        "Map export",
+        "PNG, JPEG, PDF as demonstrated."
+      ],
+      [
+        "Data export",
+        "Current verified vector/raster/tabular formats."
+      ]
+    ]
+  },
+  "reuse": {
+    "title": "Reuse and repeatability",
+    "copy": "GriidAi is designed to turn successful analytical methods into repeatable geospatial work."
+  },
+  "statusTitle": "Workflow status and version",
+  "statuses": [
+    [
+      "Live",
+      "Approved current workflow available for intended public use."
+    ],
+    [
+      "Beta",
+      "Available but with known maturity or scope limits."
+    ],
+    [
+      "Example",
+      "Demonstrated method/output used as product proof; not necessarily a packaged one-click workflow."
+    ]
+  ],
+  "faqs": [
+    [
+      "How can I automate a multi-step GIS workflow?",
+      "Define the question, bring/discover data, review the plan, approve supported operations, inspect outputs, validate, then continue/reuse as supported."
+    ],
+    [
+      "What makes a GIS workflow trustworthy?",
+      "Visible inputs, method, parameters, source context, validation checkpoints and expert review."
+    ],
+    [
+      "Can GriidAi combine raster and vector data in one workflow?",
+      "Yes for supported workflows."
+    ],
+    [
+      "Can I use my own data in a workflow?",
+      "Yes, supported uploaded data can become workflow input."
+    ],
+    [
+      "Can I review a workflow before it runs?",
+      "For supported tasks, the implementation plan exposes Inputs, Method, Validation and Output for user review."
+    ],
+    [
+      "Can I reuse a workflow?",
+      "GriidAi is designed to turn successful analytical methods into repeatable geospatial work."
+    ],
+    [
+      "Which workflows are available now?",
+      "Read the Published Workflow collection and current status badges."
+    ],
+    [
+      "Does GriidAi replace GIS experts?",
+      "No. The expert defines intent, reviews the method and validates whether the output is appropriate for use."
+    ]
+  ],
+  "emptyState": "No published workflow matches these filters yet. Clear a filter, explore all workflows, or start with your own spatial question in GriidAi.",
+  "seo": {
+    "title": "GIS Workflow Automation & Geospatial Workflows | GriidAi",
+    "description": "Explore GriidAi workflows for hydrology, NDVI, service coverage, sea-level rise and storm-surge analysis, with inspectable steps, human review and mapped outputs."
+  }
+}

@@ -1,0 +1,545 @@
+{
+  "source": {
+    "filename": "GriidAI_Ecosystem_Page_Content_UX_Development_Specification_P0.docx",
+    "sha256": "64b4324d1c9beeb968d1e1f17e0e4e799f6f535b6a82f3d0bc4c0972da09b0a4",
+    "copyPolicy": "Website copy blocks and exact public table rows are retained. Implementation, optimization and unapproved commercial source directions remain private.",
+    "visualPolicy": "Accessible HTML diagrams with decorative SVG icons implement E01–E05; no generated photographs, software captures, logos or evidence are needed. E06 uses the existing GriidAI mark.",
+    "intakeLimit": "Existing Contact Sales Apps Script is retained as requested. Its no-cors response does not confirm durable acceptance. Show the specified failure message, retain answers and never record lead_submitted for an opaque response. Server-side validation, enforced idempotency, queue ownership, retention, acknowledgments and durable receipts require the receiving service owner.",
+    "decisions": [
+      [
+        "ID and owner",
+        "Decision",
+        "Treatment in this draft"
+      ],
+      [
+        "D1 Partnerships",
+        "Can all four paths receive inquiries now, and who handles them?",
+        "All four are modeled as proposed inquiry options; enabling intake requires a named owner."
+      ],
+      [
+        "D2 Product and Partnerships",
+        "Which initial access, guidance, learning and visibility benefits can actually be delivered?",
+        "Public copy offers discussion of appropriate support; no entitlement or guaranteed benefit."
+      ],
+      [
+        "D3 Product",
+        "Contributor intake, review, licensing, publishing, verification and monetization availability",
+        "Capture ideas and interest; no upload or publishing system specified."
+      ],
+      [
+        "D4 Partnerships",
+        "Education scope for individuals, students, educators and institutions",
+        "Broad proposed interest capture; no academic license or free-access commitment."
+      ],
+      [
+        "D5 Partnerships",
+        "Services-only participation and whether a formal Solution Partner program exists",
+        "Solution delivery is an interest category, not a granted designation."
+      ],
+      [
+        "D6 Partnerships",
+        "Ambassador tier 1 education overlap and Affiliate eligibility",
+        "Keep programs distinct in copy; do not silently restructure source membership or apply disputed exclusion rules."
+      ],
+      [
+        "D7 Web and Operations",
+        "Form/CRM provider, receiving queue, owner, sender and reply-to",
+        "Provider-neutral behavior specified; production configuration is required."
+      ],
+      [
+        "D8 Privacy owner",
+        "Privacy route, contact-consent wording and retention handling",
+        "Draft consent and requirements specified; verify against the actual policy."
+      ],
+      [
+        "D9 Website owner",
+        "Adopt one-page scope in base architecture and shared navigation",
+        "Explicit supersession recorded; base files remain unchanged."
+      ]
+    ],
+    "privacyVerification": {
+      "url": "https://docs.griidai.com/docs/terms/#6-privacy-policy-and-data-use",
+      "verified": "2026-10-20",
+      "method": "Read-only HTTP GET returned 200 and the exact privacy-policy anchor."
+    },
+    "sourceTerms": "Detailed commercial rates, tiers and unresolved source contradictions remain in the supplied DOCX; they are not emitted as public website copy or assets."
+  },
+  "pageKey": "ecosystem",
+  "publicationStatus": "Published",
+  "contentOwner": null,
+  "seo": {
+    "title": "GriidAI Partner Ecosystem | Contribute, Educate and Grow",
+    "description": "Explore the GriidAI ecosystem for contributors, education and research, community growth, solution delivery and reselling. Find your path and express interest."
+  },
+  "hero": {
+    "title": "GriidAI Partner Ecosystem",
+    "copy": [
+      "Build tools, advance learning, grow communities, or bring geospatial AI to organizations.",
+      "Explore ways to contribute your expertise, collaborate with GriidAI, and create value through geospatial analysis. Whether you are an individual practitioner, educator, researcher, community builder, consultant, or organization, find a path that fits what you want to contribute and achieve."
+    ],
+    "primaryCTA": "Express Interest",
+    "secondaryCTA": "Explore the Four Paths"
+  },
+  "definition": {
+    "title": "What is the GriidAI ecosystem",
+    "copy": [
+      "The GriidAI ecosystem brings together people and organizations interested in extending how geospatial AI is built, taught, shared, and applied. It connects technical contributions, education and research, community participation, and customer-facing partnerships around the GriidAI platform.",
+      "The four paths describe different ways to participate. You can express interest in more than one and discuss the right fit with the GriidAI team."
+    ]
+  },
+  "selector": {
+    "title": "Find your place in the ecosystem",
+    "copy": "Choose a path to explore who it is for, how you could participate, and the opportunities it can open."
+  },
+  "paths": [
+    {
+      "key": "contributors",
+      "actionLabel": "Build",
+      "displayName": "Contributors",
+      "anchor": "contributors",
+      "linkLabel": "Explore Contributions",
+      "description": "Create tools and reusable geospatial workflows. Share your expertise and explore how your work could support other GriidAI users.",
+      "inquiryStatus": "interest_open",
+      "availabilityBasis": "Existing contact-service intake selected by the user; receipt verification remains unavailable."
+    },
+    {
+      "key": "education_research",
+      "actionLabel": "Educate",
+      "displayName": "Education & Research Partners",
+      "anchor": "education-research",
+      "linkLabel": "Explore Education & Research",
+      "description": "Bring geospatial AI into teaching, student projects, research, workshops, and institutional learning.",
+      "inquiryStatus": "interest_open",
+      "availabilityBasis": "Existing contact-service intake selected by the user; receipt verification remains unavailable."
+    },
+    {
+      "key": "community_growth",
+      "actionLabel": "Grow",
+      "displayName": "Community & Growth Partners",
+      "anchor": "community-growth",
+      "linkLabel": "Explore Community & Growth",
+      "description": "Share knowledge, engage communities, recommend GriidAI, or introduce relevant business opportunities.",
+      "inquiryStatus": "interest_open",
+      "availabilityBasis": "Existing contact-service intake selected by the user; receipt verification remains unavailable."
+    },
+    {
+      "key": "solutions_resellers",
+      "actionLabel": "Sell & Deliver",
+      "displayName": "Solution & Reseller Partners",
+      "anchor": "solutions-resellers",
+      "linkLabel": "Explore Solution & Reseller Partnerships",
+      "description": "Help organizations adopt GriidAI through services, implementation, integration, training, support, or local sales.",
+      "inquiryStatus": "interest_open",
+      "availabilityBasis": "Existing contact-service intake selected by the user; receipt verification remains unavailable."
+    }
+  ],
+  "contributors": {
+    "title": "Build with GriidAI",
+    "copy": [
+      "Contribute practical geospatial knowledge through tools and reusable workflows. If you have a useful analytical method, a repeatable sequence of GIS operations, or a tool that could help others solve spatial problems, tell us what you would like to build or share.",
+      "This path is for GIS practitioners, developers, data and AI engineers, researchers, and domain specialists who want to turn their expertise into reusable capabilities. You can start with an existing contribution or a well-defined idea."
+    ],
+    "activities": [
+      "Tools: propose a focused operation or utility that addresses a clear geospatial task.",
+      "Reusable workflows: describe a sequence of data preparation, analysis and output steps that others could adapt.",
+      "Practical documentation: explain required inputs, expected outputs, validation checks and known limitations so a contribution can be assessed and understood."
+    ],
+    "value": [
+      "Explore how your work could reach relevant users, demonstrate your expertise, and develop through feedback. Tell us if you are interested in publication, verification, or commercial opportunities; the team can discuss what is available and the requirements for your contribution.",
+      "Sharing an idea starts a review conversation. Publication, verification and monetization depend on the agreed route and are not automatic outcomes of submitting interest."
+    ]
+  },
+  "education": {
+    "title": "Bring geospatial AI into education and research",
+    "copy": [
+      "Explore how GriidAI could support teaching, student projects, research, workshops, and institutional learning. Connect spatial questions with data, analytical steps, and results that learners and researchers can inspect and discuss.",
+      "This path is for educators, researchers, universities, colleges, training providers, student groups, and individuals developing their geospatial skills. Tell us whether you are exploring a personal project, a classroom activity, or a wider institutional collaboration."
+    ],
+    "activities": [
+      "Teaching and workshops: introduce geospatial AI through guided demonstrations, exercises and discussions of analytical methods.",
+      "Student projects: explore a defined spatial question and communicate the inputs, process and interpretation of the results.",
+      "Research collaboration: discuss a use case, method or evaluation where geospatial analysis can contribute.",
+      "Institutional learning: explore how a department, training provider or organization could include GriidAI in its learning activities."
+    ],
+    "value": [
+      "Discuss the product access, practical guidance, learning resources, or collaboration support that could fit your proposed activity. The available support and participation arrangements will depend on the project and the agreed scope.",
+      "Education and research participation does not require you to act as a salesperson or content promoter. If you also want to teach publicly, mentor a community, or share your experience, you can express interest in the Ambassador route as well."
+    ]
+  },
+  "community": {
+    "title": "Share expertise and connect opportunities",
+    "copy": [
+      "Help more people discover where GriidAI can be useful. This path brings together community participation, content-led recommendations, and introductions to organizations with a relevant need.",
+      "Choose the relationship that matches how you want to contribute. Ambassador, Affiliate and Referral Partner participation have different expectations and reward structures."
+    ],
+    "programs": [
+      {
+        "key": "ambassador",
+        "name": "Ambassador",
+        "title": "Share knowledge and support the community",
+        "copy": [
+          "For practitioners, educators, researchers, and community leaders who want to teach, create useful content, mentor others, share product feedback, or contribute to geospatial AI discussions. The focus is practical knowledge and an independent voice.",
+          "Ambassador participation centers on contribution, recognition and collaboration. Any access, activity support or compensation is agreed for the role; it is not a commission for each signup or referral."
+        ]
+      },
+      {
+        "key": "affiliate",
+        "name": "Affiliate",
+        "title": "Recommend GriidAI through your content",
+        "copy": [
+          "For creators, publishers, trainers, and community operators whose audiences may benefit from GriidAI. The Affiliate route is designed around tracked recommendations that lead to eligible paid subscriptions.",
+          "Affiliate participation uses performance-based rewards under agreed program terms. Tracking, qualifying subscriptions, commission rates and payment arrangements are confirmed before participation begins."
+        ]
+      },
+      {
+        "key": "referral_partner",
+        "name": "Referral Partner",
+        "title": "Introduce a relevant business opportunity",
+        "copy": [
+          "For consultants, advisors, system integrators, complementary vendors, and professional networks that can make a qualified introduction to an organization with a relevant need.",
+          "Referral Partners introduce the opportunity and may help with discovery. GriidAI or the appropriate reseller manages the sale and customer relationship. Any referral reward depends on an accepted opportunity and the agreed terms."
+        ]
+      }
+    ],
+    "choosing": "Teaching or building community points toward Ambassador participation. Driving signups through content points toward Affiliate participation. Introducing a named organization points toward the Referral Partner route. If your work spans these activities, describe it in the form so we can discuss the appropriate arrangement."
+  },
+  "solutions": {
+    "title": "Bring GriidAI to organizations",
+    "copy": "Help organizations apply geospatial AI to their work through professional services, implementation, integration, training, support, or local sales. This path is for consultancies, system integrators, geospatial service firms, and commercial partners with relevant customer relationships and delivery capability.",
+    "programs": [
+      {
+        "key": "solution_delivery",
+        "name": "Solution delivery",
+        "title": "Deliver expertise around the platform",
+        "copy": "If your strength is helping customers adopt technology, describe the services you can provide: use-case scoping, workflow development, integration, onboarding, training, or ongoing support. Tell us whether you want to deliver services independently or explore a closer collaboration with GriidAI."
+      },
+      {
+        "key": "reseller",
+        "name": "Reseller",
+        "title": "Carry the commercial relationship in your market",
+        "copy": "The Reseller route is for organizations prepared to manage the sales relationship and agreed responsibilities for local contracting, billing, first-line support, and renewals. It involves a deeper commercial and operational commitment than making an introduction."
+      }
+    ],
+    "value": [
+      "Explore how your market knowledge and customer expertise could combine with GriidAI. Technical enablement, joint opportunity development, marketing collaboration, and commercial arrangements are discussed according to the role, market and agreed scope.",
+      "You can express interest in services, reselling, or both. If you only want to introduce an opportunity and hand over the sale, select the Referral Partner route instead."
+    ]
+  },
+  "benefits": {
+    "title": "Explore the value of working together",
+    "copy": "A useful partnership starts with a clear contribution and the support needed to make it work. Depending on the participation route and agreed scope, a conversation with GriidAI can cover the following opportunities.",
+    "rows": [
+      [
+        "Product and technical guidance",
+        "Discuss the product access and technical guidance relevant to your contribution, learning activity, or customer engagement."
+      ],
+      [
+        "Learning and practical resources",
+        "Explore materials and guidance that could help you understand the platform and explain its use in your own context."
+      ],
+      [
+        "Recognition and visibility",
+        "Discuss opportunities to share relevant work, experience, or contributions with the wider community."
+      ],
+      [
+        "Collaboration and feedback",
+        "Connect around a defined project or activity and bring practical feedback into the conversation."
+      ],
+      [
+        "Business opportunities",
+        "For commercial routes, discuss how introductions, subscription recommendations, services, or resale could create value under agreed terms."
+      ]
+    ],
+    "qualification": "Benefits vary by route and agreement. Expressing interest does not automatically grant access, funding, partner status, publication, leads, or earnings."
+  },
+  "comparison": {
+    "title": "Which route fits what you want to do",
+    "copy": "Start with the activity you want to pursue. You can select more than one interest or ask us to help you choose.",
+    "rows": [
+      [
+        "Create a tool or reusable geospatial workflow",
+        "Contributors"
+      ],
+      [
+        "Teach, research, run a workshop, or explore an academic project",
+        "Education & Research"
+      ],
+      [
+        "Share expertise, mentor, or engage a community",
+        "Ambassador"
+      ],
+      [
+        "Recommend GriidAI through content and tracked links",
+        "Affiliate"
+      ],
+      [
+        "Introduce an organization with a relevant business need",
+        "Referral Partner"
+      ],
+      [
+        "Implement, integrate, train, or support customer use",
+        "Solution delivery"
+      ],
+      [
+        "Manage subscription sales and the local commercial relationship",
+        "Reseller"
+      ]
+    ]
+  },
+  "process": {
+    "title": "Start with a conversation",
+    "copy": "Tell us what you would like to contribute or achieve. The next steps depend on the path and the scope of the proposed relationship.",
+    "steps": [
+      [
+        "1 Express interest",
+        "Share your background, the path or paths that interest you, and a brief description of your idea or goals."
+      ],
+      [
+        "2 Discuss the fit",
+        "The GriidAI team reviews your inquiry and follows up about the relevant opportunity and any information needed."
+      ],
+      [
+        "3 Agree the scope",
+        "If there is a fit, clarify responsibilities, available support, participation requirements, and any applicable terms."
+      ],
+      [
+        "4 Begin the agreed activity",
+        "Move into the appropriate contribution review, collaboration, or onboarding process once the arrangements are agreed."
+      ]
+    ],
+    "note": "Submitting the form expresses interest; it does not confirm acceptance into a program."
+  },
+  "faqs": [
+    {
+      "id": "ecosystem-faq-1",
+      "question": "Can I participate as an individual or as an organization",
+      "answer": "Both can express interest. The appropriate route depends on the activity and the responsibilities involved. Educational, contributor, and community interests may come from individuals or organizations; reselling requires an appropriate commercial arrangement."
+    },
+    {
+      "id": "ecosystem-faq-2",
+      "question": "Can I select more than one path",
+      "answer": "Yes. Select all relevant interests and describe how they connect. Participation across programs is subject to the agreed rules; selecting multiple options does not create multiple reward entitlements."
+    },
+    {
+      "id": "ecosystem-faq-3",
+      "question": "Do I need to be a developer",
+      "answer": "No. Contributors may bring technical tools or analytical methods, while other paths focus on teaching, research, community participation, introductions, or customer services."
+    },
+    {
+      "id": "ecosystem-faq-4",
+      "question": "What is the difference between an Ambassador and an Affiliate",
+      "answer": "Ambassadors focus on knowledge, community contribution and feedback. Affiliates focus on tracked recommendations that lead to eligible paid subscriptions. Their participation and reward arrangements differ."
+    },
+    {
+      "id": "ecosystem-faq-5",
+      "question": "What is the difference between a Referral Partner and a Reseller",
+      "answer": "A Referral Partner introduces a qualified opportunity and hands over the sale. A Reseller takes on an agreed commercial relationship, including responsibilities such as billing, support and renewal."
+    },
+    {
+      "id": "ecosystem-faq-6",
+      "question": "Can I express interest in services without reselling",
+      "answer": "Yes. Select solution delivery and describe the implementation, integration, training, or support you would like to provide. The team can discuss whether there is a suitable collaboration route."
+    },
+    {
+      "id": "ecosystem-faq-7",
+      "question": "Do contributors automatically receive payment or publication",
+      "answer": "No. Submission of interest starts a conversation. Publication, verification, licensing and any commercial arrangements need to be discussed and agreed for the contribution."
+    },
+    {
+      "id": "ecosystem-faq-8",
+      "question": "Will I receive free access or financial support",
+      "answer": "Access, support and commercial benefits depend on the route and agreed terms. The interest form does not automatically grant free accounts, funding, commissions or other benefits."
+    },
+    {
+      "id": "ecosystem-faq-9",
+      "question": "Is the form a formal application or commitment",
+      "answer": "It is an expression of interest. Further information, review and agreements may be needed before participation begins. You do not need to submit financial documents, code, or customer records at this stage."
+    },
+    {
+      "id": "ecosystem-faq-10",
+      "question": "What if I am not sure which program fits",
+      "answer": "Choose Help me choose and tell us what you want to contribute or achieve. You can also describe an interest that does not fit the listed options."
+    }
+  ],
+  "final": {
+    "title": "Tell us how you would like to participate",
+    "copy": [
+      "Bring your expertise, community, ideas, or customer experience. Share what you have in mind and explore the right way to work with GriidAI.",
+      "Not sure where to start? Choose Help me choose in the form."
+    ]
+  },
+  "form": {
+    "title": "Express interest in the GriidAI ecosystem",
+    "copy": "Tell us a little about yourself and how you would like to participate. Select one or more interests, or choose Help me choose.",
+    "note": "This form starts a conversation. It does not confirm program acceptance or commit you to a partnership. Please do not include confidential customer information, proprietary code, or sensitive documents.",
+    "fields": [
+      [
+        "Full namefull_name",
+        "Required",
+        "Enter your name."
+      ],
+      [
+        "Email addressemail",
+        "Required",
+        "Use an email address where we can reach you. Personal and institutional addresses are accepted."
+      ],
+      [
+        "I am expressing interest asparticipant_type",
+        "Required",
+        "Individual; Organization or institution. One selection."
+      ],
+      [
+        "Organization or institutionorganization",
+        "Conditional",
+        "Required for Organization or institution; optional otherwise."
+      ],
+      [
+        "Role or area of workrole",
+        "Optional",
+        "For example, GIS specialist, educator, researcher, developer, or consultant."
+      ],
+      [
+        "Country or regioncountry",
+        "Required",
+        "Searchable country/region list; no automatic restriction inferred from country."
+      ],
+      [
+        "Which paths interest youpaths",
+        "Required",
+        "Select one or more paths, or Help me choose."
+      ],
+      [
+        "Specific interestsinterests",
+        "Optional",
+        "Shown for selected paths; multiple selections permitted."
+      ],
+      [
+        "What would you like to contribute or achievemessage",
+        "Required",
+        "Briefly describe your idea, experience, audience, project, or customer-facing work. Maximum 2,000 characters."
+      ],
+      [
+        "Website or relevant workprofile_url",
+        "Optional",
+        "One website, public profile, portfolio, or relevant example URL."
+      ],
+      [
+        "Permission to respondcontact_consent",
+        "Required unchecked checkbox",
+        "I agree that GriidAI may contact me about this expression of interest. I have read the Privacy Notice."
+      ]
+    ],
+    "paths": [
+      {
+        "key": "contributors",
+        "label": "Contributors",
+        "interests": [
+          {
+            "key": "tools",
+            "label": "Tools"
+          },
+          {
+            "key": "reusable_workflows",
+            "label": "Reusable workflows"
+          },
+          {
+            "key": "documentation",
+            "label": "Documentation"
+          },
+          {
+            "key": "other_contribution",
+            "label": "Other contribution"
+          }
+        ]
+      },
+      {
+        "key": "education_research",
+        "label": "Education & Research",
+        "interests": [
+          {
+            "key": "teaching_or_training",
+            "label": "Teaching or training"
+          },
+          {
+            "key": "research",
+            "label": "Research"
+          },
+          {
+            "key": "student_project",
+            "label": "Student project"
+          },
+          {
+            "key": "institutional_collaboration",
+            "label": "Institutional collaboration"
+          }
+        ]
+      },
+      {
+        "key": "community_growth",
+        "label": "Community & Growth",
+        "interests": [
+          {
+            "key": "ambassador",
+            "label": "Ambassador"
+          },
+          {
+            "key": "affiliate",
+            "label": "Affiliate"
+          },
+          {
+            "key": "referral_partner",
+            "label": "Referral Partner"
+          }
+        ]
+      },
+      {
+        "key": "solutions_resellers",
+        "label": "Solution & Reseller",
+        "interests": [
+          {
+            "key": "solution_delivery",
+            "label": "Solution delivery"
+          },
+          {
+            "key": "reseller",
+            "label": "Reseller"
+          }
+        ]
+      },
+      {
+        "key": "help_me_choose",
+        "label": "Help me choose",
+        "interests": []
+      }
+    ],
+    "states": {
+      "Submit button": "Send Expression of Interest",
+      "In progress": "Sending your interest…",
+      "Required name": "Enter your name.",
+      "Invalid email": "Enter a valid email address.",
+      "Required organization": "Enter your organization or institution.",
+      "Missing participant type": "Choose whether you are expressing interest as an individual or an organization.",
+      "Missing country": "Select your country or region.",
+      "Missing path": "Choose at least one path, or select Help me choose.",
+      "Missing message": "Tell us briefly what you would like to contribute or achieve.",
+      "Message limit": "Keep your response within 2,000 characters.",
+      "Invalid URL": "Enter a complete website address, such as https://example.com.",
+      "Missing consent": "Confirm that we may contact you about your interest.",
+      "Error summary": "Please check the highlighted fields.",
+      "Submission failure": "We could not confirm your submission. Your answers are still here. Please try again.",
+      "Success heading": "Thank you for your interest",
+      "Success body": "Your expression of interest has been received. The GriidAI team will review it and follow up using the email address you provided. Submission does not confirm acceptance into a program.",
+      "Success link": "Return to the Ecosystem"
+    },
+    "consentVersion": "ecosystem-interest-v1",
+    "sectionKeys": [
+      "hero",
+      "contributors",
+      "education_research",
+      "community_growth",
+      "solutions_resellers",
+      "help_me_choose",
+      "closing"
+    ]
+  }
+}

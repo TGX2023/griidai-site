@@ -1,0 +1,78 @@
+{
+  "channel": "https://www.youtube.com/@GriidAi",
+  "reviewedOn": "2026-10-21",
+  "scope": "Public titles and descriptions, not a claim of watching all videos or reviewing transcripts.",
+  "videos": [
+    {
+      "id": "Pv7vEOrWKSE",
+      "title": "AI-Assisted Site Suitability Modeling: Locating Sports Centers in Riyadh | GriidAI",
+      "url": "https://www.youtube.com/watch?v=Pv7vEOrWKSE",
+      "descriptionSha256": "f05ebb6da9066a44bb75cdac1053ec58213c0ee6aefab680fb99568a0bc0665f",
+      "usedBy": [
+        "sports-facility-site-selection"
+      ]
+    },
+    {
+      "id": "_W9bd9yMtQE",
+      "title": "Sea Level Rise Analysis in Minutes —No-Code GeoAI with GriidAi",
+      "url": "https://www.youtube.com/watch?v=_W9bd9yMtQE",
+      "descriptionSha256": "747012c1ea5a788d75fc05bcdf2bc54913c71d606701930d21ccef92485bf81a",
+      "usedBy": [
+        "sea-level-rise"
+      ]
+    },
+    {
+      "id": "8vB3U31Apqw",
+      "title": "Mapping 30 Years of Deforestation in 10 Minutes | GriidAi Workflows",
+      "url": "https://www.youtube.com/watch?v=8vB3U31Apqw",
+      "descriptionSha256": "4f0349f07fec921591b122bd327ad70e1af3cb9ee522bf418b6137e672fa3e5c",
+      "usedBy": [
+        "deforestation"
+      ]
+    },
+    {
+      "id": "l08ChdgS1LA",
+      "title": "Predicting Future Crop Viability Without Code | GriidAI Workflow",
+      "url": "https://www.youtube.com/watch?v=l08ChdgS1LA",
+      "descriptionSha256": "c6ee9775a553beb9799f7585d734732e4dc4627b2e05f69154dc2ace27487c56",
+      "usedBy": [
+        "future-crop-suitability"
+      ]
+    },
+    {
+      "id": "fP00kPIs1fk",
+      "title": "Mapping Urban Heat Risk Without Coding | GriidAI Workflow Demo",
+      "url": "https://www.youtube.com/watch?v=fP00kPIs1fk",
+      "descriptionSha256": "d99036212f1cb5cb56f2e92d5fd57cedc70c5ba6e779dad59ff77484164db42e",
+      "usedBy": [
+        "urban-heat-risk"
+      ]
+    },
+    {
+      "id": "9pA2xGsau5I",
+      "title": "Mapping Rooftop Solar Potential with Natural Language | GriidAI Workflow",
+      "url": "https://www.youtube.com/watch?v=9pA2xGsau5I",
+      "descriptionSha256": "00c0d7012506e104958dbb5ae5c8098dc6d8dbf249c57d10b7f85e90d79afe6a",
+      "usedBy": [
+        "rooftop-solar-potential"
+      ]
+    },
+    {
+      "id": "K9VMBoXYOGw",
+      "title": "Advanced Geospatial Analysis Without Coding | GriidAI Demo (Vector & Raster Workflows)",
+      "url": "https://www.youtube.com/watch?v=K9VMBoXYOGw",
+      "descriptionSha256": "f0320138a528bc9caae34da44bbab04e0a64a06e844522a673763e0ba320a7e5",
+      "usedBy": [
+        "vector-raster-analysis"
+      ]
+    },
+    {
+      "id": "GFartubhpuM",
+      "title": "From 200 clicks to 5 prompts. Zero friction",
+      "url": "https://www.youtube.com/watch?v=GFartubhpuM",
+      "descriptionSha256": "bb33e6b9a88eecf71c529c1ceb8bad6e6284300ed414ae45560552d418334081",
+      "usedBy": [],
+      "role": "Autoplay hub introduction only"
+    }
+  ]
+}

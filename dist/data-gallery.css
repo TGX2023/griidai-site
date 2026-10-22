@@ -1,0 +1,40 @@
+/* Uniform, compact product screenshots on the Data page. */
+.hub-data .data-product-figure{width:100%;max-width:420px;margin:26px auto;border:1px solid #c8d9ce;border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 16px 35px -35px #173c3e80;min-width:0}
+.hub-data .hub-hero-grid>.data-figure-hero{max-width:420px;width:100%;margin:0;justify-self:center}
+.hub-data .data-image-link{height:220px;display:flex;align-items:center;justify-content:center;padding:10px;position:relative;background:#f0f4f0;isolation:isolate}
+.hub-data .data-image-link img{display:block;width:100%;height:100%;object-fit:contain}
+.data-enlarge-label{position:absolute;right:9px;bottom:9px;background:#fcfcf8f5;border:1px solid #b6cfc2;border-radius:4px;box-shadow:0 2px 10px #173c3e18;padding:5px 8px;font-size:9px;color:var(--ink);line-height:1.5;pointer-events:none}
+.data-image-link:hover .data-enlarge-label{background:#fff;border-color:var(--teal)}
+.data-image-link:focus-visible{outline:3px solid #d58c33;outline-offset:-4px}
+.data-product-figure figcaption{display:flex;flex-direction:column;gap:4px;padding:14px 17px;min-height:84px;border-top:1px solid var(--line);background:#f4f7f1}
+.data-product-figure figcaption strong{font-size:12px;font-weight:500;color:var(--ink)}
+.data-product-figure figcaption>span{font-size:11px;color:var(--muted);line-height:1.7}
+.data-evidence-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);align-items:center;gap:80px}
+.data-evidence-copy{max-width:660px;min-width:0}
+.data-evidence-copy h2{font-size:clamp(30px,3.2vw,42px);line-height:1.18;margin-bottom:22px}
+.data-evidence-copy h3{font-size:28px;letter-spacing:-.6px;line-height:1.3;margin-bottom:18px}
+.data-evidence-copy p{font-size:14px;line-height:1.9}
+.hub-data .data-evidence-row>.data-product-figure{margin:0;justify-self:end}
+.data-readiness-checks{margin-top:40px}
+.data-export-rows>.data-evidence-row+.data-evidence-row{border-top:1px solid var(--line);padding-top:34px;margin-top:34px}
+.data-image-dialog{width:calc(100vw - 48px);max-width:1500px;max-height:calc(100dvh - 48px);padding:0;border:1px solid #c6d7cc;border-radius:8px;overflow:auto;background:var(--cream);color:var(--ink)}.data-image-dialog::backdrop{background:#102f36c9;backdrop-filter:blur(5px)}.data-viewer-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--cream);z-index:1}.data-viewer-toolbar h2{font-size:19px;letter-spacing:-.3px;margin:0;line-height:1.4}.data-viewer-actions{display:flex;align-items:center;gap:14px;flex-shrink:0}.data-viewer-actions button{min-width:44px;min-height:44px;border:1px solid #b9cfc0;background:transparent;color:var(--ink);border-radius:4px;padding:7px 12px;font-size:12px}.data-viewer-actions .data-viewer-close{font-size:25px;line-height:1}.data-viewer-stage{overflow:auto;padding:20px;background:#eaf0e9;max-height:72dvh;text-align:center;overscroll-behavior:contain}.data-viewer-stage img{display:block;width:auto;height:auto;max-width:100%;max-height:calc(72dvh - 40px);object-fit:contain;margin:0 auto}.data-viewer-stage.is-zoomed img{width:var(--image-width);max-width:none;max-height:none}.data-viewer-caption{padding:15px 22px;font-size:12px;color:var(--muted);margin:0;line-height:1.7}body:has(.data-image-dialog[open]){overflow:hidden}
+
+@media(max-width:1190px){.data-evidence-row{gap:40px}}
+@media(max-width:899px){.data-evidence-row{grid-template-columns:1fr;gap:24px}.hub-data .data-evidence-row>.data-product-figure{justify-self:start}.data-evidence-copy{max-width:700px}}
+@media(max-width:700px){
+  .hub-data .data-image-link{height:200px;padding:9px}
+  .data-product-figure figcaption{padding:13px 15px}
+  .hub-data .data-product-figure{margin-block:22px}
+  .hub-data .data-figure-hero{margin:0}
+  .data-evidence-copy h3{font-size:24px}
+  .data-evidence-copy p{font-size:13px}
+  .data-readiness-checks{margin-top:28px}
+  .data-image-dialog{width:calc(100vw - 16px);max-height:calc(100dvh - 24px)}
+  .data-viewer-toolbar{padding:12px;gap:12px;align-items:flex-start}
+  .data-viewer-toolbar h2{font-size:15px;padding-top:7px;max-width:190px}
+  .data-viewer-actions{gap:7px}
+  .data-viewer-actions button{font-size:10px;padding:6px 9px}
+  .data-viewer-stage{padding:10px;max-height:65dvh}
+  .data-viewer-stage img{max-height:calc(65dvh - 20px)}
+  .data-viewer-caption{padding:13px 15px;font-size:11px}
+}

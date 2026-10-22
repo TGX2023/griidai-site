@@ -1,0 +1,42 @@
+{
+  "mode": "built-in image_gen",
+  "intent": "generate",
+  "assets": [
+    {
+      "key": "inputs",
+      "prompt": "Use case: stylized-concept. Asset type: small editorial illustration for an enterprise geospatial website step. Style: refined isometric miniature paper-and-clay sculpture, simple shapes with subtle realistic surface texture, soft diffuse studio light, restrained muted sage green, deep teal and warm ivory. Plain warm off-white background (#f4f6ee). Square composition with a single compact centered subject and generous breathing room. Must stay immediately legible at only 128 pixels wide. No software screens, UI, text, numbers, logos, watermark, borders or typography. Subject: three slightly separated square geospatial source layers stacked together: a terrain contour sheet, a small aerial land-parcel map sheet, and a translucent boundary outline sheet. Communicate inspecting source spatial data before analysis. No magnifier or checkmark.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-4f558220-f23a-4b08-a4e6-641a413106f6.png",
+      "assets": [
+        "dist/assets/enterprise/review-inputs-v1.png",
+        "dist/assets/enterprise/review-inputs-v1-320.webp"
+      ]
+    },
+    {
+      "key": "method",
+      "prompt": "Use case: stylized-concept. Asset type: small editorial illustration for an enterprise geospatial website step. Style: refined isometric miniature paper-and-clay sculpture, simple shapes with subtle realistic surface texture, soft diffuse studio light, restrained muted sage green, deep teal and warm ivory. Plain warm off-white background (#f4f6ee). Square composition with a single compact centered subject and generous breathing room. Must stay immediately legible at only 128 pixels wide. No software screens, UI, text, numbers, logos, watermark, borders or typography. Subject: three small terrain-map tiles arranged in a short orderly connected sequence, with a slender teal path passing through all three and a small drafting compass beside the middle tile. Communicate a deliberate analytical method progressing through clear stages. No chart labels, no arrows with text.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-dfc6e103-5569-4551-94be-a0ab64e5ba6a.png",
+      "assets": [
+        "dist/assets/enterprise/review-method-v1.png",
+        "dist/assets/enterprise/review-method-v1-320.webp"
+      ]
+    },
+    {
+      "key": "validation",
+      "prompt": "Use case: stylized-concept. Asset type: small editorial illustration for an enterprise geospatial website step. Style: refined isometric miniature paper-and-clay sculpture, simple shapes with subtle realistic surface texture, soft diffuse studio light, restrained muted sage green, deep teal and warm ivory. Plain warm off-white background (#f4f6ee). Square composition with a single compact centered subject and generous breathing room. Must stay immediately legible at only 128 pixels wide. No software screens, UI, text, numbers, logos, watermark, borders or typography. Subject: one small topographic terrain-map tile under a substantial elegant teal-rimmed magnifying glass, with a tiny sculpted sage checkmark beside it. Communicate expert inspection and validation of spatial analysis results. Keep the map and magnifying lens clear and simple.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-38b1c943-0769-45e8-8de7-4ea7e6cdd23e.png",
+      "assets": [
+        "dist/assets/enterprise/review-validation-v1.png",
+        "dist/assets/enterprise/review-validation-v1-320.webp"
+      ]
+    },
+    {
+      "key": "output",
+      "prompt": "Use case: stylized-concept. Asset type: small editorial illustration for an enterprise geospatial website step. Style: refined isometric miniature paper-and-clay sculpture, simple shapes with subtle realistic surface texture, soft diffuse studio light, restrained muted sage green, deep teal and warm ivory. Plain warm off-white background (#f4f6ee). Square composition with a single compact centered subject and generous breathing room. Must stay immediately legible at only 128 pixels wide. No software screens, UI, text, numbers, logos, watermark, borders or typography. Subject: a finished gently folded thematic map with a clear teal highlighted spatial region, next to a short ivory report sheet carrying only a few abstract teal graphic lines and a small raised terrain inset. Communicate a reviewed spatial result ready to share. No letters or numbers.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-1d21418a-52d1-488d-9d6e-f4e5645ac6db.png",
+      "assets": [
+        "dist/assets/enterprise/review-output-v1.png",
+        "dist/assets/enterprise/review-output-v1-320.webp"
+      ]
+    }
+  ]
+}

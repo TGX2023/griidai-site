@@ -1,0 +1,102 @@
+{
+  "ecosystem": [
+    [
+      "Can I participate as an individual or as an organization?",
+      "Both can express interest. The appropriate route depends on the activity and the responsibilities involved. Educational, contributor, and community interests may come from individuals or organizations; reselling requires an appropriate commercial arrangement."
+    ],
+    [
+      "Can I select more than one path?",
+      "Yes. Select all relevant interests and describe how they connect. Participation across programs is subject to the agreed rules; selecting multiple options does not create multiple reward entitlements."
+    ],
+    [
+      "Do I need to be a developer?",
+      "No. Contributors may bring technical tools or analytical methods, while other paths focus on teaching, research, community participation, introductions, or customer services."
+    ],
+    [
+      "What is the difference between an Ambassador and an Affiliate?",
+      "Ambassadors focus on knowledge, community contribution and feedback. Affiliates focus on tracked recommendations that lead to eligible paid subscriptions. Their participation and reward arrangements differ."
+    ],
+    [
+      "What is the difference between a Referral Partner and a Reseller?",
+      "A Referral Partner introduces a qualified opportunity and hands over the sale. A Reseller takes on an agreed commercial relationship, including responsibilities such as billing, support and renewal."
+    ],
+    [
+      "Can I express interest in services without reselling?",
+      "Yes. Select solution delivery and describe the implementation, integration, training, or support you would like to provide. The team can discuss whether there is a suitable collaboration route."
+    ],
+    [
+      "Do contributors automatically receive payment or publication?",
+      "No. Submission of interest starts a conversation. Publication, verification, licensing and any commercial arrangements need to be discussed and agreed for the contribution."
+    ],
+    [
+      "Will I receive free access or financial support?",
+      "Access, support and commercial benefits depend on the route and agreed terms. The interest form does not automatically grant free accounts, funding, commissions or other benefits."
+    ],
+    [
+      "Is the form a formal application or commitment?",
+      "It is an expression of interest. Further information, review and agreements may be needed before participation begins. You do not need to submit financial documents, code, or customer records at this stage."
+    ],
+    [
+      "What if I am not sure which program fits?",
+      "Choose Help me choose and tell us what you want to contribute or achieve. You can also describe an interest that does not fit the listed options."
+    ]
+  ],
+  "data": [
+    [
+      "Can I use my own GIS data?",
+      "Yes, use supported file-based inputs. Check the current format record, accepted structure and applicable limits, then inspect the uploaded data before analysis."
+    ],
+    [
+      "Can GriidAI retrieve data for my study area?",
+      "For a supported source and access path, GriidAI can use the requested area and analytical context to retrieve relevant data. Check the provider’s available products and review the acquisition step."
+    ],
+    [
+      "Are all listed sources free?",
+      "No. Access may be public, account-based, credentialed or licensed, and may differ by dataset. The source record explains the relevant requirement."
+    ],
+    [
+      "What if my provider is not listed?",
+      "An absent record does not establish current GriidAI access. You can check compatible upload formats for data you already have, or contact us about the source."
+    ],
+    [
+      "Does upload support mean export support?",
+      "No. Upload, inspection, analysis and export are listed separately. Use the direction-specific matrix for the format you need."
+    ],
+    [
+      "Are Parquet and GeoParquet the same support claim?",
+      "No. Check their individual records. Support for one input or output path does not establish all directions for the other."
+    ],
+    [
+      "Can I upload a ZIP archive or File Geodatabase?",
+      "Check the current record for packaging and accepted contents. ZIP is a container, and a geodatabase can contain structures with different handling requirements."
+    ],
+    [
+      "Can I use Zarr or multidimensional data?",
+      "Check the supported version, store structure, variable and dimension handling in the current Zarr record. Do not assume every store or slice is compatible."
+    ],
+    [
+      "Is uploaded data automatically cleaned?",
+      "Do not assume automatic correction. Inspect the dataset, identify the preparation required, and review supported processing steps before using the revised result."
+    ],
+    [
+      "How large can my files be?",
+      "Applicable limits can depend on the current product plan, file structure and operation. Check the approved product limits before transferring a large dataset."
+    ],
+    [
+      "Can I connect an external database?",
+      "File upload does not establish a live database connection. Check separately confirmed integration options; do not assume PostGIS, Oracle Spatial or MySQL connectivity from file support."
+    ],
+    [
+      "Can I export maps and analytical data?",
+      "They are different output types. Check the matrix for analytical vector/raster formats and the separate map-output group for communication formats."
+    ],
+    [
+      "Can I reuse data in another session?",
+      "Where supported, session data sharing lets you reuse the intended inputs. Check the current behavior; it does not imply real-time co-editing."
+    ],
+    [
+      "Does Last verified mean the data is newly collected?",
+      "No. It records verification of the access or compatibility claim. Dataset observation dates, temporal coverage and update frequency are separate facts."
+    ]
+  ]
+}

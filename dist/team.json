@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Uday Patil",
+    "role": "CEO",
+    "image": "/assets/team/uday-patil-800.webp",
+    "linkedin": "https://www.linkedin.com/in/uday-patil-60652293/"
+  },
+  {
+    "name": "Mohamed Abdalhamid",
+    "role": "CCO",
+    "image": "/assets/team/mohamed-abdalhamid-800.webp",
+    "linkedin": "https://www.linkedin.com/in/abdalhamid"
+  },
+  {
+    "name": "Prem Kumar Thogiti",
+    "role": "Director – Geospatial Platform",
+    "image": "/assets/team/prem-kumar-thogiti-800.webp",
+    "linkedin": "https://www.linkedin.com/in/prem-thogiti/"
+  },
+  {
+    "name": "Madhavi Pore",
+    "role": "Associate Director – Programs & Operations",
+    "image": "/assets/team/madhavi-pore-800.webp",
+    "linkedin": "https://www.linkedin.com/in/madhavi-pore-07969310/"
+  },
+  {
+    "name": "Kishor Krishna",
+    "role": "Software Engineer",
+    "image": "/assets/team/kishor-krishna-800.webp",
+    "linkedin": "https://www.linkedin.com/in/kishorkrishnak/"
+  },
+  {
+    "name": "Abdalrahman Embaby",
+    "role": "GeoAI Engineer",
+    "image": "/assets/team/abdalrahman-embaby-20261008.jpeg",
+    "linkedin": "https://www.linkedin.com/in/abdalrahmanembaby/"
+  },
+  {
+    "name": "Pallavi",
+    "role": "Data Engineer",
+    "image": "/assets/team/pallavi-20261012.jpeg",
+    "linkedin": "https://www.linkedin.com/in/pallavi15/"
+  }
+]

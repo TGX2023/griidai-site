@@ -1,0 +1,14 @@
+{
+  "name": "griidai-local",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.cjs",
+    "build:data": "node scripts/build-hubs.cjs --data-only",
+    "build:content": "node scripts/build-hubs.cjs",
+    "build:pages": "node scripts/build-hubs.cjs && node scripts/build-pages.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

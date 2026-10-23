@@ -8,3 +8,4 @@ node_modules/
 !.env.example
 *.tar
 *.tar.gz
+.DS_Store

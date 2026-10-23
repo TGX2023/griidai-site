@@ -24,4 +24,5 @@ const server = http.createServer((req,res) => {
   } catch {res.writeHead(404);res.end('Page not found');}
 });
 server.on('error', error => {console.error(error.code === 'EADDRINUSE' ? `Port ${port} is busy. Set PORT to another number.` : error.message);process.exit(1);});
-server.listen(port,'127.0.0.1',()=>console.log(`GriidAi: http://localhost:${port}\nPress Ctrl+C to stop.`));
+const host = process.env.HOST || '127.0.0.1';
+server.listen(port,host,()=>console.log(`GriidAi: http://${host}:${port}\nPress Ctrl+C to stop.`));

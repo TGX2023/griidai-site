@@ -18,45 +18,26 @@ subscription notice, add-ons, or pricing disclaimer.
 
 ## Where to change the backend host, IP, or port
 
-The website is static, so public endpoint addresses are supplied as build-time
-environment variables. The HTML has placeholders; the local server and Pages
-build resolve them before serving or publishing. The variable names are:
+Use a single website environment variable: `PRICING_EMBED_URL`.
+The local server and static build resolve the HTML placeholder from this value.
+The browser uses the configured URL regardless of the website hostname,
+including localhost; it does not select a separate local backend address.
 
-```text
-PRICING_EMBED_URL
-PRICING_LOCAL_EMBED_URL
-```
+1. For development, run `npm run env:local` if `.env` is absent, then edit
+   `PRICING_EMBED_URL` in `.env`. Restart the website server after changes.
+2. For GitHub Pages, set `PRICING_EMBED_URL` under repository **Settings →
+   Secrets and variables → Actions → Variables**. The workflow passes it to
+   the build, overriding the tracked public `.env` default.
+3. For another hosting service, set the same variable in its build environment.
+   Rebuild and redeploy to change a static site's endpoint.
+4. Change the host/IP and explicit port in that one URL if the backend address
+   changes. Keep `/api/v1/public/pricing/embed?mode=public`.
 
-For local development, run `npm run env:local` to create `.env` from
-`.env.example`, then edit the values:
-
-```powershell
-npm run env:local
-```
-
-- `PRICING_EMBED_URL` is the production backend URL. Change its host/IP or
-  explicit port when the production API address changes.
-- `PRICING_LOCAL_EMBED_URL` is the developer's local backend URL. The current
-  address is `localhost:8001`; change the host/IP or `8001` if that backend
-  listens elsewhere.
-- Keep the endpoint path `/api/v1/public/pricing/embed` and query
-  `?mode=public` in both values. The build validates the route and mode.
-- `dist/pricing.js` selects the local URL only when the marketing site itself
-  is opened on localhost/loopback. All other hosts use the production URL.
-
-The website host currently runs locally at `http://localhost:3000`. This is
-separate from the backend port `8001`. If the website port changes, allow that
-new exact website origin in the backend configuration below. Do not put an API
-key or user session token in these public URLs; this endpoint is public catalog
-data. The real `.env` file is ignored by Git; commit only `.env.example`.
-
-For GitHub Pages, define `PRICING_EMBED_URL` and
-`PRICING_LOCAL_EMBED_URL` as repository **Settings → Secrets and variables →
-Actions → Variables**. They are public endpoint addresses, so Actions variables
-are sufficient; do not use secrets or hard-code them into HTML. The workflow
-passes both variables to the build, which injects them into the generated
-iframe attributes. If either variable is absent, the build fails with a clear
-message rather than publishing a broken pricing page.
+No other website pricing URL variable is required. The build fails clearly if
+this variable is missing or invalid. Only public URLs may be included in the
+tracked `.env` and `.env.example`; do not add tokens or credentials.
+The endpoint URL becomes visible in the final static HTML, as expected for a
+public iframe address. Source HTML contains only the build placeholder.
 
 ## Backend code and configuration
 
@@ -97,13 +78,10 @@ protection on other endpoints. Keep the public embed response free of
 account-specific state and cache it for 60 seconds with a 300-second
 `stale-while-revalidate` window. Do not expose secrets in this response.
 
-## Local and production behavior
+## Website hostname and backend address
 
-| Marketing site | Backend URL used | Required allowed origin |
-| --- | --- | --- |
-| Local site at `http://localhost:3000` | `PRICING_LOCAL_EMBED_URL` (example: `http://localhost:8001/api/v1/public/pricing/embed?mode=public`) | `http://localhost:3000` |
-| Local site at `http://localhost:4319` | `PRICING_LOCAL_EMBED_URL` | `http://localhost:4319` |
-| Production site at `https://www.griidai.com` | `PRICING_EMBED_URL` | `https://www.griidai.com` |
+Every website hostname uses `PRICING_EMBED_URL`. The backend must allow the
+website's exact origin, even when the website is served from localhost.
 
 GitHub Pages previews have a different origin. Add their exact origin to the
 allowlist only if the iframe should work there; `www.griidai.com` does not
@@ -132,6 +110,5 @@ Backend tests specified for this endpoint:
 ./.venv/bin/pytest tests/unit/api/test_public_pricing.py -q
 ```
 
-The public pricing URL is separate from the website's local port. The marketing
-site on `localhost:3000` can load a backend on `localhost:8001`; production uses
-the production API host configured above.
+The website port and backend address are independent. Changing the website
+port does not change the configured pricing endpoint.

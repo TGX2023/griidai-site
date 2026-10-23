@@ -100,12 +100,12 @@ YouTube videos and external links require an internet connection. Site images an
 Backend deployment and endpoint configuration instructions are documented in
 [`docs/pricing-backend-integration.md`](docs/pricing-backend-integration.md).
 
-Pricing URLs are supplied through `PRICING_EMBED_URL` and
-`PRICING_LOCAL_EMBED_URL`. For local work, run `npm run env:local` to create
-`.env` from `.env.example`, then edit the values as needed. `.env` is ignored by
-Git. For GitHub Pages builds, set both names as repository Actions variables;
-the workflow injects them into the static build. These are public endpoint URLs,
-not secrets, and are compiled into the generated site at build time.
+The pricing endpoint is supplied only through `PRICING_EMBED_URL`. For local
+work, run `npm run env:local` to create `.env` from `.env.example`. The tracked
+`.env` contains a public endpoint URL only. For Pages, set `PRICING_EMBED_URL`
+as a repository Actions variable and rebuild after changing it. The browser
+uses that configured URL on every hostname, including localhost; there is no
+automatic local URL selection.
 
 `dist/pricing/index.html` embeds the backend-rendered public catalog at
 `https://api.griidai.com/api/v1/public/pricing/embed?mode=public`.
@@ -120,16 +120,10 @@ its own origin, and top-level navigation following a user click. No authenticati
 token or account-specific pricing state is passed to it. Loading failures offer
 a retry and a link to platform pricing instead of displaying stale prices.
 
-When opened on localhost, 127.0.0.1 or IPv6 loopback, the pricing page instead
-uses its explicit `data-local-embed-url`:
-`http://localhost:8001/api/v1/public/pricing/embed?mode=public`.
-This address comes from the local GriidAi backend project. Local iframe loads
-include a cache-busting query parameter so reloading the page or selecting Try
-again reads fresh backend output. This is load-time refresh, not live push.
-The local API must be running a version that contains the shared-pricing route,
-and its iframe allow list must include the exact website origin (normally
-`http://localhost:3000`). Public deployments keep using the production URL;
-no API keys or session tokens are needed for this public endpoint.
+The same configured endpoint is used on localhost and public deployments.
+The backend must allow the exact website origin (for example
+`http://localhost:3000` for local website previews). No API keys or session
+tokens are needed for this public endpoint.
 
 The backend public template fixes `mode=public` to a light theme. The platform
 mode keeps its existing host-controlled theme. The corresponding backend template

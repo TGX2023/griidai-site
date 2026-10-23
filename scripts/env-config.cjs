@@ -37,14 +37,12 @@ function getPricingUrls(project) {
   loadEnvFile(project);
   return {
     production: validatePricingUrl('PRICING_EMBED_URL', process.env.PRICING_EMBED_URL),
-    local: validatePricingUrl('PRICING_LOCAL_EMBED_URL', process.env.PRICING_LOCAL_EMBED_URL),
   };
 }
 
 function renderPricingHtml(html, urls) {
   const rendered = html
-    .replaceAll('__PRICING_EMBED_URL__', urls.production.replace(/&/g, '&amp;').replace(/"/g, '&quot;'))
-    .replaceAll('__PRICING_LOCAL_EMBED_URL__', urls.local.replace(/&/g, '&amp;').replace(/"/g, '&quot;'));
+    .replaceAll('__PRICING_EMBED_URL__', urls.production.replace(/&/g, '&amp;').replace(/"/g, '&quot;'));
   if (rendered.includes('__PRICING_')) throw new Error('Unresolved pricing URL placeholder in pricing HTML.');
   return rendered;
 }

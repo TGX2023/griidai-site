@@ -28,7 +28,6 @@ jobs:
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
           PAGES_SITE_URL: ${{ steps.pages.outputs.base_url }}
           PRICING_EMBED_URL: ${{ vars.PRICING_EMBED_URL }}
-          PRICING_LOCAL_EMBED_URL: ${{ vars.PRICING_LOCAL_EMBED_URL }}
       - name: Upload website
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:

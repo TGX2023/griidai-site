@@ -6,9 +6,7 @@
 
   // The backend owns all plan presentation, prices, links and billing copy.
   // Keep this URL absolute so Pages packaging cannot prefix the API path.
-  const isLocalPreview = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname);
-  const localEmbedUrl = isLocalPreview && frame.dataset.localEmbedUrl;
-  const embedUrl = new URL(localEmbedUrl || frame.dataset.embedUrl);
+  const embedUrl = new URL(frame.dataset.embedUrl);
   const status = document.getElementById('pricing-embed-status');
   const message = document.getElementById('pricing-embed-message');
   const actions = document.getElementById('pricing-embed-actions');
@@ -51,8 +49,6 @@
     frame.style.height = '420px';
     timeout = window.setTimeout(showUnavailable, 15000);
     const requestUrl = new URL(embedUrl);
-    // Local QA should show fresh backend output rather than a cached catalog.
-    if (localEmbedUrl) requestUrl.searchParams.set('_preview', String(Date.now()));
     frame.src = requestUrl.toString();
   }
 

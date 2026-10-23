@@ -2,6 +2,7 @@ const config=require('./site-publication.cjs');
 const useCaseContent=require('./use-cases-content.json');
 const cases=useCaseContent.records;
 module.exports=function publicationRules(html,route){
+ if(route==='solutions')html=require('./render-solutions-use-cases.cjs')(html);
  if(!config.workflowsEnabled&&route==='solutions')html=html.replace(/<section\b[^>]*id="workflow-proof"[^>]*>[\s\S]*?<\/section>/g,'');
  const isUseCase=route==='use-cases'||route.startsWith('use-cases/'),isIndustry=route==='industries'||route.startsWith('industries/');
  // Shared navigation stays complete. Category cross-link exclusions apply
@@ -14,6 +15,8 @@ module.exports=function publicationRules(html,route){
   const pathname=url.pathname.replace(/^\/moh_web(?=\/)/,'');
   const ownOrigin=['https://site.invalid','https://griidai-homepage-review.griidai-9992.chatgpt.site','https://abdelrahmanembaby-oss.github.io'].includes(url.origin);
   if(!ownOrigin)return anchor;
+  // Platform's legacy multi-step workflow section was removed by the owner.
+  if(/^\/platform\/?$/.test(pathname)&&url.hash==='#examples')return anchor.replace(match[0],'href="/use-cases/"').replace(/Explore(?: spatial)? [Ww]orkflows/,'Explore Use Cases');
   if(!config.workflowsEnabled&&(/^\/workflows(?:\/|$)/.test(pathname)||/^#workflow-(?:proof|\d+)$/.test(url.hash)))return '';
   if(inContent&&isUseCase&&/^\/industries(?:\/|$)/.test(pathname))return '';
   if(inContent&&isIndustry&&/^\/use-cases(?:\/|$)/.test(pathname))return '';

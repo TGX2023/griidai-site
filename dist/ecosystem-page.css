@@ -9,3 +9,56 @@
 .eco-form-section .hub-small:empty{display:none}
 /* Repeat both comparison labels when the table reflows into stacked pairs. */
 @media(max-width:700px){.hub-ecosystem #choose-your-route tbody th:before{content:attr(data-label);display:block;font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:3px}}
+/* One cohesive AI illustration for the four participation paths. */
+.hub-ecosystem .eco-hero-ai{width:100%;max-width:580px;min-width:0;margin:0;justify-self:end;align-self:center}
+.eco-hero-ai img{display:block;width:100%;height:auto;object-fit:contain;border:0;border-radius:12px}
+@media(max-width:899px){.hub-ecosystem .eco-hero-ai{max-width:600px;justify-self:center}}
+@media(max-width:700px){.hub-ecosystem .eco-hero-ai{max-width:500px}}
+/* Reveal detailed participation content on demand. */
+.eco-content-disclosure{margin-top:24px;border:1px solid var(--line);border-radius:8px;background:var(--cream)}
+.eco-content-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 18px;min-height:48px;cursor:pointer;list-style:none;color:var(--teal);font-size:14px;line-height:1.5;font-weight:500}
+.eco-content-disclosure>summary::-webkit-details-marker{display:none}
+.eco-content-disclosure>summary>svg{flex-shrink:0;transition:transform .18s}
+.eco-content-disclosure[open]>summary>svg{transform:rotate(180deg)}
+.eco-content-disclosure[open]>summary{border-bottom:1px solid var(--line)}
+.eco-disclosure-content{padding:0 18px 8px}
+.eco-disclosure-content .eco-activities{margin-top:0}
+.eco-disclosure-content .eco-activities>article:first-child{border-top:0}
+.eco-guidance-callout{padding:20px 24px;margin:28px 0;background:var(--pale);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 10px 10px 0}
+.eco-guidance-callout p{color:var(--muted);font-size:14px;line-height:1.8}
+.eco-guidance-callout p:first-child{color:var(--teal);font-size:15px;margin-top:0}
+.eco-guidance-callout p:last-child{margin-bottom:0}
+.hub-ecosystem .eco-program-grid{align-items:start;gap:22px}
+.hub-ecosystem .eco-program-grid>article{padding:22px;background:var(--cream);border-radius:12px}
+.eco-program-grid>article>svg{margin-bottom:18px}
+.eco-program-grid h3{font-size:22px;line-height:1.35;margin-bottom:14px}
+.eco-program-grid p{font-size:14px;line-height:1.75}
+.eco-program-grid .eco-program-details{margin-top:18px;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+.eco-program-details>summary{padding:12px 0;min-height:44px;font-size:13px}
+.eco-program-details[open]>summary{border-bottom:0}
+.eco-program-details .eco-disclosure-content{padding:0}
+.eco-program-grid .eco-program-details p:last-child{padding:0;border:0;margin:0 0 4px}
+@media(max-width:767px){
+ .eco-content-disclosure>summary{font-size:14px;padding:14px}
+ .eco-disclosure-content{padding-inline:14px}
+ .eco-guidance-callout{padding:18px 20px}
+ .eco-guidance-callout p:first-child{font-size:14px}
+ .eco-program-details>summary{padding-inline:0}
+}
+/* Align the contribution and education diagrams beside their introductory copy. */
+.hub-ecosystem :is(#education-research,#contributors){padding-bottom:48px}
+.hub-ecosystem :is(#education-research,#contributors) .hub-section-heading{margin-bottom:24px}
+.hub-ecosystem :is(#education-research,#contributors) .eco-guidance-callout{margin-block:20px}
+@media(min-width:1000px){
+ .hub-ecosystem :is(#education-research,#contributors)>.container{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);column-gap:52px;align-items:start}
+ .hub-ecosystem :is(#education-research,#contributors) .hub-section-heading{grid-column:1;grid-row:1;max-width:none}
+ .hub-ecosystem :is(#education-research,#contributors) .eco-detail{display:contents}
+ .hub-ecosystem :is(#education-research,#contributors) .eco-detail>div{grid-column:1;grid-row:2}
+ .hub-ecosystem :is(#education-research,#contributors) .eco-diagram{grid-column:2;grid-row:1/span 2;align-self:start;margin-top:8px}
+ .hub-ecosystem :is(#education-research,#contributors) .eco-guidance-callout,.hub-ecosystem :is(#education-research,#contributors) .eco-actions{grid-column:1/-1}
+}
+@media(max-width:767px){
+ .hub-ecosystem :is(#education-research,#contributors){padding-bottom:40px}
+ .hub-ecosystem :is(#education-research,#contributors) .eco-detail{gap:18px}
+ .hub-ecosystem :is(#education-research,#contributors) .eco-guidance-callout{margin-block:18px}
+}

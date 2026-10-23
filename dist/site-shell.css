@@ -13,3 +13,5 @@
 
 .nav-submenu#solutions-submenu.nav-use-cases-only{grid-template-columns:1fr;width:310px}
 @media(max-width:1100px){.nav-submenu#solutions-submenu.nav-use-cases-only{width:100%}}
+/* Keep global navigation and dropdowns above sticky in-page section bars. */
+body>header{z-index:50}

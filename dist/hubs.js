@@ -26,7 +26,7 @@
   }
   window.addEventListener('hashchange',revealHash);revealHash();
   // Shared section navigation: sticky position, scroll tracking and mobile disclosure.
-  document.querySelectorAll('.hub-jump').forEach(jump=>{
+  document.querySelectorAll('.hub-jump, .platform-jump').forEach(jump=>{
     const root=jump.closest('main')||document.body,header=document.querySelector('body>header');
     const details=jump.querySelector('details'),summary=details?.querySelector('summary');
     const wide=matchMedia('(min-width:900px)');

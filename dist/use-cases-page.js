@@ -33,27 +33,6 @@
   }
  }
 
- const form=root.querySelector('#use-case-filters');
- if(form){
-  const search=form.querySelector('[name="q"]'),type=form.querySelector('[name="kind"]');
-  const cards=[...root.querySelectorAll('.uc-channel-card')],groups=[...root.querySelectorAll('[data-case-group]')];
-  const normalize=value=>value.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'');
-  const update=()=>{
-   const terms=normalize(search.value.trim()).split(/\s+/).filter(Boolean);
-   let count=0;
-   cards.forEach(card=>{const text=normalize(card.dataset.search);const match=terms.every(term=>text.includes(term))&&(!type.value||card.dataset.kind===type.value);card.hidden=!match;if(match)count++;});
-   groups.forEach(group=>group.hidden=![...group.querySelectorAll('.uc-channel-card')].some(card=>!card.hidden));
-   root.querySelector('#use-case-empty').hidden=count!==0;
-   form.querySelector('[role="status"]').textContent=`${count} of ${cards.length} use cases`;
-  };
-  form.hidden=false;
-  form.addEventListener('submit',e=>e.preventDefault());
-  form.addEventListener('input',update);form.addEventListener('change',update);
-  const clear=()=>{form.reset();search.focus();};
-  form.addEventListener('reset',()=>{search.value='';type.value='';update();});
-  root.querySelector('[data-clear-case-filters]').addEventListener('click',clear);
-  update();
- }
  root.addEventListener('click',e=>{
   const play=e.target.closest('[data-video-play]');
   if(play){

@@ -385,6 +385,16 @@ body:has(.hub-data)>header{background:var(--cream)}
 .hub-data #data-definition .hub-reading p:last-child{margin-bottom:0}
 .hub-data #data-definition .dp-data-route-visual{grid-column:2;grid-row:1/span 2;align-self:center;justify-self:center;width:88%;max-width:480px;margin:0;border:0;box-shadow:none;background:transparent}
 .hub-data #data-definition .dp-data-route-visual .data-image-link{display:block;height:auto;min-height:0;aspect-ratio:auto;padding:0;border:0;border-radius:14px;background:var(--cream);overflow:hidden}
+.hub-data .data-product-figure[data-illustration="data-families"],
+.hub-data [data-illustration="data-families"] .data-image-link{border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible}
+.hub-data .dp-format-guidance{max-width:76ch;margin:20px 0 28px}
+.hub-data .dp-format-guidance summary{display:flex;align-items:center;justify-content:space-between;gap:18px;width:max-content;min-height:44px;padding:10px 16px;border:1px solid var(--line);border-radius:6px;background:var(--pale);color:var(--teal);font-size:14px;font-weight:500;cursor:pointer;list-style:none}
+.hub-data .dp-format-guidance summary::-webkit-details-marker{display:none}
+.hub-data .dp-format-guidance summary:hover{border-color:var(--teal)}
+.hub-data .dp-format-guidance[open] summary svg{transform:rotate(180deg)}
+.hub-data .dp-format-guidance>div{padding-top:18px}
+.hub-data .dp-format-guidance p{font-size:14px;line-height:1.85;color:var(--muted);margin:0 0 14px}
+.hub-data .dp-format-guidance p:last-child{margin-bottom:0}
 .hub-data #data-definition .dp-data-route-visual img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
 .hub-data #data-definition .dp-data-route-visual figcaption{min-height:0;padding:12px 0 0;border:0;background:transparent}
 @media(max-width:1000px){

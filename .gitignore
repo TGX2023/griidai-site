@@ -3,6 +3,7 @@
 node_modules/
 .local-server*.log
 .pricing-source.html
+# Local environment files stay on this machine.
 .env
 .env.*
 !.env.example

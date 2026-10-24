@@ -101,8 +101,8 @@ Backend deployment and endpoint configuration instructions are documented in
 [`docs/pricing-backend-integration.md`](docs/pricing-backend-integration.md).
 
 The pricing endpoint is supplied only through `PRICING_EMBED_URL`. For local
-work, run `npm run env:local` to create `.env` from `.env.example`. The tracked
-`.env` contains a public endpoint URL only. For Pages, set `PRICING_EMBED_URL`
+work, run `npm run env:local` to create `.env` from `.env.example`. The local
+`.env` is ignored by Git; only `.env.example` is committed. For Pages, set `PRICING_EMBED_URL`
 as a repository Actions variable and rebuild after changing it. The browser
 uses that configured URL on every hostname, including localhost; there is no
 automatic local URL selection.

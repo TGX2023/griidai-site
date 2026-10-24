@@ -27,15 +27,17 @@ including localhost; it does not select a separate local backend address.
    `PRICING_EMBED_URL` in `.env`. Restart the website server after changes.
 2. For GitHub Pages, set `PRICING_EMBED_URL` under repository **Settings →
    Secrets and variables → Actions → Variables**. The workflow passes it to
-   the build, overriding the tracked public `.env` default.
+   the build without requiring a committed `.env` file.
 3. For another hosting service, set the same variable in its build environment.
    Rebuild and redeploy to change a static site's endpoint.
 4. Change the host/IP and explicit port in that one URL if the backend address
    changes. Keep `/api/v1/public/pricing/embed?mode=public`.
 
 No other website pricing URL variable is required. The build fails clearly if
-this variable is missing or invalid. Only public URLs may be included in the
-tracked `.env` and `.env.example`; do not add tokens or credentials.
+this variable is missing or invalid. The real `.env` is local and ignored by
+Git. Commit only `.env.example` with public example URLs. After cloning, run
+`npm run env:local` and edit `.env`, or supply `PRICING_EMBED_URL` directly
+in the server/build environment. Do not put tokens in the public iframe URL.
 The endpoint URL becomes visible in the final static HTML, as expected for a
 public iframe address. Source HTML contains only the build placeholder.
 

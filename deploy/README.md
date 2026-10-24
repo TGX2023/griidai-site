@@ -36,7 +36,7 @@ The image reference is saved separately for each target in `.last_build.prod.env
 
 - Bash, Node.js 18 or newer, `gcloud`, `git`, and `curl`.
 - An authenticated Google account with permissions to enable APIs, create Artifact Registry and service accounts, submit Cloud Build jobs, deploy Cloud Run, and manage domain mappings in both projects.
-- The website's root `.env` file, containing `PRICING_EMBED_URL` and `PRICING_LOCAL_EMBED_URL`.
+- A local root `.env` containing `PRICING_EMBED_URL` (create it with `npm run env:local` after cloning), or set that variable in the deployment shell. `.env` is ignored by Git and is not included in the image.
 
 The optional global load balancer scripts also require permissions to manage Compute Engine load-balancer resources and Certificate Manager resources.
 
@@ -78,7 +78,7 @@ ADC commands configure credentials for local applications that use Google client
 There are two different kinds of environment files:
 
 - `deploy/config.dev.env` (or its example fallback) configures the dev GCP project and service. Production uses `deploy/config.env` (or its example fallback).
-- The website's root `.env` contains `PRICING_EMBED_URL` and `PRICING_LOCAL_EMBED_URL`. The deploy script reads this same root file for both environments and injects only those two values into Cloud Run. It does not copy `.env` into the image or send other `.env` values to GCP.
+- The website's root `.env` contains `PRICING_EMBED_URL`. The deploy script reads this same root file for both environments and injects only that value into Cloud Run. It does not copy `.env` into the image or send other `.env` values to GCP.
 
 For dev, the deployment settings come from whichever config file is selected by the rule above, and the pricing URLs come from the root `.env`. The dev website uses the same FastAPI pricing endpoint as production unless `PRICING_EMBED_URL` is overridden in the environment when running `03_deploy_cloud_run.sh dev`.
 

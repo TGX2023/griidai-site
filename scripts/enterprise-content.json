@@ -4,8 +4,8 @@
     "sha256": "473199dc23970b0df4797afc01e0221b66bedb28b5b05e42f37bc6c9d56fce1f",
     "copyPolicy": "Final public copy, source tables and section order are retained. FAQ answers are written from the document’s answer directions, which do not provide final answers. Internal editing, verification and optimization instructions are not displayed. Public stack-positioning rows translate editorial directions into customer-facing wording without adding capabilities.",
     "visualPolicy": "Conceptual illustrations follow the user’s established visual direction. They are labeled and do not represent software captures or an executed enterprise workflow. Previously supplied Data-only screenshots remain confined to Data.",
-    "routePolicy": "Use existing published hub anchors for industry/workflow relationships; use the existing Contact Sales service for qualification. No unverified detail, security or API routes are created.",
-    "sectionOrderBasis": "Follow the numbered content chapters, with later owner exclusions. The owner removed the proof story (15), outputs (16), positioning (17), pilot path (18), stakeholder value (19), FAQs (21) and final CTA. The first eleven sections and the shared site footer remain."
+    "routePolicy": "Keep Enterprise content independent of industry/workflow cross-link cards as requested by the owner; use the existing Contact Sales service for qualification. No unverified detail, security or API routes are created.",
+    "sectionOrderBasis": "Follow the numbered content chapters, with later owner exclusions. The owner removed domain workflows / industry cards (14), the proof story (15), outputs (16), positioning (17), pilot path (18), stakeholder value (19), FAQs (21) and final CTA. The first ten sections and the shared site footer remain."
   },
   "hero": {
     "eyebrow": "Enterprise",
@@ -201,43 +201,6 @@
         ]
       ]
     }
-  },
-  "domains": {
-    "title": "Enterprise value becomes credible when the workflow is tied to a real decision.",
-    "records": [
-      {
-        "name": "AEC & Environmental Consulting",
-        "question": "Can teams standardize repeated environmental, site or project-screening analysis?",
-        "industryId": "aec-environmental",
-        "relatedWorkflows": [
-          "dem-hydrology-stream-network",
-          "ndvi-analysis"
-        ]
-      },
-      {
-        "name": "Climate Resilience & Physical Risk",
-        "question": "Which assets or locations require deeper review under sea-level, storm-surge or flood scenarios?",
-        "industryId": "climate-resilience",
-        "relatedWorkflows": [
-          "sea-level-rise",
-          "storm-surge"
-        ]
-      },
-      {
-        "name": "Utilities & Critical Infrastructure",
-        "question": "How do assets relate to proximity, terrain, hydrology, access and hazard context?",
-        "industryId": "utilities-critical-infrastructure",
-        "relatedWorkflows": [
-          "fire-station-coverage"
-        ]
-      },
-      {
-        "name": "Location & Portfolio Intelligence",
-        "question": "Can candidate sites or a portfolio be compared using the same reviewed spatial method?",
-        "industryId": "location-intelligence",
-        "relatedWorkflows": []
-      }
-    ]
   },
   "integrations": {
     "title": "Fit the workflow around your data environment - without inventing connectors.",
@@ -719,12 +682,6 @@
       "position": 10,
       "sourceSection": 13,
       "sourceLabel": "13 — TEAM AND COLLABORATION"
-    },
-    {
-      "key": "domains",
-      "position": 11,
-      "sourceSection": 14,
-      "sourceLabel": "14 — DOMAIN WORKFLOWS"
     }
   ]
 }

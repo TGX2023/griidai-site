@@ -1,6 +1,4 @@
 const content=require('./enterprise-content.json');
-const industryContent=require('./industries-content.json');
-const workflowContent=require('./workflows-content.json');
 const fs=require('node:fs');
 const path=require('node:path');
 
@@ -23,7 +21,6 @@ module.exports=function renderEnterprise(ui){
   const reuse=`<div class="ep-split"><div>${paragraphs(content.reuse.copy)}<ul class="ep-statement-list">${content.reuse.safeStatements.map(text=>`<li>${esc(text)}</li>`).join('')}</ul></div>${figure('reviewed-methods','Conceptual illustration of the same reviewed spatial method applied to different terrain study areas; not a workflow-builder interface or an executed analysis.')}</div><ol class="ep-reuse-flow">${content.reuse.stages.map(text=>`<li>${esc(text)}</li>`).join('')}</ol>`;
   const collaboration=`<div class="hub-reading">${paragraphs(content.reuse.collaboration.safeCopy)}<span class="ep-status">Planned</span>${paragraphs(content.reuse.collaboration.roadmapCopy)}</div>`;
   const data=`<div class="ep-split"><div>${paragraphs(content.data.copy)}<ul class="ep-statement-list">${content.data.messages.map(text=>`<li>${esc(text)}</li>`).join('')}</ul><div class="ep-section-links">${link('Data','/data/')}${link('Bring Your Own Data','/data/#bring-your-data')}${link('Supported Formats','/data/#supported-formats')}</div></div>${figure('workspace-context','Conceptual aligned elevation, feature and data layers for one area of interest; not a software workspace screenshot.')}</div>`;
-  const domains=`<div class="ep-domain-grid">${content.domains.records.map((domain,index)=>{const industry=industryContent.records.find(i=>i.id===domain.industryId&&i.publicationStatus==='Published');if(!industry)return '';return `<article class="ep-domain-card" data-industry="${industry.id}" data-position="${index+1}"><div class="ep-domain-copy"><h3>${esc(domain.name)}</h3>${paragraphs(domain.question)}${link(industry.cta,industry.url)}<div class="ep-related-workflows">${domain.relatedWorkflows.map(id=>{const w=workflowContent.records.find(w=>w.id===id&&w.publicationStatus==='Published'&&['Live','Beta','Example'].includes(w.status));return w?`<a class="text-link" data-workflow="${w.id}" href="/workflows/#${w.id}">${esc(w.name)} <span class="hub-tag">${esc(w.status)}</span><span aria-hidden="true">↗</span></a>`:'';}).join('')}</div></div><figure class="ep-domain-art">${image('industries',industry.image,'Conceptual illustration of '+industry.name+'; not a measured analytical result.')}<figcaption>Illustrative</figcaption></figure></article>`;}).join('')}</div><div class="ep-section-links">${link('Workflows','/workflows/')}</div>`;
   const integrationRows=content.integrations.records.filter(r=>r.publicationStatus==='Published').map(r=>[esc(r.name),`<span class="ep-status">${esc(r.publicStatus)}</span>`]);
   const integrations=`${table(['Integration area','Status'],integrationRows)}<p class="ep-requirements-copy">${esc(content.requirementsCopy)}</p>${sales(content.security.requirementsCTA,'requirements',false)}`;
   const approvedControls=content.security.records.filter(r=>r.publicApproved&&r.documentationUrl&&r.lastVerified);
@@ -37,7 +34,6 @@ module.exports=function renderEnterprise(ui){
     reuse: section('enterprise-reuse','',content.reuse.title,reuse),
     data: section('enterprise-data','',content.data.title,data,{pale:true}),
     collaboration: section('enterprise-collaboration','',content.reuse.collaboration.title,collaboration,{pale:true}),
-    domains: section('enterprise-domains','',content.domains.title,domains),
     integrations: section('enterprise-integrations','',content.integrations.title,integrations,{pale:true}),
     security: section('enterprise-security','',content.security.title,security)
   };
@@ -45,5 +41,5 @@ module.exports=function renderEnterprise(ui){
   // Keep their H2 sections separate instead of grouping them by the summary blueprint.
   const order=content.sectionOrder.map(item=>item.key);
   if(order.length!==Object.keys(sections).length||new Set(order).size!==order.length||order.some(key=>!Object.hasOwn(sections,key)))throw new Error('Invalid Enterprise document section order');
-  return order.map(key=>sections[key]+(key==='hero'?jump([['Operating Model','enterprise-operating-model'],['Human Review','enterprise-validation'],['Requirements','enterprise-integrations'],['Workflows','enterprise-domains']]):'')).join('');
+  return order.map(key=>sections[key]+(key==='hero'?jump([['Operating Model','enterprise-operating-model'],['Human Review','enterprise-validation'],['Requirements','enterprise-integrations']]):'')).join('');
 };

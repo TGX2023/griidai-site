@@ -5,14 +5,17 @@ module.exports=function publicationRules(html,route){
  if(route==='solutions')html=require('./render-solutions-use-cases.cjs')(html);
  if(!config.workflowsEnabled&&route==='solutions')html=html.replace(/<section\b[^>]*id="workflow-proof"[^>]*>[\s\S]*?<\/section>/g,'');
  const isUseCase=route==='use-cases'||route.startsWith('use-cases/'),isIndustry=route==='industries'||route.startsWith('industries/');
- // Shared navigation stays complete. Category cross-link exclusions apply
- // only inside page content, including each dedicated use-case page.
+ // Industry-page links are excluded site-wide, including shared navigation.
+ // Other category cross-link rules apply only inside page content.
  const mainStart=html.indexOf('<main'),mainEnd=html.indexOf('</main>');
  let result=html.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g,(anchor,offset)=>{
   const inContent=mainStart!==-1&&offset>mainStart&&offset<mainEnd;
   const match=anchor.match(/\bhref=(["'])(.*?)\1/);if(!match)return anchor;
   let url;try{url=new URL(match[2],'https://site.invalid/'+route+'/')}catch{return anchor;}
   const pathname=url.pathname.replace(/^\/moh_web(?=\/)/,'');
+  // Remove direct links, including relative and absolute deployment URLs.
+  // Preserve in-page jump links and image assets on the retained source page.
+  if(!config.industryLinksEnabled&&!match[2].startsWith('#')&&/^\/industries(?:\/|\.html$|$)/i.test(pathname))return '';
   const ownOrigin=['https://site.invalid','https://griidai-homepage-review.griidai-9992.chatgpt.site','https://abdelrahmanembaby-oss.github.io'].includes(url.origin);
   if(!ownOrigin)return anchor;
   // Platform's legacy multi-step workflow section was removed by the owner.

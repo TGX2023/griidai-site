@@ -1,0 +1,2658 @@
+{
+  "source": {
+    "filename": "GriidAI_Data_Page_Consolidated_Content_UX_Development_Specification_P0.docx",
+    "sha256": "06403086418a663d74f884d07aecfda66d4ca932d69b0493c84e5564c856613c",
+    "copyPolicy": "Public website copy, captions, FAQ answers and explanatory tables follow the document body chapter sequence, subject to the owner's later instructions. Internal development, evidence and launch-verification instructions are never displayed as marketing copy. Duplicate alternative headings are represented by the final section heading.",
+    "visualPolicy": "User-approved AI illustrations replace all Data-page product screenshots except Map Export. Eight conceptual illustrations are labeled Illustrative and do not establish product execution, source access or measured results. Map Export remains the original user-supplied screenshot.",
+    "chapters": [
+      {
+        "id": "10",
+        "title": "10. Data Catalog and workspace context"
+      },
+      {
+        "id": "11",
+        "title": "11. Supported data types"
+      },
+      {
+        "id": "12",
+        "title": "12. Supported formats and full compatibility treatment"
+      },
+      {
+        "id": "13",
+        "title": "13. Verified provider directory module"
+      },
+      {
+        "id": "14",
+        "title": "14. Provider publication and freshness logic"
+      },
+      {
+        "id": "15",
+        "title": "15. Dataset content model and inline dataset detail"
+      },
+      {
+        "id": "16",
+        "title": "16. Data discovery proof sequence"
+      },
+      {
+        "id": "17",
+        "title": "17. AOI, geography, time, and variable context"
+      },
+      {
+        "id": "18",
+        "title": "18. Data inside workflows"
+      },
+      {
+        "id": "19",
+        "title": "19. Trust, metadata, and provenance"
+      },
+      {
+        "id": "20",
+        "title": "20. User-provided data: review before analysis"
+      },
+      {
+        "id": "21",
+        "title": "21. Organize complex data work without losing the final result"
+      },
+      {
+        "id": "22",
+        "title": "22. Reuse and share data across sessions"
+      },
+      {
+        "id": "23",
+        "title": "23. Outputs and export: keep the Data page focused"
+      },
+      {
+        "id": "24",
+        "title": "24. Current capability matrix for the page team"
+      },
+      {
+        "id": "25",
+        "title": "25. Product-truth guardrails"
+      },
+      {
+        "id": "26",
+        "title": "26. CTA placement and conversion path"
+      },
+      {
+        "id": "27",
+        "title": "27. SEO ownership"
+      },
+      {
+        "id": "28",
+        "title": "28. GEO / AEO questions this page should answer"
+      },
+      {
+        "id": "29",
+        "title": "29. Internal linking architecture"
+      },
+      {
+        "id": "30",
+        "title": "30. CMS architecture for the Data Hub"
+      },
+      {
+        "id": "31",
+        "title": "31. Reusable design-system components"
+      },
+      {
+        "id": "32",
+        "title": "32. Required screenshot and visual asset plan"
+      },
+      {
+        "id": "33",
+        "title": "33. Desktop, tablet, and mobile behavior"
+      },
+      {
+        "id": "34",
+        "title": "34. Accessibility requirements"
+      },
+      {
+        "id": "35",
+        "title": "35. Performance requirements"
+      },
+      {
+        "id": "36",
+        "title": "36. Analytics and funnel signals"
+      },
+      {
+        "id": "37",
+        "title": "37. Technical SEO and rendering"
+      },
+      {
+        "id": "38",
+        "title": "38. Pre-launch verification matrix"
+      },
+      {
+        "id": "39",
+        "title": "39. Launch acceptance checklist"
+      },
+      {
+        "id": "40",
+        "title": "40. Source and claim basis"
+      },
+      {
+        "id": "41",
+        "title": "41. Final design and engineering handoff"
+      },
+      {
+        "id": "42",
+        "title": "42. One-page production wireframe summary"
+      },
+      {
+        "id": "01",
+        "title": "1. Executive implementation summary"
+      },
+      {
+        "id": "02",
+        "title": "2. Product truth and evidence hierarchy"
+      },
+      {
+        "id": "03",
+        "title": "3. Exact top-to-bottom page order"
+      },
+      {
+        "id": "04",
+        "title": "4. Global header and Data navigation"
+      },
+      {
+        "id": "05",
+        "title": "5. Hero section"
+      },
+      {
+        "id": "06",
+        "title": "6. Direct-answer block: What data can I use in GriidAi?"
+      },
+      {
+        "id": "07",
+        "title": "7. Two ways to start with data"
+      },
+      {
+        "id": "08",
+        "title": "8. Discover supported geospatial data"
+      },
+      {
+        "id": "09",
+        "title": "9. Bring your own geospatial data"
+      }
+    ],
+    "verificationRequirements": [
+      [
+        [
+          "Owner and topic",
+          "Required decision"
+        ],
+        [
+          "Data sources",
+          "Approve each public provider and dataset; confirm access, attribution, coverage and verification cadence"
+        ],
+        [
+          "Planetary Computer",
+          "Verify selected Sentinel-2, Landsat, NAIP, Copernicus DEM, ESA WorldCover and USDA CDL paths individually before naming them"
+        ],
+        [
+          "OSM and related services",
+          "Identify exact OSM/derived access and distinguish data provision from geocoding/routing services"
+        ],
+        [
+          "SRTM",
+          "Confirm current acquisition path, provider attribution and demonstration reproducibility"
+        ],
+        [
+          "USGS and climate candidates",
+          "Keep research candidates internal until verified product access; old connectivity findings are insufficient"
+        ],
+        [
+          "Formats",
+          "Approve all four support directions, notes and last verification per record"
+        ],
+        [
+          "Complex inputs",
+          "Verify Shapefile packaging, File GDB contents, GeoTIFF variants, Parquet/GeoParquet distinction, ZIP contents and Zarr versions/slices"
+        ],
+        [
+          "Upload and account limits",
+          "Confirm file, quota and processing constraints and actual app/auth destination"
+        ],
+        [
+          "Catalog and continuity",
+          "Approve folders, bulk actions, temporary outputs, metadata fields and session-sharing wording"
+        ],
+        [
+          "Legal and security",
+          "Approve storage/access/deletion/model-training wording if published; verify policy links"
+        ],
+        [
+          "Web and SEO",
+          "Approve route migration based on actual deployed inventory; update shared references"
+        ]
+      ],
+      [
+        [
+          "Additional check",
+          "Owner",
+          "Required decision"
+        ],
+        [
+          "Folder upload",
+          "Platform",
+          "Browser/platform behavior and exact current controls"
+        ],
+        [
+          "Upload conflict handling",
+          "Platform",
+          "How duplicate names, replacement and retained assets behave"
+        ],
+        [
+          "Metadata and inspection",
+          "Platform / GIS",
+          "Actual fields, row/map selection and raster statistics available"
+        ],
+        [
+          "Zarr output of ingest",
+          "Platform / GIS",
+          "Accepted stores/slices, resulting asset type and downstream compatibility"
+        ],
+        [
+          "Complex format details",
+          "GIS / Platform",
+          "Every constraint in chapter 12; no inferred parity"
+        ],
+        [
+          "Optional rooftop proof",
+          "GIS / Product",
+          "Inputs, audit, derived fields and screening limitations"
+        ],
+        [
+          "Sample assets",
+          "Product / Legal",
+          "Safe data, rights and authentic same-dataset sequence"
+        ],
+        [
+          "Historical candidates",
+          "Data Lead",
+          "Recheck IMERG, NEX-GDDP-CMIP6, ERA5-Land, NASADEM, GloFAS, GFM and Frost before publication"
+        ]
+      ]
+    ],
+    "mediaRequirements": [
+      [
+        [
+          "ID",
+          "Required capture or design state"
+        ],
+        [
+          "CD01",
+          "Real catalog overview with uploaded and acquired data"
+        ],
+        [
+          "CD02",
+          "Upload state and matching catalog/map result"
+        ],
+        [
+          "CD03",
+          "Vector attribute table, selection and layer helper"
+        ],
+        [
+          "CD04",
+          "Raster metadata including verified CRS/resolution/NoData fields"
+        ],
+        [
+          "CD05",
+          "Provider directory card, expansion, filters, empty and failure states"
+        ],
+        [
+          "CD06",
+          "Dataset rows and source attribution/access notes"
+        ],
+        [
+          "CD07",
+          "Desktop compatibility matrix and mobile cards"
+        ],
+        [
+          "CD08",
+          "Format notes and separate map-output group"
+        ],
+        [
+          "CD09",
+          "Miami AOI, SRTM request, plan, acquired raster and slope/aspect"
+        ],
+        [
+          "CD10",
+          "Building upload, selected feature, 50 m buffer plan/result and intersection"
+        ],
+        [
+          "CD11",
+          "GeoTIFF raster output and vector export menu"
+        ],
+        [
+          "CD12",
+          "Temporary outputs, organization and verified reuse/sharing"
+        ],
+        [
+          "CD13",
+          "Optional verified Google Drive/composer import"
+        ],
+        [
+          "CD14",
+          "Optional verified Zarr or File GDB ingest details"
+        ],
+        [
+          "CD15",
+          "Retained rooftop-solar screening proof with input audit"
+        ],
+        [
+          "CD16",
+          "Mobile anchor landing, disclosure and screenshot expansion states"
+        ]
+      ],
+      [
+        [
+          "Capture group",
+          "Required states"
+        ],
+        [
+          "Upload",
+          "Browse and verified folder selection; drag/drop; progress; processing; failure; uploaded asset on map; current mobile uploader if shown"
+        ],
+        [
+          "Inspection",
+          "Vector fields and synchronized selection where verified; raster/DSM statistics and metadata; exact layer helper selection"
+        ],
+        [
+          "Review and output",
+          "Implementation plan using that layer; approval/execution state; buffer/intersection; output export/continuation"
+        ],
+        [
+          "Provider directory",
+          "Desktop and mobile; access badges; status/date; source-to-dataset and dataset-to-workflow relations; no results; outage; official attribution"
+        ],
+        [
+          "Formats",
+          "Desktop matrix/mobile cards; direction distinction; expanded restrictions; no match; separate container and map-output groups"
+        ],
+        [
+          "Rooftop alternative",
+          "Pre-analysis audit plus real building-level result/table; not just an illustrative rooftop image"
+        ],
+        [
+          "Optional media",
+          "Upload-to-result clip 25–40 seconds; directory-to-workflow clip 20–30 seconds; each with poster, captions and textual equivalent"
+        ]
+      ]
+    ],
+    "evidence": {
+      "formats": [
+        [
+          "Shapefile",
+          "Vector",
+          "Demonstrated/current",
+          "Demonstrated",
+          "Keep packaging/sidecar rules in Notes if required by launch ingest."
+        ],
+        [
+          "GeoJSON",
+          "Vector",
+          "Demonstrated/current",
+          "Demonstrated",
+          "Suitable for vector exchange where geometry/fields are valid."
+        ],
+        [
+          "FlatGeobuf",
+          "Vector",
+          "Demonstrated/current",
+          "Demonstrated",
+          "Do not add browser-streaming claims unless separately verified."
+        ],
+        [
+          "KML",
+          "Vector",
+          "Demonstrated/current",
+          "Demonstrated",
+          "Treat as supported spatial exchange; exact geometry/style handling needs QA."
+        ],
+        [
+          "File Geodatabase",
+          "Geodatabase",
+          "Demonstrated/current",
+          "Not claimed",
+          "Verify folder/packaging and supported dataset types before public notes."
+        ],
+        [
+          "GeoTIFF",
+          "Raster",
+          "Demonstrated/current",
+          "Current inventory",
+          "Primary raster compatibility proof; GeoTIFF details are included in the format notes on this page."
+        ],
+        [
+          "CSV",
+          "Tabular / output",
+          "Demonstrated/current",
+          "Demonstrated",
+          "Spatial use depends on fields/geometry/context; do not imply every CSV is spatial."
+        ],
+        [
+          "Parquet",
+          "Tabular",
+          "Demonstrated/current",
+          "Not claimed",
+          "Keep separate from GeoParquet unless product intentionally unifies labels."
+        ],
+        [
+          "GeoParquet",
+          "Vector analytical output",
+          "Not claimed",
+          "Demonstrated",
+          "Do not present as upload support without launch confirmation."
+        ],
+        [
+          "Zarr",
+          "Multidimensional",
+          "Demonstrated/current",
+          "Not claimed",
+          "Version, slicing and dimension behavior must be launch-verified."
+        ]
+      ],
+      "containersAndMaps": [
+        [
+          "ZIP container",
+          "Demonstrated packaged upload",
+          "Accepted contents and packaging must be verified; not an analytical dataset type"
+        ],
+        [
+          "PNG and JPEG",
+          "Demonstrated map exports",
+          "Communication outputs, not proof of analytical raster import/export"
+        ],
+        [
+          "PDF",
+          "Demonstrated map document export",
+          "Map/report communication, not analytical GIS interchange"
+        ]
+      ]
+    },
+    "missingCaptureGroups": [
+      {
+        "requirement": "Miami AOI and actual SRTM acquisition source/plan/catalog/slope-aspect sequence",
+        "status": "Conceptual illustration supplied under explicit user override; real proof still unverified"
+      },
+      {
+        "requirement": "Building footprints selection, 50 m buffer plan, execution and intersection result",
+        "status": "Conceptual illustration supplied under explicit user override; real proof still unverified"
+      },
+      {
+        "requirement": "Layer helper, vector row/map selection and readable CRS/resolution fields",
+        "status": "Retained capture requirement; not fabricated"
+      },
+      {
+        "requirement": "Upload progress, preparing, failure and same-dataset result",
+        "status": "Retained capture requirement; not fabricated"
+      },
+      {
+        "requirement": "Verified session sharing/copy",
+        "status": "Conceptual illustration supplied under explicit user override; real proof still unverified"
+      },
+      {
+        "requirement": "GeoTIFF export and vector export menus for the demonstrated workflow",
+        "status": "Retained capture requirement; not fabricated"
+      }
+    ],
+    "optionalRooftop": {
+      "copy": "Combine building footprints and a digital surface model in a reviewed rooftop-screening workflow. Check spatial overlap, CRS, resolution, dimensions and NoData before processing, then inspect building-level summaries and sanity checks. Use the results to identify buildings that may warrant closer engineering review.",
+      "requirements": [
+        [
+          "Multiple data types",
+          "Vector building footprints + raster DSM."
+        ],
+        [
+          "Pre-analysis audit",
+          "CRS, spatial overlap, resolution, dimensions, NoData and data type are inspected."
+        ],
+        [
+          "Human review",
+          "Implementation plans are reviewed before processing."
+        ],
+        [
+          "Derived output",
+          "Building attributes receive summarized screening values after spatial/raster processing."
+        ],
+        [
+          "Validation",
+          "Sanity checks are part of the sequence rather than an afterthought."
+        ]
+      ],
+      "selectedForLaunch": false
+    },
+    "migration": {
+      "newDetailRoutes": false,
+      "aliases": {
+        "/data/providers/": "/data/#data-sources",
+        "/data/upload/": "/data/#bring-your-data",
+        "/data/formats/": "/data/#supported-formats"
+      },
+      "policy": "No legacy Data marketing subpages exist in the deployed inventory; do not create redirect stubs."
+    },
+    "routePolicy": "Reuse published /spatial-analysis/ and /contact-sales.html destinations. Unverified workflow details use a clearly labeled library link. Retain the original provider/upload/format migration mapping without creating unlaunched subpages.",
+    "handoff": {
+      "capabilityMatrix": [
+        [
+          "Area",
+          "Inventory / demo evidence",
+          "Launch handling"
+        ],
+        [
+          "Data Catalog",
+          "Core Platform",
+          "Current after environment verification"
+        ],
+        [
+          "File upload",
+          "Core Platform",
+          "Current after format verification"
+        ],
+        [
+          "External data sources",
+          "Core Platform",
+          "Provider-specific claims require verification"
+        ],
+        [
+          "Planetary Computer enrichment",
+          "Release v1",
+          "Verify datasets/provider access before featuring"
+        ],
+        [
+          "File GDB import",
+          "Release v2",
+          "Verify current upload UX"
+        ],
+        [
+          "Google Drive import",
+          "Release v3",
+          "Verify before public mention"
+        ],
+        [
+          "Inline composer upload",
+          "Release v3",
+          "Verify before screenshot"
+        ],
+        [
+          "Zarr v2/v3 upload",
+          "Release v3",
+          "Verify limits/UX before detail claim"
+        ],
+        [
+          "Semantic raster/vector metadata",
+          "Release v3.5",
+          "Verify launch build"
+        ],
+        [
+          "Upload conflict handling",
+          "Release v3.5",
+          "Detail belongs in the own-data module"
+        ],
+        [
+          "Expanded OSM/network/geocoding providers",
+          "Release v3.5",
+          "Classify correctly; not all belong in Data Provider directory"
+        ],
+        [
+          "Share & continue sessions",
+          "Release v3.5",
+          "Verify exact behavior before public copy"
+        ]
+      ],
+      "uploadStateBehavior": [
+        [
+          "Product state",
+          "Behavior retained"
+        ],
+        [
+          "Idle",
+          "Browse files equivalent to drag-and-drop; verified folder options only"
+        ],
+        [
+          "Selected",
+          "Safe file name, type and size; remove option; never expose local file path"
+        ],
+        [
+          "Uploading",
+          "File-specific progress and accessible announcements"
+        ],
+        [
+          "Processing",
+          "Distinct Preparing data state while parsing continues"
+        ],
+        [
+          "Complete",
+          "Dataset appears in catalog with View on map or Inspect data where applicable"
+        ],
+        [
+          "Failed",
+          "Plain-language reason, retry/remove option and safe diagnostic reference if available"
+        ]
+      ],
+      "uploadRecovery": [
+        [
+          "Issue",
+          "Guidance to preserve"
+        ],
+        [
+          "Unsupported format",
+          "Explain the recognized extension and link to /data/#supported-formats"
+        ],
+        [
+          "Unreadable/corrupt file",
+          "Explain parse failure and offer retry or re-export guidance"
+        ],
+        [
+          "Missing companion content",
+          "Show verified packaging requirements for the relevant format"
+        ],
+        [
+          "Size or quota",
+          "Explain the applicable current limit and next action before a long transfer where technically possible"
+        ],
+        [
+          "Cloud-import authentication",
+          "Reconnect/retry inside the product without exposing credentials"
+        ],
+        [
+          "Processing failure",
+          "Offer safe retry/support route; do not expose stack traces"
+        ]
+      ],
+      "productErrorMicrocopy": [
+        [
+          "State",
+          "Copy pattern",
+          "Action"
+        ],
+        [
+          "Unsupported format",
+          "This file type is not supported by this upload path. Check supported formats.",
+          "Check formats"
+        ],
+        [
+          "Unreadable file",
+          "We could not read this file. Try again or export a new copy from your source application.",
+          "Retry / Remove"
+        ],
+        [
+          "Missing components",
+          "This upload is missing required companion files. Check the packaging instructions for this format.",
+          "View format notes"
+        ],
+        [
+          "Limit exceeded",
+          "This file exceeds the applicable limit of {approved_limit}. Choose a smaller supported input or review your plan limits.",
+          "Review limits"
+        ],
+        [
+          "Cloud authentication",
+          "We could not access this file from your connected account. Reconnect and try again.",
+          "Reconnect"
+        ],
+        [
+          "Processing failure",
+          "We could not finish preparing this dataset. Try again, or contact support with reference {safe_reference}.",
+          "Retry / Contact support"
+        ]
+      ],
+      "complexFormatVerification": [
+        [
+          "Format",
+          "Exact verification scope"
+        ],
+        [
+          "Shapefile",
+          "ZIP versus folder versus selected components; required/optional sidecars; encoding; field names; mixed or multilayer packaging"
+        ],
+        [
+          "GeoJSON",
+          "Accepted geometry and fields; CRS interpretation; size and encoding limits"
+        ],
+        [
+          "FlatGeobuf",
+          "Input/output paths independently; no streaming or speed claims without measurements"
+        ],
+        [
+          "KML",
+          "Feature, style, network-link, 3D and KML/KMZ distinctions"
+        ],
+        [
+          "GeoTIFF",
+          "Bands, data types, compression, COG behavior, size, projection, metadata fields and export variants"
+        ],
+        [
+          "File Geodatabase",
+          "Versions, feature-class selection, tables/rasters, domains, subtypes, attachments, relationships, folder/packaging and limits"
+        ],
+        [
+          "CSV",
+          "Coordinates or spatial relationships, field semantics, data types and export behavior"
+        ],
+        [
+          "Parquet / GeoParquet",
+          "Distinct parser and output contracts; geometry/CRS handling when applicable"
+        ],
+        [
+          "Zarr",
+          "v2/v3 and accepted layouts; chunks; variable/dimension selection; slicing/reduction; ingest result; downstream operations; export separately"
+        ],
+        [
+          "ZIP",
+          "Accepted contents, compound-file expectations and unsupported mixed contents"
+        ]
+      ],
+      "datasetSchema": [
+        [
+          "Field",
+          "Purpose"
+        ],
+        [
+          "dataset_name and slug",
+          "Official or approved identity; stable inline anchor if needed"
+        ],
+        [
+          "provider",
+          "Relation to the actual source organization/service"
+        ],
+        [
+          "description and data_type",
+          "What the product represents"
+        ],
+        [
+          "variables / bands / themes",
+          "Available content and meaning"
+        ],
+        [
+          "resolution / scale",
+          "Meaningful spatial resolution or scale"
+        ],
+        [
+          "spatial_coverage",
+          "Geographic scope"
+        ],
+        [
+          "temporal_coverage",
+          "Observation or product time range"
+        ],
+        [
+          "update_frequency",
+          "Refresh cadence when known"
+        ],
+        [
+          "license / access_method",
+          "Usage and access requirements"
+        ],
+        [
+          "availability",
+          "Current approved product state"
+        ],
+        [
+          "supported_operations",
+          "Verified relevant downstream actions"
+        ],
+        [
+          "source_url / attribution",
+          "Official provenance"
+        ],
+        [
+          "last_verified",
+          "Dataset-specific check when provider-level verification is insufficient"
+        ],
+        [
+          "publication_status and content_owner",
+          "Editorial governance"
+        ]
+      ],
+      "cmsSchema": [
+        [
+          [
+            "Record",
+            "Required groups"
+          ],
+          [
+            "Provider",
+            "Name, slug, official URL, logo/alt, provider_type, description, data_types, geographic/temporal summary, access_type, integration_status, public label, attribution, license notes, dataset/workflow relations, last_verified, owner, publication status"
+          ],
+          [
+            "Dataset",
+            "Name, provider relation, description, type, variables, resolution/scale, spatial/temporal coverage, update frequency, access/license, availability, supported-operation context, source URL, last_verified, publication status"
+          ],
+          [
+            "Format",
+            "Name, slug, aliases/extensions, family, upload_status, preview_status, analysis_status, export_status, support_notes, release dependency, last_verified, related workflows, owner, publication status"
+          ],
+          [
+            "Verification",
+            "verified_by, method, result, next_review_date and approved stale policy; internal only"
+          ],
+          [
+            "Page and CTA",
+            "Editorial copy, stable section IDs, publication status, owner, SEO fields, asset references and centralized action destinations"
+          ],
+          [
+            "Placement",
+            "page_key=data, section_key, entity_id, display_order, enabled; no duplicated featured_data_hub booleans across templates"
+          ]
+        ],
+        [
+          [
+            "Record",
+            "Required detail beyond identity"
+          ],
+          [
+            "Provider",
+            "short_description (110–160 characters), full_description for inline panel, provider_type, controlled data_types, structured coverage + summary, access enum, internal integration_status, public_status_label, attribution, license notes, dataset/workflow relations, last_verified, verified_by, owner, publication status"
+          ],
+          [
+            "Dataset",
+            "Fields in chapter 15, including variable/scale/time semantics; explicit source and workflow relations"
+          ],
+          [
+            "Format",
+            "upload_status, preview_status, analysis_status, export_status, direction-specific restrictions, product_version, last_verified, owner, aliases/extensions, publication status"
+          ],
+          [
+            "Placement",
+            "Stable entity IDs with page_key and section_key; editorial ordering separate from eligibility"
+          ],
+          [
+            "Verification",
+            "Method, result, next review, stale policy and status-change log; private only"
+          ],
+          [
+            "Page configuration",
+            "SEO metadata, CTAs, anchor names, legal content references and media versions"
+          ]
+        ],
+        [
+          [
+            "Content",
+            "Source of truth"
+          ],
+          [
+            "Hero, journey and readiness explanation",
+            "Editorial page content"
+          ],
+          [
+            "Provider and dataset facts",
+            "Maintained related CMS records"
+          ],
+          [
+            "Format directions and notes",
+            "Central Format records"
+          ],
+          [
+            "Workflow examples",
+            "Published Workflow relationships with verified product state"
+          ],
+          [
+            "Plan and upload limits",
+            "Approved product/commercial configuration"
+          ],
+          [
+            "Privacy and security statements",
+            "Managed Legal-approved text"
+          ],
+          [
+            "Signup and product handoff",
+            "Shared destination configuration"
+          ],
+          [
+            "Screenshots and captions",
+            "Approved media registry with version, alt text and evidence source"
+          ]
+        ]
+      ],
+      "providerPublicationRules": [
+        [
+          [
+            "Internal condition",
+            "Public rule"
+          ],
+          [
+            "Live and verified",
+            "Eligible for Available after editorial approval"
+          ],
+          [
+            "Live with credentials",
+            "Available plus credential/account requirement; access is separate from integration status"
+          ],
+          [
+            "Beta and verified",
+            "Public only with Product approval and explicit Beta label"
+          ],
+          [
+            "Adapter or canary ready",
+            "Hidden until end-to-end product access is verified"
+          ],
+          [
+            "Candidate",
+            "Internal only"
+          ],
+          [
+            "Blocked or unavailable",
+            "Remove from selectable live sources; optionally retain an approved outage explanation for a previously public record"
+          ],
+          [
+            "Retired",
+            "Remove active directory presence and update linked evidence"
+          ]
+        ],
+        [
+          [
+            "Situation",
+            "Recommended response"
+          ],
+          [
+            "Short outage, integration otherwise valid",
+            "Keep page/card if Data team approves; add non-alarming temporary availability note only when useful"
+          ],
+          [
+            "Credential model changed",
+            "Update access badge/instructions immediately; reverify"
+          ],
+          [
+            "Dataset removed but provider remains",
+            "Remove/retire dataset relation; keep provider if other verified data remains"
+          ],
+          [
+            "Integration no longer supported",
+            "Remove from directory and mark Retired internally"
+          ],
+          [
+            "Indexed provider detail page retired",
+            "Return 301 to closest useful Data/Provider parent when a strong substitute exists, otherwise 410 when appropriate; SEO owner decides"
+          ]
+        ]
+      ],
+      "claimGuardrails": [
+        [
+          "Claim area",
+          "Rule"
+        ],
+        [
+          "Source breadth",
+          "Supported, verified paths only; not all data on the web or every provider"
+        ],
+        [
+          "Marketplace",
+          "Data hub/directory terminology; no commerce claim"
+        ],
+        [
+          "Scientific suitability",
+          "Human review remains necessary; no automatically best dataset promise"
+        ],
+        [
+          "Formats",
+          "Direction-specific records; no any-file or universal converter promise"
+        ],
+        [
+          "Scale",
+          "Approved plan/operation limits only"
+        ],
+        [
+          "Cloud and databases",
+          "Specific verified connector only; file upload is not database connectivity"
+        ],
+        [
+          "Metadata",
+          "Distinguish product inspection fields from maintained website provenance fields"
+        ],
+        [
+          "Sharing",
+          "Verified session reuse/copy behavior; no real-time co-editing inference"
+        ],
+        [
+          "Security and privacy",
+          "Approved factual policy only; no invented retention/training/residency commitments"
+        ],
+        [
+          "Demonstrations",
+          "Current reproducibility and accurate limitations; screening is not guaranteed decision correctness"
+        ]
+      ],
+      "analytics": [
+        [
+          [
+            "Event",
+            "Trigger and safe context"
+          ],
+          [
+            "cta_click",
+            "Shared event; page_key=data, section_key, cta_id, destination_type and optional entity_id"
+          ],
+          [
+            "data_source_filter",
+            "Applied controlled facet; filter name/value and result count"
+          ],
+          [
+            "data_source_search",
+            "Search action; result count only, no raw text"
+          ],
+          [
+            "data_source_expand",
+            "Explicit provider-details expansion; provider ID"
+          ],
+          [
+            "data_format_filter",
+            "Format facet and result count"
+          ],
+          [
+            "data_format_expand",
+            "Open compatibility notes; format ID"
+          ],
+          [
+            "data_proof_expand",
+            "Open verified screenshot; asset ID"
+          ],
+          [
+            "data_workflow_click",
+            "Published workflow action; workflow ID"
+          ],
+          [
+            "signup_completed",
+            "Confirmed shared signup event only; no conversion inferred from a click"
+          ]
+        ],
+        [
+          [
+            "Event",
+            "Trigger",
+            "Safe fields"
+          ],
+          [
+            "data_page_view",
+            "Canonical page rendered once",
+            "locale, referrer category"
+          ],
+          [
+            "data_source_dataset_expand",
+            "Dataset details explicitly opened",
+            "provider_id, dataset_id"
+          ],
+          [
+            "data_source_official_click",
+            "Official source link followed",
+            "provider_id, placement"
+          ],
+          [
+            "data_family_interaction",
+            "Family filter or jump used",
+            "controlled family"
+          ],
+          [
+            "data_faq_expand",
+            "FAQ opened",
+            "question_id"
+          ],
+          [
+            "data_proof_step",
+            "Proof step intentionally selected",
+            "asset_id, step_id"
+          ]
+        ]
+      ],
+      "sourceMapping": [
+        [
+          [
+            "Block",
+            "Production summary"
+          ],
+          [
+            "0 Global header",
+            "Shared navigation"
+          ],
+          [
+            "1 Hero",
+            "Data proposition and two paths"
+          ],
+          [
+            "2 Direct answer",
+            "Explain supported source and upload paths"
+          ],
+          [
+            "3 Two ways to start",
+            "Choose discovery or own data"
+          ],
+          [
+            "4 Discover supported data — #discover-data",
+            "Acquisition explanation and AOI proof"
+          ],
+          [
+            "5 Bring your own data — #bring-your-data",
+            "Upload, inspect, select, review, execute, validate, continue"
+          ],
+          [
+            "6 Verified sources — #data-sources",
+            "Complete directory with inline source/dataset details"
+          ],
+          [
+            "7 Data types and formats — #supported-formats",
+            "Families, full directional matrix and inline notes"
+          ],
+          [
+            "8 Data inside workflows — #data-workflows",
+            "Method connection and selected examples"
+          ],
+          [
+            "9 Data Catalog — #data-workspace",
+            "Inspect and organize source, intermediate and final layers"
+          ],
+          [
+            "10 Trust and readiness — #data-readiness",
+            "Provenance, coverage, CRS, units, time and NoData"
+          ],
+          [
+            "11 Reuse data — #data-reuse",
+            "Verified continuity between sessions"
+          ],
+          [
+            "12 Questions — #data-faq",
+            "Full answers to practical access and compatibility questions"
+          ],
+          [
+            "13 Final CTA — #data-next-step",
+            "Start for Free, sources or own-data guidance"
+          ]
+        ],
+        [
+          [
+            "Original coverage",
+            "Revised chapters",
+            "Disposition"
+          ],
+          [
+            "DH 1–42",
+            "1–42 respectively",
+            "Original structure and order retained; page-specific routing and scope updated"
+          ],
+          [
+            "UP 1–8",
+            "1–7, 9, 11–12",
+            "Separate hero/canonical merged; input families and central format facts retained"
+          ],
+          [
+            "UP 9–15",
+            "9–10",
+            "Upload states, post-upload visibility, both inspection types, layer helper, seven-step flow and plan fields retained"
+          ],
+          [
+            "UP 16–18",
+            "18, 20",
+            "Vector proof restored in full; rooftop proof and workflow applicability retained"
+          ],
+          [
+            "UP 19–23",
+            "20–23",
+            "Preparation, technical checks, organization, sharing and export retained"
+          ],
+          [
+            "UP 24–28",
+            "9, 12, 25, 38",
+            "Connector boundaries, cloud paths, limits, privacy and recovery retained"
+          ],
+          [
+            "UP 29–32",
+            "30–32",
+            "Safe sample policy, components, managed content and all distinct capture states retained"
+          ],
+          [
+            "UP 33–40",
+            "27–30, 33–37",
+            "Responsive, accessibility, performance, analytics, answers, links and technical requirements merged"
+          ],
+          [
+            "UP 41–45",
+            "25, 38–42",
+            "Guardrails, launch checks, source attribution and handoff merged"
+          ],
+          [
+            "DP 1–7",
+            "1–7, 13",
+            "Directory proposition becomes an on-page module; separate hero removed"
+          ],
+          [
+            "DP 8–11",
+            "13, 30, 33–34",
+            "Directory journey, controlled filters and card anatomy retained"
+          ],
+          [
+            "DP 12–19",
+            "13–15, 30",
+            "Access, coverage, status, relationships, attribution and freshness retained; detail content becomes inline"
+          ],
+          [
+            "DP 20–27",
+            "13–18, 30",
+            "Source-to-method flow, dataset preview, empty/outage states, sorting and editorial approval retained"
+          ],
+          [
+            "DP 28–36",
+            "27–30, 33–37",
+            "Single canonical replaces split SEO; UX, performance and analytics merged"
+          ],
+          [
+            "DP 37–42",
+            "25, 32, 38–42",
+            "Distinct assets, safeguards, named verification candidates and handoff retained"
+          ],
+          [
+            "F 1–8",
+            "1–7, 11–12",
+            "Separate hero merged; full matrix and evidence retained"
+          ],
+          [
+            "F 9–20",
+            "11–12, 19–20",
+            "Every named format and special handling scope retained; GeoTIFF detail guidance becomes inline"
+          ],
+          [
+            "F 21–24",
+            "9–10, 12, 18, 20, 23",
+            "Upload, vector and raster proof connected to a single set of page demonstrations"
+          ],
+          [
+            "F 25–29",
+            "12, 30, 33–34",
+            "Format model, synchronization, search, responsive and accessibility retained"
+          ],
+          [
+            "F 30–38",
+            "25, 27–31, 35–37",
+            "Separate format SEO replaced; answer intent, links, analytics and components retained"
+          ],
+          [
+            "F 39–44",
+            "26, 32, 38–42",
+            "Assets, verification, launch gates, sources and CTA/handoff merged"
+          ]
+        ],
+        [
+          [
+            "Previous destination",
+            "New destination"
+          ],
+          [
+            "/data/providers/",
+            "/data/#data-sources"
+          ],
+          [
+            "/data/upload/",
+            "/data/#bring-your-data"
+          ],
+          [
+            "/data/formats/",
+            "/data/#supported-formats"
+          ],
+          [
+            "Named provider detail",
+            "/data/#provider-{slug} when a public record exists"
+          ],
+          [
+            "Named format detail",
+            "/data/#format-{slug} when a public record exists"
+          ],
+          [
+            "Dataset directory/detail",
+            "On-page dataset rows inside source details; no new launch routes"
+          ]
+        ]
+      ]
+    },
+    "orderBasis": "The attached consolidated document explicitly defines website order in chapter 3 and repeats it in chapter 42. Its 42 numbered chapters are specification topics, not separate public page sections. Supporting proof remains within the modules specified by chapter 3.",
+    "presentationOverrides": {
+      "workflowsSection": "Removed from the Data page at the website owner's request; remaining section order preserved.",
+      "sectionOrder": "Follow the document body content chapters at the owner’s explicit request, ignoring the opening order table; omit the removed workflow chapter; retain the final CTA as page closing.",
+      "contentGrouping": "Public chapter 20 owns the building-buffer example, chapter 21 owns organization and chapter 23 owns outputs. Chapters 13–15 share the provider/dataset directory; chapter 17 request context follows chapter 16 proof."
+    }
+  },
+  "pageKey": "data",
+  "publicationStatus": "Published",
+  "seo": {
+    "title": "Geospatial Data Sources and GIS File Support | GriidAI",
+    "description": "Explore verified geospatial sources, bring your own GIS data, and check upload and export formats. Connect data to reviewed analysis in GriidAI."
+  },
+  "hero": {
+    "title": "Geospatial data, connected to the analysis you need.",
+    "copy": "Start with data you already have or work with supported geospatial sources inside GriidAI. Bring vector, raster, tabular, and multidimensional data into the workspace, review its context, and use it directly in an AI-guided spatial analysis workflow."
+  },
+  "definition": {
+    "title": "What geospatial data can I use in GriidAI?",
+    "copy": [
+      "GriidAI supports two data paths. You can upload supported geospatial files from your own work, or use supported external and public sources when the required access path is available. Once data is in the workspace, inspect it, select it as an input, and use it in supported analysis, mapping, and later workflow steps.",
+      "Use the source directory and format matrix on this page to check access requirements, upload and export support, and handling notes. The right input also depends on your study area, time period, variables and analytical method."
+    ]
+  },
+  "paths": {
+    "title": "Start with a trusted source or bring the data you already use.",
+    "copy": "Choose the path that fits your project. Both lead to data you can inspect in the workspace and use in a reviewed analysis.",
+    "rows": [
+      [
+        "Discover supported data",
+        "Use a supported source and narrow the request by area, time, variable or analytical need. Check the source and review the acquisition step before continuing.",
+        "Explore Data Sources → #data-sources",
+        "AOI and acquired dataset"
+      ],
+      [
+        "Bring your own data",
+        "Upload supported files, inspect their spatial context, and use the intended dataset in a reviewed analysis.",
+        "Bring Your Own Data → #bring-your-data",
+        "Upload and catalog state"
+      ]
+    ]
+  },
+  "discovery": {
+    "title": "Find data in the context of the analysis.",
+    "copy": [
+      "When the required source is supported, GriidAI can use the study area and analytical intent to locate or fetch relevant geospatial data, make it available in the workspace, and continue into the next analytical step.",
+      "Review the selected source, area and time coverage before continuing. Data from different sources may represent different measurements, resolutions or methods."
+    ],
+    "sequence": {
+      "title": "From a study area to terrain analysis.",
+      "copy": "Define an area of interest, request supported elevation data, review the acquisition plan, and inspect the raster in the catalog. Use the retrieved data in a subsequent terrain step, then review the slope or aspect result.",
+      "steps": [
+        [
+          "1",
+          "Named Miami AOI",
+          "Define the study area."
+        ],
+        [
+          "2",
+          "SRTM request scoped to AOI",
+          "Request elevation data for the selected area."
+        ],
+        [
+          "3",
+          "Implementation plan before execution",
+          "Review the proposed source and retrieval step."
+        ],
+        [
+          "4",
+          "Fetched raster in catalog/map",
+          "Inspect the returned elevation raster."
+        ],
+        [
+          "5",
+          "Slope/aspect result",
+          "Review the terrain result before continuing."
+        ]
+      ]
+    },
+    "request": {
+      "copy": "Make the data request specific: identify the study area, time window, variable and scale you need. Check whether the source measures observations, estimates, forecasts or modeled conditions before comparing or combining results.",
+      "example": "Use this area of interest and the specified time window. Retrieve the required variable from a supported source, and show the source and relevant resolution before analysis.",
+      "context": [
+        [
+          "Area of interest",
+          "Controls spatial extent and reduces unnecessary retrieval",
+          "\"Use this AOI as the study area.\""
+        ],
+        [
+          "Time window",
+          "Avoids mixing data from the wrong period",
+          "\"Use observations from 1-15 Oct 2020.\""
+        ],
+        [
+          "Variable/theme",
+          "Clarifies what the dataset must contain",
+          "Elevation, rainfall, land cover, buildings"
+        ],
+        [
+          "Resolution/scale",
+          "Affects suitability for the decision",
+          "30 m DEM may be suitable for regional terrain, not building engineering"
+        ],
+        [
+          "Source type",
+          "Distinguishes station, satellite, reanalysis, vector mapping, etc.",
+          "Do not silently substitute scientifically different sources"
+        ]
+      ]
+    }
+  },
+  "byod": {
+    "title": "Use the data your project already depends on.",
+    "copy": "Upload supported geospatial data into the GriidAI workspace, organize it in the Data Catalog, inspect the map and metadata, and use the dataset as input to your next prompt or analysis step.",
+    "journeyTitle": "Upload once. Continue into a reviewable analysis.",
+    "steps": [
+      [
+        "Upload",
+        "Choose or drop a supported dataset."
+      ],
+      [
+        "Inspect",
+        "Confirm layer, map, attributes/metadata and study area."
+      ],
+      [
+        "Ask",
+        "Describe the spatial task and select the intended layer."
+      ],
+      [
+        "Review plan",
+        "GriidAI proposes inputs, method, validation and expected output for supported executed steps."
+      ],
+      [
+        "Execute",
+        "User approves the step and processing runs."
+      ],
+      [
+        "Validate",
+        "Inspect map, attributes, statistics or other output context."
+      ],
+      [
+        "Export / continue",
+        "Export supported output or use it in the next analysis step."
+      ]
+    ],
+    "plan": {
+      "title": "Review how your data will be used before the analysis runs.",
+      "copy": "When a supported step requires execution, GriidAI can present an implementation plan before the operation proceeds. The demonstrated plan structure exposes the selected inputs, method, validation approach and expected output so the user can confirm that the workflow matches the intended question.",
+      "rows": [
+        [
+          "Inputs",
+          "The exact uploaded layer(s) selected from workspace context."
+        ],
+        [
+          "Method",
+          "The GIS operation or multi-step method to be applied."
+        ],
+        [
+          "Validation",
+          "Checks relevant to geometry, raster alignment, CRS, counts/statistics or stated assumptions."
+        ],
+        [
+          "Output",
+          "The expected layer, table, raster or map-ready result."
+        ]
+      ]
+    },
+    "vector": {
+      "question": "Which neighboring buildings fall within 50 meters of this selected property?",
+      "copy": "Upload building footprints, select the intended feature, and review a 50-meter buffer operation before execution. Inspect the buffer and a follow-on intersection result to identify nearby or overlapping buildings.",
+      "captions": [
+        "Inspect the uploaded building layer.",
+        "Review the input and 50-meter buffer plan.",
+        "Check the buffer and intersection result."
+      ]
+    },
+    "output": {
+      "title": "Keep the result usable after the analysis.",
+      "copy": "Inspect the result in the workspace, then export supported analytical or map outputs when the next step requires them. Check the format matrix for the available output directions and any restrictions.",
+      "caption": "Export a supported output or continue the analysis."
+    }
+  },
+  "sourceDirectory": {
+    "title": "Explore geospatial data sources",
+    "copy": [
+      "Browse sources verified for use with GriidAI. See the available data types, coverage, access requirements, and related datasets or workflows. Availability can differ between products from the same provider.",
+      "Some sources are public; others require a provider account, credentials, subscription, or license. Data remains subject to the provider’s terms and availability. Check the last-verified date and the dataset details before choosing a source."
+    ],
+    "states": {
+      "No filter matches": "No sources match these filters. Clear a filter or bring your own data into GriidAI.",
+      "Unknown source": "We do not currently publish a verified record for this source. Check the supported formats to bring your own data, or contact us about your requirements.",
+      "No approved records": "Current source details are not available here yet. You can explore supported upload options below.",
+      "Temporary data load failure": "We could not load source details. Please try again or explore the upload options below.",
+      "Temporary source outage": "This source is temporarily unavailable through GriidAI. Check the source details for updates or use supported data you already have."
+    },
+    "access": [
+      {
+        "name": "Public",
+        "meaning": "The source can be accessed without provider credentials for the supported path",
+        "pattern": "Public source"
+      },
+      {
+        "name": "Account required",
+        "meaning": "A provider account is needed",
+        "pattern": "Provider account required"
+      },
+      {
+        "name": "Credentials required",
+        "meaning": "API key/client ID/token or similar is needed",
+        "pattern": "Provider credentials required"
+      },
+      {
+        "name": "Paid / licensed",
+        "meaning": "Use depends on commercial/provider entitlement",
+        "pattern": "Provider subscription or license may be required"
+      },
+      {
+        "name": "Mixed",
+        "meaning": "Different datasets/products have different access terms",
+        "pattern": "Access varies by dataset"
+      }
+    ],
+    "accessDistinction": "Public access does not mean public-domain licensing. Free access does not mean unrestricted redistribution.",
+    "providers": [],
+    "datasets": [],
+    "loadState": "ready"
+  },
+  "types": {
+    "title": "Work across the data types spatial analysis needs.",
+    "copy": "Use feature geometries, grids, tables and multidimensional inputs where the current workflow supports them. Data type explains the structure; the format matrix below explains how files can enter and leave GriidAI.",
+    "rows": [
+      [
+        "Vector",
+        "Represent discrete features with geometry and attributes.",
+        "Points, lines, polygons; buildings, roads and boundaries"
+      ],
+      [
+        "Raster",
+        "Work with cell-based grids and imagery.",
+        "Elevation, land cover and satellite imagery"
+      ],
+      [
+        "Tabular",
+        "Use rows and fields where their meaning and relationship to the workflow are clear.",
+        "CSV and supported Parquet tables"
+      ],
+      [
+        "Multidimensional",
+        "Use supported variables and slices across dimensions such as time or depth.",
+        "Verified Zarr path"
+      ]
+    ],
+    "familyCopy": [
+      [
+        "Vector formats",
+        "Use supported vector formats for feature-based analysis and exchange. Inspect the geometry, attributes and spatial reference before selecting a method."
+      ],
+      [
+        "Raster formats",
+        "Check GeoTIFF input and output support alongside its raster metadata. Resolution, bands, data type and NoData can affect the analysis and the exported result."
+      ],
+      [
+        "Tabular formats",
+        "A table is not automatically spatial. Coordinates, identifiers related to mapped features, or a supported attribute workflow determine how its rows can be used."
+      ],
+      [
+        "Multidimensional inputs",
+        "Check the supported Zarr version, store structure, variables and dimensions. The selected slice and the resulting dataset must fit the downstream operation."
+      ]
+    ]
+  },
+  "compatibility": {
+    "title": "Check your format from input to output",
+    "copy": [
+      "See which formats can be uploaded, inspected, used in supported analysis, and exported. These are separate capabilities: a format accepted as an input may not be available as an output, and analysis depends on the dataset’s structure and the selected operation.",
+      "Open a format’s notes for packaging, version and handling details. Check the current status before preparing your data."
+    ],
+    "intro": "Check upload, inspection, analysis and export separately. Supported formats vary by direction, and a file that opens successfully may still need preparation before a particular operation. Use the notes beside each format for packaging, version and structure requirements.",
+    "why": "A file can be accepted by an upload path yet still have constraints that affect how it is previewed or analyzed.",
+    "states": [
+      [
+        "Upload accepted",
+        "Ingest/parsing started or completed",
+        "File is structurally readable."
+      ],
+      [
+        "Preview / inspect",
+        "Map/table/metadata can be shown",
+        "A tabular file may be inspectable even if it is not spatial by itself."
+      ],
+      [
+        "Analysis-ready",
+        "Can be selected by relevant supported operations",
+        "Geometry, CRS, raster structure or fields may matter."
+      ],
+      [
+        "Exportable",
+        "Can be produced in a stated direction",
+        "May differ from the input list."
+      ]
+    ],
+    "empty": "No current public compatibility record found. Check the format name or contact us about your requirements.",
+    "failure": "We could not load the compatibility details. Please try again.",
+    "loadState": "ready",
+    "rasterCaption": "Inspect the raster context, review the terrain method, and check the output."
+  },
+  "formats": [
+    {
+      "id": "shapefile",
+      "name": "Shapefile",
+      "family": "Vector",
+      "extensions": [
+        ".shp",
+        ".shx",
+        ".dbf",
+        ".prj"
+      ],
+      "aliases": [],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "Shapefiles contain related components. Include the required companion files in the accepted upload packaging. Upload, inspection, analysis and Shapefile export are supported.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "geojson",
+      "name": "GeoJSON",
+      "family": "Vector",
+      "extensions": [
+        ".geojson",
+        ".json"
+      ],
+      "aliases": [],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "Inspect feature geometries, attributes and spatial reference before analysis. GeoJSON is supported for upload and vector export.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "flatgeobuf",
+      "name": "FlatGeobuf",
+      "family": "Vector",
+      "extensions": [
+        ".fgb"
+      ],
+      "aliases": [],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "FlatGeobuf is supported for vector upload and export. Inspect geometry, attributes and spatial reference before analysis.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "kml",
+      "name": "KML",
+      "family": "Vector",
+      "extensions": [
+        ".kml"
+      ],
+      "aliases": [],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "KML is supported for vector upload and export. Styles, network links, 3D constructs and related extensions may require separate handling.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "file-geodatabase",
+      "name": "File Geodatabase",
+      "family": "Geodatabase",
+      "extensions": [
+        ".gdb"
+      ],
+      "aliases": [
+        "File GDB"
+      ],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Not supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "File Geodatabase input supports inspection and analysis. File Geodatabase is not an export format in the current export list. Check the contents, versions and packaging accepted by the import path.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Not supported",
+            "source": "Owner confirmation that supplied lists define available formats"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "geotiff",
+      "name": "GeoTIFF",
+      "family": "Raster",
+      "extensions": [
+        ".tif",
+        ".tiff"
+      ],
+      "aliases": [
+        "TIFF"
+      ],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {
+        "export": "Raster data."
+      },
+      "notes": "GeoTIFF is supported for raster upload and export. Inspect CRS, resolution, bands, data type and NoData before raster analysis.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "csv",
+      "name": "CSV",
+      "family": "Tabular",
+      "extensions": [
+        ".csv"
+      ],
+      "aliases": [],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "CSV supports upload, inspection, analysis and export. Tables can be exported as CSV or Parquet. Coordinates, a relationship to mapped features, or a supported attribute workflow determine spatial use.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "parquet",
+      "name": "Parquet",
+      "family": "Tabular",
+      "extensions": [
+        ".parquet"
+      ],
+      "aliases": [],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {
+        "export": "Tabular data. Vector export uses GeoParquet."
+      },
+      "notes": "Parquet supports tabular upload, inspection, analysis and export. Tables can be exported as CSV or Parquet. Vector geometry export uses the separate GeoParquet format.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "geoparquet",
+      "name": "GeoParquet",
+      "family": "Vector",
+      "extensions": [
+        ".parquet"
+      ],
+      "aliases": [],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Not supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "GeoParquet is available for vector data export. Direct GeoParquet upload is not included in the current upload list; Parquet and GeoParquet have separate records. Inspection and analysis refer to the vector data in the workspace.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Not supported",
+            "source": "Owner confirmation that supplied lists define available formats"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "zarr",
+      "name": "Zarr",
+      "family": "Multidimensional",
+      "extensions": [
+        ".zarr"
+      ],
+      "aliases": [],
+      "group": "Analytical formats",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Not supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "Zarr supports multidimensional upload, inspection and analysis. Check store layouts, versions, variables, dimensions and slice selection. Zarr is not included in the current export list.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Not supported",
+            "source": "Owner confirmation that supplied lists define available formats"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "zip",
+      "name": "ZIP",
+      "family": "Container",
+      "extensions": [
+        ".zip"
+      ],
+      "aliases": [],
+      "group": "Upload containers",
+      "publicationStatus": "Published",
+      "upload": "Supported",
+      "inspect": "Supported",
+      "analyze": "Supported",
+      "export": "Not supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {},
+      "notes": "ZIP is an upload container. Inspection and analysis apply to the supported datasets inside the archive. ZIP is not included in the current export list.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          },
+          "inspect": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Not supported",
+            "source": "Owner confirmation that supplied lists define available formats"
+          }
+        },
+        "ownerConfirmed": true
+      }
+    },
+    {
+      "id": "png-jpeg",
+      "name": "PNG & JPEG",
+      "family": "Map output",
+      "extensions": [
+        ".png",
+        ".jpg",
+        ".jpeg"
+      ],
+      "aliases": [
+        "JPG"
+      ],
+      "group": "Map communication outputs",
+      "publicationStatus": "Published",
+      "upload": "Not supported",
+      "inspect": "Not supported",
+      "analyze": "Not supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {
+        "export": "Map view only; not analytical dataset export."
+      },
+      "notes": "PNG and JPEG export the map view for communication. They do not export reusable analytical datasets and are not listed as dataset upload formats.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "ownerConfirmed": true,
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Not supported",
+            "source": "Owner confirmation that supplied lists define available formats"
+          },
+          "inspect": {
+            "status": "Not supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Not supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        }
+      }
+    },
+    {
+      "id": "pdf",
+      "name": "PDF",
+      "family": "Map output",
+      "extensions": [
+        ".pdf"
+      ],
+      "aliases": [],
+      "group": "Map communication outputs",
+      "publicationStatus": "Published",
+      "upload": "Not supported",
+      "inspect": "Not supported",
+      "analyze": "Not supported",
+      "export": "Supported",
+      "lastVerified": "2026-10-22",
+      "owner": "GriidAI website owner",
+      "productVersion": null,
+      "restrictions": {
+        "export": "Map view only; not analytical dataset export."
+      },
+      "notes": "PDF exports the map view for communication. It does not export reusable analytical datasets and is not listed as a dataset upload format.",
+      "relatedWorkflows": [],
+      "supportEvidence": {
+        "reviewedOn": "2026-10-22",
+        "basis": "Owner confirmation and supplied product upload, vector export, raster export and table export screenshots",
+        "ownerConfirmed": true,
+        "endToEndTested": false,
+        "directions": {
+          "upload": {
+            "status": "Not supported",
+            "source": "Owner confirmation that supplied lists define available formats"
+          },
+          "inspect": {
+            "status": "Not supported",
+            "source": "Owner confirmation"
+          },
+          "analyze": {
+            "status": "Not supported",
+            "source": "Owner confirmation"
+          },
+          "export": {
+            "status": "Supported",
+            "source": "Supplied product interface and owner confirmation"
+          }
+        }
+      }
+    }
+  ],
+  "workflows": {
+    "title": "Use the dataset in a method you can review",
+    "copy": "Data becomes useful when it stays connected to the method. Review the selected inputs, follow the supported analytical steps, inspect intermediate and final results, and continue or export when the next task requires it.",
+    "flowTitle": "From source to spatial workflow.",
+    "flow": [
+      [
+        "Provider",
+        "Where the data originates or is accessed"
+      ],
+      [
+        "Dataset",
+        "The actual product/layer/collection selected for the question"
+      ],
+      [
+        "Workspace",
+        "The data is fetched or made available in GriidAI"
+      ],
+      [
+        "Plan",
+        "The system proposes how the selected data will be used"
+      ],
+      [
+        "Review",
+        "The user checks source, CRS, resolution, time/variables and method"
+      ],
+      [
+        "Analysis",
+        "Supported GIS operations run"
+      ],
+      [
+        "Result",
+        "Map, table, analytical dataset or export becomes inspectable"
+      ]
+    ],
+    "relations": [
+      {
+        "id": "dem-hydrology-stream-network",
+        "title": "Terrain and hydrology",
+        "copy": "Use a compatible elevation dataset to inspect terrain and follow a published hydrology method.",
+        "action": "Explore Terrain Workflow",
+        "selected": true
+      },
+      {
+        "id": "ndvi-analysis",
+        "title": "Vegetation analysis",
+        "copy": "Use compatible imagery and the required bands in a reviewed vegetation-index workflow.",
+        "action": "Explore Vegetation Workflow",
+        "selected": true
+      },
+      {
+        "id": "fire-station-coverage",
+        "title": "Coverage analysis",
+        "copy": "Combine facilities and relevant context to examine the coverage question defined by the method.",
+        "action": "Explore Coverage Workflow",
+        "selected": true
+      },
+      {
+        "id": "sea-level-rise",
+        "title": "Coastal screening",
+        "copy": "Use elevation and scenario inputs to explore coastal exposure under the stated assumptions.",
+        "action": "Explore Coastal Workflow",
+        "selected": false
+      }
+    ]
+  },
+  "workspace": {
+    "title": "Keep data, intermediate outputs, and analysis context in one workspace.",
+    "copy": "The Data Catalog is the working inventory for a GriidAI session. Uploaded and acquired datasets can be organized, viewed on the map, inspected in tables or metadata panels, selected as prompt inputs, and carried through multi-step analysis. Intermediate analysis files can be separated from final project layers so the workspace remains understandable as the workflow grows.",
+    "inspectionTitle": "Inspect the data behind the map.",
+    "inspectionCopy": "Use attribute tables to examine vector records and metadata views to check the available structural and spatial information. Select the exact workspace layer for the next question so similarly named datasets do not create ambiguity.",
+    "uploadedTitle": "See the data you uploaded - not just a success message.",
+    "uploadedCopy": "After upload, find the dataset in the session Layers/Data Catalog. Toggle visibility, zoom to the layer where appropriate, and check whether it is vector, raster, tabular, AOI or an intermediate result.",
+    "vectorTitle": "Inspect the attributes behind the geometry.",
+    "vectorCopy": "For uploaded vector data, use the attribute table to inspect fields and records, make selections, and relate table records to map features.",
+    "rasterTitle": "Check spatial context before running raster analysis.",
+    "rasterCopy": "For raster or multidimensional inputs, safe analysis depends on more than opening the file. Resolution, dimensions, CRS, NoData behavior, valid values, time/depth dimensions and grid alignment can affect the result.",
+    "rasterContext": [
+      [
+        "CRS / spatial reference",
+        "Distance, area and overlay assumptions depend on coordinate systems."
+      ],
+      [
+        "Resolution / grid",
+        "Controls the scale and alignment of cell-based calculations."
+      ],
+      [
+        "NoData / masks",
+        "Prevents missing cells from being treated as measurements."
+      ],
+      [
+        "Dimensions / data type",
+        "Helps validate the structure being analyzed."
+      ],
+      [
+        "Time / other dimensions",
+        "Relevant for Zarr/multidimensional workflows when supported."
+      ]
+    ],
+    "layerTitle": "Reference the layer already in your workspace.",
+    "layerCopy": "Use the layer helper to select an existing asset instead of repeatedly typing a long or ambiguous file name. This shortens prompts and reduces accidental reference to the wrong dataset when several layers have similar names.",
+    "layerCaption": "Select the exact workspace layer before the plan is generated.",
+    "boundary": "Workspace awareness improves input selection; it does not guarantee that the selected data is scientifically suitable for the task. The user still reviews the data and plan.",
+    "organization": {
+      "title": "Keep project data understandable as the analysis grows.",
+      "typeFilterCopy": "Use layer type filters to find vector, raster, tabular, AOI and temp/intermediate items.",
+      "copy": "Organize source data, intermediate results and final layers so you can follow the work. Review temporary outputs and retain the ones needed for the next step. Use layer visibility and order to manage the map without confusing that with deleting data."
+    }
+  },
+  "readiness": {
+    "title": "Know what the data represents before you use it",
+    "copy": [
+      "Check where the data came from, what it measures, where and when it applies, and how it is encoded. GriidAI can expose workspace metadata for inspection, while source records provide access, coverage, licensing and verification context.",
+      "Use that context to assess whether the dataset fits your question. A mapped result or an accepted upload is not a guarantee of data quality or analytical suitability."
+    ],
+    "checks": [
+      [
+        "Source and access",
+        "Identify the actual provider/product and applicable license or account requirement"
+      ],
+      [
+        "Area of interest",
+        "Keep retrieval and analysis aligned with the study area"
+      ],
+      [
+        "Time window",
+        "Avoid mixing periods or confusing observations with forecasts"
+      ],
+      [
+        "Variable and source type",
+        "Distinguish station observations, satellite estimates, reanalysis and other scientifically different sources"
+      ],
+      [
+        "Resolution and scale",
+        "Match the dataset to the decision; regional elevation is not a building-engineering survey"
+      ],
+      [
+        "CRS and units",
+        "Check distance, area, overlay and coordinate assumptions"
+      ],
+      [
+        "Geometry and attributes",
+        "Inspect fields, selections, duplicates, missing values and topology where relevant"
+      ],
+      [
+        "Raster grid and NoData",
+        "Review alignment, dimensions, valid values, band meanings and missing-cell treatment"
+      ],
+      [
+        "Verification date",
+        "Indicates access/support verification; it is not the dataset’s acquisition date or update frequency"
+      ]
+    ],
+    "distinction": "Observation date and product update frequency describe the data. Last verified describes a support/access check. CRS, structure and values shown in product metadata are different from licensing and provenance information in source records.",
+    "reviewTitle": "Review your data before the analysis.",
+    "reviewCopy": "Confirm the intended dataset and study area, inspect its geometry or raster structure, and check the spatial reference, units and missing-value behavior. Define any preparation needed before using the data in a reviewed method.",
+    "preparationTitle": "Prepare what the analysis needs - explicitly.",
+    "preparation": [
+      "Inspect the input and identify a specific problem such as duplicates, invalid naming, geometry issues or missing values.",
+      "Define the preparation action required for the task.",
+      "Review the proposed processing step where execution is needed.",
+      "Run the preparation and inspect the revised data before downstream analysis."
+    ],
+    "rooftop": {
+      "title": "Screening, not engineering design",
+      "copy": "Combine building footprints and a digital surface model in a reviewed rooftop-screening workflow. Check spatial overlap, CRS, resolution, dimensions and NoData before processing, then inspect building-level summaries and sanity checks. Use the results to identify buildings that may warrant closer engineering review."
+    },
+    "technical": [
+      [
+        "CRS",
+        "Distance/area/overlay results can be wrong when coordinate systems are unsuitable or mixed."
+      ],
+      [
+        "Units",
+        "Meters/degrees/feet and attribute units can change interpretation."
+      ],
+      [
+        "Raster resolution",
+        "Controls analytical scale and alignment."
+      ],
+      [
+        "NoData",
+        "Missing pixels must not silently become measurements."
+      ],
+      [
+        "Field semantics",
+        "A column name alone may not explain meaning, units or codes."
+      ],
+      [
+        "Spatial overlap",
+        "Inputs may be individually valid but not cover the same area."
+      ]
+    ]
+  },
+  "reuse": {
+    "title": "Continue with trusted data instead of uploading it again.",
+    "copy": "Where session data sharing is available, reuse the intended datasets in another session and continue related analysis with the same project inputs."
+  },
+  "faq": {
+    "title": "Questions about using data in GriidAI",
+    "records": [
+      {
+        "id": "data-faq-1",
+        "question": "Can I use my own GIS data",
+        "answer": "Yes, use supported file-based inputs. Check the current format record, accepted structure and applicable limits, then inspect the uploaded data before analysis."
+      },
+      {
+        "id": "data-faq-2",
+        "question": "Can GriidAI retrieve data for my study area",
+        "answer": "For a supported source and access path, GriidAI can use the requested area and analytical context to retrieve relevant data. Check the provider’s available products and review the acquisition step."
+      },
+      {
+        "id": "data-faq-3",
+        "question": "Are all listed sources free",
+        "answer": "No. Access may be public, account-based, credentialed or licensed, and may differ by dataset. The source record explains the relevant requirement."
+      },
+      {
+        "id": "data-faq-4",
+        "question": "What if my provider is not listed",
+        "answer": "An absent record does not establish current GriidAI access. You can check compatible upload formats for data you already have, or contact us about the source."
+      },
+      {
+        "id": "data-faq-5",
+        "question": "Does upload support mean export support",
+        "answer": "No. Upload, inspection, analysis and export are listed separately. Use the direction-specific matrix for the format you need."
+      },
+      {
+        "id": "data-faq-6",
+        "question": "Are Parquet and GeoParquet the same support claim",
+        "answer": "Parquet supports tabular upload and table export. GeoParquet is available for vector export and is not listed as a direct upload format. Use the separate records for each direction."
+      },
+      {
+        "id": "data-faq-7",
+        "question": "Can I upload a ZIP archive or File Geodatabase",
+        "answer": "Check the current record for packaging and accepted contents. ZIP is a container, and a geodatabase can contain structures with different handling requirements."
+      },
+      {
+        "id": "data-faq-8",
+        "question": "Can I use Zarr or multidimensional data",
+        "answer": "Check the supported version, store structure, variable and dimension handling in the current Zarr record. Do not assume every store or slice is compatible."
+      },
+      {
+        "id": "data-faq-9",
+        "question": "Is uploaded data automatically cleaned",
+        "answer": "Do not assume automatic correction. Inspect the dataset, identify the preparation required, and review supported processing steps before using the revised result."
+      },
+      {
+        "id": "data-faq-10",
+        "question": "How large can my files be",
+        "answer": "Applicable limits can depend on the current product plan, file structure and operation. Check the approved product limits before transferring a large dataset."
+      },
+      {
+        "id": "data-faq-11",
+        "question": "Can I connect an external database",
+        "answer": "File upload does not establish a live database connection. Check separately confirmed integration options; do not assume PostGIS, Oracle Spatial or MySQL connectivity from file support."
+      },
+      {
+        "id": "data-faq-12",
+        "question": "Can I export maps and analytical data",
+        "answer": "Yes. Export vector data as Shapefile, GeoJSON, CSV, GeoParquet, FlatGeobuf or KML, raster data as GeoTIFF, and tables as CSV or Parquet. PNG, JPEG and PDF export the map view rather than reusable analytical data."
+      },
+      {
+        "id": "data-faq-13",
+        "question": "Can I reuse data in another session",
+        "answer": "Where supported, session data sharing lets you reuse the intended inputs. Check the current behavior; it does not imply real-time co-editing."
+      },
+      {
+        "id": "data-faq-14",
+        "question": "Does Last verified mean the data is newly collected",
+        "answer": "No. It records verification of the access or compatibility claim. Dataset observation dates, temporal coverage and update frequency are separate facts."
+      },
+      {
+        "id": "data-faq-15",
+        "question": "Which data providers can GriidAI use?",
+        "answer": "Use the source directory on this page to see the current verified public inventory. Each source identifies available data categories or products, access requirements, coverage and the date its status was checked."
+      },
+      {
+        "id": "data-faq-16",
+        "question": "What GIS file formats can I use?",
+        "answer": "Check the current matrix for upload, inspection, analysis and export support. Vector, raster, tabular, geodatabase and multidimensional paths have different requirements; ZIP packaging and map outputs are shown separately."
+      },
+      {
+        "id": "data-faq-17",
+        "question": "Can I analyze an uploaded Shapefile?",
+        "answer": "Yes. Upload a supported Shapefile with its required companion files, inspect the layer and attributes, and select it for a supported vector operation. Review the proposed method before execution."
+      },
+      {
+        "id": "data-faq-18",
+        "question": "Can I upload and analyze a GeoTIFF?",
+        "answer": "Yes. GeoTIFF supports upload, inspection, analysis and raster export. Inspect CRS, resolution, dimensions, bands and NoData, then select a supported raster or terrain method."
+      },
+      {
+        "id": "data-faq-19",
+        "question": "How does GriidAI use an uploaded layer?",
+        "answer": "Select the exact layer in the workspace and describe the task. For supported executed steps, review the selected inputs, method, validation and expected output, approve execution, and inspect the result before continuing."
+      },
+      {
+        "id": "data-faq-20",
+        "question": "Does a public source require no license?",
+        "answer": "No. Public access and licensing are different. Review the provider’s terms and the dataset-specific notes before using or redistributing data."
+      },
+      {
+        "id": "data-faq-21",
+        "question": "Will I need a provider API key?",
+        "answer": "Some supported paths require a provider account, API key, token or subscription. The access badge explains that requirement. This website does not collect provider credentials."
+      },
+      {
+        "id": "data-faq-22",
+        "question": "How current is the source directory?",
+        "answer": "Each public source has a Last verified date for its supported access path. Dataset collection dates and update frequency are separate. Check temporary-availability notes and dataset-specific details before relying on a source."
+      },
+      {
+        "id": "data-faq-23",
+        "question": "How are providers and datasets related?",
+        "answer": "A provider is the source organization or service. A dataset is a particular product, collection or layer. Different datasets from one provider may have different coverage, dates and access requirements."
+      },
+      {
+        "id": "data-faq-24",
+        "question": "Does GriidAI own third-party source data?",
+        "answer": "Third-party data remains subject to its source’s ownership, licensing and availability. GriidAI provides a supported access path and analytical context; consult the official source and dataset notes for terms."
+      },
+      {
+        "id": "data-faq-25",
+        "question": "Is this a data marketplace?",
+        "answer": "This page explains supported data sources and how to use your own data in GriidAI. It does not offer data purchasing or selling."
+      },
+      {
+        "id": "data-faq-26",
+        "question": "What should I check before spatial analysis?",
+        "answer": "Check source, license, study area, time period, CRS, units and the meaning of fields or variables. For raster and multidimensional inputs, also check resolution, alignment, bands, dimensions and NoData."
+      }
+    ]
+  },
+  "final": {
+    "title": "Start with the data your question needs",
+    "copy": "Find a supported source or bring your own dataset. Check its context, review the method, and move into spatial analysis with GriidAI."
+  },
+  "pageOrder": [
+    {
+      "order": 1,
+      "id": "",
+      "sourceChapter": 5,
+      "sourceLabel": "Hero"
+    },
+    {
+      "order": 2,
+      "id": "data-definition",
+      "sourceChapter": 6,
+      "sourceLabel": "Direct answer"
+    },
+    {
+      "order": 3,
+      "id": "data-entry-paths",
+      "sourceChapter": 7,
+      "sourceLabel": "Two ways to start"
+    },
+    {
+      "order": 4,
+      "id": "discover-data",
+      "sourceChapter": 8,
+      "sourceLabel": "Discover supported geospatial data"
+    },
+    {
+      "order": 5,
+      "id": "bring-your-data",
+      "sourceChapter": 9,
+      "sourceLabel": "Bring your own geospatial data"
+    },
+    {
+      "order": 6,
+      "id": "data-workspace",
+      "sourceChapter": 10,
+      "sourceLabel": "Data Catalog and workspace context"
+    },
+    {
+      "order": 7,
+      "id": "data-types",
+      "sourceChapter": 11,
+      "sourceLabel": "Supported data types"
+    },
+    {
+      "order": 8,
+      "id": "supported-formats",
+      "sourceChapter": 12,
+      "sourceLabel": "Supported formats"
+    },
+    {
+      "order": 9,
+      "id": "data-sources",
+      "sourceChapter": 13,
+      "sourceLabel": "Provider directory with inline dataset details (chapters 13–15)"
+    },
+    {
+      "order": 10,
+      "id": "data-discovery-proof",
+      "sourceChapter": 16,
+      "sourceLabel": "Discovery proof and request context (chapters 16–17)"
+    },
+    {
+      "order": 11,
+      "id": "data-readiness",
+      "sourceChapter": 19,
+      "sourceLabel": "Trust, metadata and provenance"
+    },
+    {
+      "order": 12,
+      "id": "data-preparation",
+      "sourceChapter": 20,
+      "sourceLabel": "Review, preparation and building example"
+    },
+    {
+      "order": 13,
+      "id": "data-organization",
+      "sourceChapter": 21,
+      "sourceLabel": "Organize complex data work"
+    },
+    {
+      "order": 14,
+      "id": "data-reuse",
+      "sourceChapter": 22,
+      "sourceLabel": "Reuse across sessions"
+    },
+    {
+      "order": 15,
+      "id": "data-outputs",
+      "sourceChapter": 23,
+      "sourceLabel": "Outputs and export"
+    },
+    {
+      "order": 16,
+      "id": "data-faq",
+      "sourceChapter": 28,
+      "sourceLabel": "Questions"
+    },
+    {
+      "order": 17,
+      "id": "data-next-step",
+      "sourceChapter": 26,
+      "sourceLabel": "Final CTA retained at the page closing"
+    }
+  ]
+}

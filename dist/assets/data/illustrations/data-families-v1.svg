@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="640" viewBox="0 0 960 640" fill="none">
+  <title>Raster, Vector and Tabular data</title>
+  <desc>Three floating data illustrations: a pixel grid, mapped polygons with points and lines, and a table of records.</desc>
+  <defs>
+    <filter id="shadow" x="-40%" y="-30%" width="180%" height="180%"><feDropShadow dx="0" dy="15" stdDeviation="14" flood-color="#173c3e" flood-opacity=".09"/></filter>
+    <pattern id="pixels" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" stroke="#fcfcf8" stroke-opacity=".65" stroke-width="2"/></pattern>
+    <clipPath id="raster"><rect x="0" y="0" width="196" height="196" rx="7"/></clipPath>
+  </defs>
+  <path d="M149 359C254 437 319 217 468 286S661 418 812 323" stroke="#a8c6bd" stroke-width="3" stroke-dasharray="5 10" stroke-linecap="round"/>
+  <g transform="translate(66 155) rotate(-7 124 142)" filter="url(#shadow)">
+    <g transform="translate(26 61)" clip-path="url(#raster)">
+      <rect width="196" height="196" fill="#dbe6c8"/>
+      <path d="M84 0H196V56H168V112H140V168H84V196H0V140H28V84H56V28H84Z" fill="#a9c7a3"/>
+      <path d="M140 0H196V112H168V168H112V196H28V168H56V112H84V56H112V28H140Z" fill="#6d9b86"/>
+      <path d="M196 56V196H56V168H84V140H112V112H140V84H168V56Z" fill="#3b7c78"/>
+      <path d="M196 140V196H112V168H140V140Z" fill="#287588"/>
+      <rect width="196" height="196" fill="url(#pixels)"/>
+    </g>
+  </g>
+  <g transform="translate(356 112)" filter="url(#shadow)">
+    <path d="M42 88L107 76L124 136L72 164L42 88Z" fill="#e0ead4" stroke="#6b9076" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M143 80L201 98L190 153L138 137L143 80Z" fill="#c3d7be" stroke="#6b9076" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M87 185L141 158L201 184L180 233L109 237L87 185Z" fill="#dce6cd" stroke="#6b9076" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M45 234L77 185L129 150L137 115L197 70" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 234L77 185L129 150L137 115L197 70" stroke="#287588" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#287588" stroke="#fff" stroke-width="3"><circle cx="77" cy="185" r="7"/><circle cx="129" cy="150" r="7"/><circle cx="137" cy="115" r="7"/><circle cx="197" cy="70" r="7"/></g>
+  </g>
+  <g transform="translate(646 155) rotate(7 124 142)" filter="url(#shadow)">
+    <rect x="26" y="61" width="196" height="196" rx="7" fill="#fcfcf8" stroke="#dbe4df" stroke-width="2"/>
+    <path d="M33 61H215Q222 61 222 68V97H26V68Q26 61 33 61Z" fill="#287588"/>
+    <path d="M26 129H222M26 193H222" stroke="#eff3eb" stroke-width="32"/>
+    <path d="M26 97H222M26 129H222M26 161H222M26 193H222M26 225H222M76 61V257M148 61V257" stroke="#dbe4df" stroke-width="1.5"/>
+    <path d="M40 79H59M91 79H132M163 79H206" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M40 113H56M40 145H56M40 177H56M40 209H56M40 241H56" stroke="#91aaa1" stroke-width="4" stroke-linecap="round"/>
+    <path d="M91 113H128M91 145H120M91 177H130M91 209H118M91 241H129M163 113H198M163 145H187M163 177H201M163 209H195M163 241H204" stroke="#6c8d85" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" fill="#173c3e" text-anchor="middle">
+    <text x="190" y="513">Raster</text><text x="480" y="469">Vector</text><text x="770" y="513">Tabular</text>
+  </g>
+  <g stroke="#287588" stroke-width="3" stroke-linecap="round"><path d="M173 535H207"/><path d="M463 491H497"/><path d="M753 535H787"/></g>
+</svg>

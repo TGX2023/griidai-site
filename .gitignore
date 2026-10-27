@@ -1,0 +1,12 @@
+.qa/
+.deploy/
+node_modules/
+.local-server*.log
+.pricing-source.html
+# Local environment files stay on this machine.
+.env
+.env.*
+!.env.example
+*.tar
+*.tar.gz
+.DS_Store

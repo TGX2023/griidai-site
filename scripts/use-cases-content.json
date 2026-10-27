@@ -1,0 +1,416 @@
+{
+  "source": {
+    "channel": "https://www.youtube.com/@GriidAi",
+    "reviewedOn": "2026-10-21",
+    "videoUploadsReviewed": 31,
+    "basis": "Public English video titles and descriptions, with language selection confirmed by the user. No full-video viewing or transcript review is claimed.",
+    "excludedVideoIds": [
+      "HlW0j4Z6Rl0",
+      "n3L1P_qVngw"
+    ],
+    "supersedes": "The five generic use cases from the earlier supplied hub specification.",
+    "routePolicy": "One card and one detail page per source video. Multiple tasks and practice scenarios stay together on their source-video page. Retired split routes redirect to the combined page. No content links to Industries or Workflows.",
+    "selectionPolicy": "Keep only the seven videos explicitly selected by the user. The previously selected autoplay introduction remains a separate hero video, not a use-case card.",
+    "selectedVideoIds": [
+      "8vB3U31Apqw",
+      "_W9bd9yMtQE",
+      "l08ChdgS1LA",
+      "Pv7vEOrWKSE",
+      "K9VMBoXYOGw",
+      "9pA2xGsau5I",
+      "fP00kPIs1fk"
+    ]
+  },
+  "hero": {
+    "eyebrow": "Use Cases",
+    "title": "Real spatial questions. Explore the analysis.",
+    "copy": "Explore seven GriidAi demonstrations—from deforestation and sea-level rise to crop suitability, site selection, vector and raster analysis, rooftop solar and urban heat. Open a use case to understand the question, the method and the source video.",
+    "video": {
+      "id": "GFartubhpuM",
+      "title": "From 200 clicks to 5 prompts. Zero friction",
+      "url": "https://www.youtube.com/watch?v=GFartubhpuM",
+      "thumbnailBase": "/assets/use-cases/videos/GFartubhpuM",
+      "language": "English",
+      "languageBasis": "User confirmed remaining videos are English; Arabic hydrology is excluded.",
+      "autoplay": true,
+      "muted": true
+    }
+  },
+  "groups": [
+    {
+      "id": "demonstrations",
+      "title": "Explore the demonstrations",
+      "description": "Seven selected GriidAi videos, each with its own page explaining the spatial question, analytical approach and outputs."
+    }
+  ],
+  "records": [
+    {
+      "id": "deforestation",
+      "name": "Deforestation & Land-Cover Change",
+      "group": "demonstrations",
+      "kind": "Full demo",
+      "question": "Where has forest cover changed, and what land-cover classes replaced it?",
+      "summary": "Compare land-cover dates, trace forest loss and summarize transitions into other land uses.",
+      "overview": [
+        "The video follows land-cover changes between 1992 and 2022. It uses class metadata to translate raster codes into named land-cover categories, making changes easier to interpret.",
+        "After aligning the data, the analysis builds transition summaries and distinguishes forest-to-cropland change from other forest-loss pathways. Mapped classes and tabular exports keep the geography connected to the quantitative result."
+      ],
+      "inputs": [
+        "Categorical land-cover rasters for the comparison dates",
+        "Class definitions and metadata",
+        "A study boundary and an area-calculation reference system"
+      ],
+      "steps": [
+        "Inspect the dates, class definitions and spatial alignment.",
+        "Identify forest classes and compare them with the later land-cover categories.",
+        "Calculate transitions and summarize their areas or proportions.",
+        "Map the different loss pathways and export the results."
+      ],
+      "outputs": [
+        "Forest-loss maps separated by destination class",
+        "Land-cover transition summaries and exportable tables"
+      ],
+      "review": [
+        "Check that class definitions are comparable across dates.",
+        "Review alignment and area units before interpreting change totals."
+      ],
+      "featured": true,
+      "publicationStatus": "Published",
+      "productStatus": "Example",
+      "indexStatus": "Index",
+      "detailUrl": "/use-cases/deforestation/",
+      "video": {
+        "id": "8vB3U31Apqw",
+        "title": "Mapping 30 Years of Deforestation in 10 Minutes | GriidAi Workflows",
+        "url": "https://www.youtube.com/watch?v=8vB3U31Apqw",
+        "thumbnailBase": "/assets/use-cases/videos/8vB3U31Apqw",
+        "language": "English",
+        "languageBasis": "User confirmed remaining videos are English; Arabic hydrology is excluded."
+      },
+      "editorialBasis": "Paraphrased from the public video title and description. Review points are editorial guidance; no additional results or performance claims are inferred."
+    },
+    {
+      "id": "sea-level-rise",
+      "name": "Sea-Level Rise & Coastal Inundation",
+      "group": "demonstrations",
+      "kind": "Full demo",
+      "question": "Which coastal areas connect to the ocean under a defined water-level scenario?",
+      "summary": "Separate ocean-connected inundation from inland low points and prepare coastal exposure layers for review.",
+      "overview": [
+        "This demonstration starts with elevation and hydrological information to examine sea-level-rise scenarios. Its central distinction is between land that is simply low and land connected to ocean-driven flooding.",
+        "The described sequence cleans waterbody inputs, applies hydrological masking and converts raster results into vector layers. Reprojection and GeoParquet export prepare the output for mapping and subsequent analysis."
+      ],
+      "inputs": [
+        "Elevation data with known units and vertical reference",
+        "Waterbody and coastal-connectivity information",
+        "A study area and an explicit water-level scenario"
+      ],
+      "steps": [
+        "Inspect elevation, spatial references and the chosen scenario.",
+        "Prepare waterbody data and distinguish coastal connectivity from inland depressions.",
+        "Derive the scenario result and inspect the inundation boundaries.",
+        "Convert and export the mapped layers for further analysis."
+      ],
+      "outputs": [
+        "Scenario-based coastal inundation layers",
+        "Vector outputs suitable for maps and exposure summaries"
+      ],
+      "review": [
+        "Check elevation quality, vertical reference and connectivity assumptions.",
+        "Treat the result as a defined scenario, rather than a forecast of a particular storm."
+      ],
+      "featured": true,
+      "publicationStatus": "Published",
+      "productStatus": "Example",
+      "indexStatus": "Index",
+      "detailUrl": "/use-cases/sea-level-rise/",
+      "video": {
+        "id": "_W9bd9yMtQE",
+        "title": "Sea Level Rise Analysis in Minutes —No-Code GeoAI with GriidAi",
+        "url": "https://www.youtube.com/watch?v=_W9bd9yMtQE",
+        "thumbnailBase": "/assets/use-cases/videos/_W9bd9yMtQE",
+        "language": "English",
+        "languageBasis": "User confirmed remaining videos are English; Arabic hydrology is excluded."
+      },
+      "editorialBasis": "Paraphrased from the public video title and description. Review points are editorial guidance; no additional results or performance claims are inferred."
+    },
+    {
+      "id": "future-crop-suitability",
+      "name": "Future Crop Suitability",
+      "group": "demonstrations",
+      "kind": "Full demo",
+      "question": "How might suitable maize-growing areas shift under a future climate scenario?",
+      "summary": "Connect current crop distribution with climate variables to compare present and future suitability in the US Corn Belt.",
+      "overview": [
+        "This case study combines bioclimatic variables with crop-distribution information to model maize suitability. The description identifies WorldClim, NASA GFSAD and IFPRI SPAM among the inputs.",
+        "The trained model is applied to a future climate scenario, then compared with present conditions to map potential gains and losses. Those maps describe modeled suitability under the selected assumptions; they do not establish future yields."
+      ],
+      "inputs": [
+        "Present and future bioclimatic variables",
+        "Crop extent or distribution data",
+        "A stated climate model, scenario, horizon and study area"
+      ],
+      "steps": [
+        "Align climate and crop data and prepare the sampling design.",
+        "Train and evaluate a suitability model against the available observations.",
+        "Apply the model to the selected future climate inputs.",
+        "Compare present and future rasters to locate suitability gains and losses."
+      ],
+      "outputs": [
+        "Present and future suitability rasters",
+        "Maps showing modeled suitability change"
+      ],
+      "review": [
+        "Review sampling, validation and spatial transfer limitations.",
+        "Keep the selected climate scenario and time horizon attached to every result."
+      ],
+      "featured": false,
+      "publicationStatus": "Published",
+      "productStatus": "Example",
+      "indexStatus": "Index",
+      "detailUrl": "/use-cases/future-crop-suitability/",
+      "video": {
+        "id": "l08ChdgS1LA",
+        "title": "Predicting Future Crop Viability Without Code | GriidAI Workflow",
+        "url": "https://www.youtube.com/watch?v=l08ChdgS1LA",
+        "thumbnailBase": "/assets/use-cases/videos/l08ChdgS1LA",
+        "language": "English",
+        "languageBasis": "User confirmed remaining videos are English; Arabic hydrology is excluded."
+      },
+      "editorialBasis": "Paraphrased from the public video title and description. Review points are editorial guidance; no additional results or performance claims are inferred."
+    },
+    {
+      "id": "sports-facility-site-selection",
+      "name": "Sports Facility Site Selection",
+      "group": "demonstrations",
+      "kind": "Full demo",
+      "question": "Where could new sports centers best serve Riyadh?",
+      "summary": "Compare demand, access, competition and terrain to identify candidate development zones in Riyadh.",
+      "overview": [
+        "The Riyadh demonstration combines several location factors in a common hexagonal grid. Demographics describe potential demand, while transport access, commercial activity and nearby competitors add context to each candidate area.",
+        "The video describes a suitability index built from normalized indicators, then groups high-scoring cells into development clusters. The result is a transparent shortlist for review, with individual indicators behind each score."
+      ],
+      "inputs": [
+        "Population and demographic layers; nighttime-light data",
+        "Public services, transport stops, shopping malls and existing gyms",
+        "Building density, land cover and elevation"
+      ],
+      "steps": [
+        "Define the study area and organize the city into comparison cells.",
+        "Build indicators for demand, commercial activity, accessibility and competition.",
+        "Review land-cover and terrain constraints, then normalize the selected indicators.",
+        "Combine the indicators and examine the resulting high-scoring clusters."
+      ],
+      "outputs": [
+        "Suitability map and candidate development clusters",
+        "Indicator values explaining each candidate score"
+      ],
+      "review": [
+        "Review how weights and thresholds affect the ranking.",
+        "Check that access, population and competitor data represent the same geography and relevant period."
+      ],
+      "featured": true,
+      "publicationStatus": "Published",
+      "productStatus": "Example",
+      "indexStatus": "Index",
+      "detailUrl": "/use-cases/sports-facility-site-selection/",
+      "video": {
+        "id": "Pv7vEOrWKSE",
+        "title": "AI-Assisted Site Suitability Modeling: Locating Sports Centers in Riyadh | GriidAI",
+        "url": "https://www.youtube.com/watch?v=Pv7vEOrWKSE",
+        "thumbnailBase": "/assets/use-cases/videos/Pv7vEOrWKSE",
+        "language": "English",
+        "languageBasis": "User confirmed remaining videos are English; Arabic hydrology is excluded."
+      },
+      "editorialBasis": "Paraphrased from the public video title and description. Review points are editorial guidance; no additional results or performance claims are inferred."
+    },
+    {
+      "id": "vector-raster-analysis",
+      "name": "Advanced Vector & Raster Analysis",
+      "group": "demonstrations",
+      "kind": "Full demo",
+      "question": "How can vector and raster analysis work together in one reviewable GIS process?",
+      "summary": "Explore one complete demonstration covering vector operations, satellite imagery, NDVI, coastline proximity and building-level elevation.",
+      "overview": [
+        "This walkthrough brings building footprints, roads, census tracts, elevation and Sentinel-2 imagery into a single GIS demonstration. It shows how attribute inspection, spatial relationships and raster processing can be combined without treating each operation as a separate application.",
+        "The same video covers NDVI and false-color imagery, building distance to a coastline, and mean elevation within building footprints. These are different analytical tasks within the original demonstration, presented together here."
+      ],
+      "inputs": [
+        "Building footprints, roads, census tracts and a coastline layer",
+        "A digital elevation model and Sentinel-2 imagery",
+        "Compatible coordinate systems, attribute definitions and a study boundary"
+      ],
+      "steps": [
+        "Explore the source attributes and prepare the vector and raster inputs.",
+        "Apply vector operations such as buffers, clipping, selection and spatial joins.",
+        "Inspect raster tasks including masking, NDVI, false-color composites and reclassification.",
+        "Review proximity and zonal-statistics outputs alongside the source layers."
+      ],
+      "outputs": [
+        "Mapped vector and raster results from the combined demonstration",
+        "NDVI and supporting imagery visualizations",
+        "Coastal-distance and building-level elevation attributes"
+      ],
+      "review": [
+        "Check coordinate systems, raster alignment, distance and elevation units.",
+        "Review imagery dates, spectral bands, clouds and missing pixels.",
+        "Interpret proximity, terrain summaries and vegetation indices according to their individual methods."
+      ],
+      "featured": false,
+      "publicationStatus": "Published",
+      "productStatus": "Example",
+      "indexStatus": "Index",
+      "detailUrl": "/use-cases/vector-raster-analysis/",
+      "video": {
+        "id": "K9VMBoXYOGw",
+        "title": "Advanced Geospatial Analysis Without Coding | GriidAI Demo (Vector & Raster Workflows)",
+        "url": "https://www.youtube.com/watch?v=K9VMBoXYOGw",
+        "thumbnailBase": "/assets/use-cases/videos/K9VMBoXYOGw",
+        "language": "English",
+        "languageBasis": "User confirmed remaining videos are English; Arabic hydrology is excluded."
+      },
+      "editorialBasis": "Paraphrased from the public video title and description. Review points are editorial guidance; no additional results or performance claims are inferred.",
+      "topics": [
+        {
+          "title": "Vegetation Analysis with NDVI",
+          "description": "Calculate NDVI from satellite bands and inspect vegetation patterns within a broader raster-analysis demonstration."
+        },
+        {
+          "title": "Building Proximity to the Coastline",
+          "description": "Use near-distance analysis to add coastal-proximity evidence to building records."
+        },
+        {
+          "title": "Building-Level Elevation Analysis",
+          "description": "Summarize a digital elevation model by building using zonal statistics."
+        }
+      ]
+    },
+    {
+      "id": "rooftop-solar-potential",
+      "name": "Rooftop Solar Potential",
+      "group": "demonstrations",
+      "kind": "Full demo",
+      "question": "Which building rooftops show stronger modeled solar potential?",
+      "summary": "Combine surface elevation and building footprints to compare rooftop solar potential in Miami-Dade County.",
+      "overview": [
+        "The demonstration aligns a USGS digital surface model with OpenStreetMap building footprints. Rooftops are isolated before modeling radiation with slope, orientation and shading effects.",
+        "Zonal summaries translate the modeled surface into building-level measures and potential classes. Monthly radiation patterns add a seasonal view alongside the overall comparison."
+      ],
+      "inputs": [
+        "A digital surface model",
+        "Building footprints in an aligned coordinate system",
+        "A modeling year and solar-radiation parameters"
+      ],
+      "steps": [
+        "Check surface-model and building-footprint alignment.",
+        "Isolate rooftops and calculate radiation for the selected period.",
+        "Summarize radiation and rooftop area for each building.",
+        "Compare potential classes and inspect monthly patterns."
+      ],
+      "outputs": [
+        "Building-level radiation and rooftop-area summaries",
+        "Solar-potential classes and seasonal comparisons"
+      ],
+      "review": [
+        "Review surface-model resolution, rooftop geometry and shadow assumptions.",
+        "Modeled radiation is a screening input; installation feasibility needs further assessment."
+      ],
+      "featured": true,
+      "publicationStatus": "Published",
+      "productStatus": "Example",
+      "indexStatus": "Index",
+      "detailUrl": "/use-cases/rooftop-solar-potential/",
+      "video": {
+        "id": "9pA2xGsau5I",
+        "title": "Mapping Rooftop Solar Potential with Natural Language | GriidAI Workflow",
+        "url": "https://www.youtube.com/watch?v=9pA2xGsau5I",
+        "thumbnailBase": "/assets/use-cases/videos/9pA2xGsau5I",
+        "language": "English",
+        "languageBasis": "User confirmed remaining videos are English; Arabic hydrology is excluded."
+      },
+      "editorialBasis": "Paraphrased from the public video title and description. Review points are editorial guidance; no additional results or performance claims are inferred."
+    },
+    {
+      "id": "urban-heat-risk",
+      "name": "Urban Heat Risk Assessment",
+      "group": "demonstrations",
+      "kind": "Full demo",
+      "question": "Where do heat exposure, population sensitivity and limited cooling capacity overlap?",
+      "summary": "Build a heat-risk index for Jeddah using temperature history, land cover and population context.",
+      "overview": [
+        "The Jeddah demonstration brings together Landsat surface-temperature history, ESA WorldCover and WorldPop. It describes checks on resolution, alignment and coordinate systems before the analytical layers are combined.",
+        "The index represents heat exposure, adaptive capacity and population sensitivity. Its mapped patterns support examination of heat-priority areas and discussion of measures such as shade, vegetation and reflective surfaces."
+      ],
+      "inputs": [
+        "Surface-temperature observations and a defined historical period",
+        "Land cover describing built-up and vegetated areas",
+        "Population distribution and a common analysis grid"
+      ],
+      "steps": [
+        "Inspect the input periods, resolution and coordinate systems.",
+        "Develop temperature, land-cover and population indicators on a common grid.",
+        "Normalize and combine the indicators into the stated heat-risk index.",
+        "Map the index and examine priority clusters with local context."
+      ],
+      "outputs": [
+        "Heat-risk raster and priority-area map",
+        "Evidence to support review of possible mitigation locations"
+      ],
+      "review": [
+        "Distinguish land-surface temperature from direct human heat exposure.",
+        "Review indicator weights and population redistribution assumptions."
+      ],
+      "featured": true,
+      "publicationStatus": "Published",
+      "productStatus": "Example",
+      "indexStatus": "Index",
+      "detailUrl": "/use-cases/urban-heat-risk/",
+      "video": {
+        "id": "fP00kPIs1fk",
+        "title": "Mapping Urban Heat Risk Without Coding | GriidAI Workflow Demo",
+        "url": "https://www.youtube.com/watch?v=fP00kPIs1fk",
+        "thumbnailBase": "/assets/use-cases/videos/fP00kPIs1fk",
+        "language": "English",
+        "languageBasis": "User confirmed remaining videos are English; Arabic hydrology is excluded."
+      },
+      "editorialBasis": "Paraphrased from the public video title and description. Review points are editorial guidance; no additional results or performance claims are inferred."
+    }
+  ],
+  "faq": [
+    [
+      "How are the examples organized?",
+      "Each of the seven selected videos has one card and one detail page. Analytical tasks from the same video stay together on that page."
+    ],
+    [
+      "What will I find on each page?",
+      "A description of the spatial question, the inputs and method described in the source, the outputs to inspect, review points and the original video."
+    ],
+    [
+      "Can I use the same approach with my own data?",
+      "Use the example to frame the question, then review your data, supported operations, parameters and validation needs. A published example does not guarantee the same result for a different location or dataset."
+    ]
+  ],
+  "seo": {
+    "title": "Geospatial Use Cases & Video Examples | GriidAi",
+    "description": "Explore GriidAi video examples for site selection, sea-level rise, deforestation, crop suitability, urban heat, rooftop solar, vegetation and spatial analysis."
+  },
+  "retiredRoutes": {
+    "site-selection": "sports-facility-site-selection",
+    "coverage": null,
+    "flood-coastal": "sea-level-rise",
+    "vegetation": "vector-raster-analysis",
+    "hydrology": null,
+    "vegetation-ndvi": "vector-raster-analysis",
+    "building-coastal-proximity": "vector-raster-analysis",
+    "building-elevation": "vector-raster-analysis",
+    "hurricane-power-line-prioritization": null,
+    "cairo-coffee-shop-site-selection": null,
+    "bangladesh-flood-vulnerability": null,
+    "crop-freeze-damage": null,
+    "service-area-coverage": null,
+    "population-mapping": null,
+    "ambulance-station-planning": null,
+    "crime-pattern-analysis": null,
+    "spatial-thinking-exercises": null
+  }
+}

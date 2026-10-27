@@ -1,0 +1,392 @@
+{
+  "source": {
+    "filename": "GriidAi_Industries_Hub_Content_UX_Development_Specification_P0.docx",
+    "sha256": "be745c00654562ed84fe8c3ddc278e487d23833c71a31ca73a22f45d1835289b",
+    "visualOverride": "User requested generated conceptual artwork in the existing website theme, rather than software screenshots.",
+    "routePolicy": "The source calls for unique industry detail pages only after hub approval. Existing published hub anchors are retained; no thin detail pages or unpublished routes are created. Published use-case hub sections are intentionally featured as fallbacks."
+  },
+  "hero": {
+    "eyebrow": "Industries",
+    "title": "Geospatial intelligence built around the decisions your industry makes.",
+    "copy": "GriidAi connects geospatial data, spatial analysis, AI-guided execution, human review, maps, and reusable outputs in one workspace. Explore how that workflow applies to environmental projects, climate and physical risk, infrastructure, and location-based business decisions.",
+    "primaryCTA": "Explore Your Industry",
+    "secondaryCTA": "Start for Free"
+  },
+  "selector": {
+    "title": "Explore GriidAi by industry",
+    "intro": "Start with the environment in which the decision is being made. Each industry page connects the platform to the questions, datasets, workflows, and outputs that matter in that sector."
+  },
+  "records": [
+    {
+      "id": "aec-environmental",
+      "short": "AEC & Environmental",
+      "name": "AEC & Environmental Consulting",
+      "copy": "Move from project questions to repeatable site, environmental, terrain, hydrology, and client-delivery workflows while keeping technical review in the loop.",
+      "cta": "Explore AEC & Environmental",
+      "image": "aec-environmental",
+      "example": [
+        "AEC & Environmental",
+        "Which sites or project areas require closer environmental or terrain review?",
+        "Map + analytical layers + exportable evidence."
+      ],
+      "matrix": [
+        "AEC & Environmental",
+        "Site context, nearby receptors, terrain and drainage, environmental review, project-area screening",
+        "Buffer/intersect; terrain; hydrology; raster/vector analysis; attribute review",
+        "Project map, affected-feature table, terrain/hydrology layers, exportable analytical data"
+      ],
+      "relatedUseCases": [
+        "site-selection",
+        "hydrology",
+        "vegetation"
+      ],
+      "publicationStatus": "Published",
+      "indexStatus": "Index",
+      "featured": true,
+      "order": 1,
+      "detailUrl": null,
+      "url": "/industries/#aec-environmental",
+      "plannedDetailUrl": "/industries/aec-environmental/",
+      "lastVerified": null,
+      "teaserQuestion": "Which sites or project areas require closer environmental or terrain review?"
+    },
+    {
+      "id": "climate-resilience",
+      "short": "Climate Resilience",
+      "name": "Climate Resilience & Physical Risk",
+      "copy": "Bring spatial evidence into flood, coastal, climate, exposure, and physical-risk screening with transparent inputs and review points.",
+      "cta": "Explore Climate Resilience",
+      "image": "climate-resilience",
+      "example": [
+        "Climate Resilience",
+        "Which assets or places may be exposed under a flood or coastal scenario?",
+        "Exposure map + scenario result + supporting statistics."
+      ],
+      "matrix": [
+        "Climate Resilience & Physical Risk",
+        "Flood and coastal exposure, scenario screening, asset context, vulnerability evidence",
+        "Raster/vector overlay; elevation/terrain; coastal/flood workflows; proximity/exposure",
+        "Scenario map, exposed assets/areas, summary statistics, downloadable layers"
+      ],
+      "relatedUseCases": [
+        "flood-coastal",
+        "hydrology",
+        "vegetation"
+      ],
+      "publicationStatus": "Published",
+      "indexStatus": "Index",
+      "featured": true,
+      "order": 2,
+      "detailUrl": null,
+      "url": "/industries/#climate-resilience",
+      "plannedDetailUrl": "/industries/climate-resilience/",
+      "lastVerified": null,
+      "teaserQuestion": "Which assets or places may be exposed under a defined flood or coastal scenario?"
+    },
+    {
+      "id": "utilities-critical-infrastructure",
+      "short": "Utilities & Infrastructure",
+      "name": "Utilities & Critical Infrastructure",
+      "copy": "Work across assets, networks, proximity, routing, service coverage, and infrastructure context with geospatial analysis that remains reviewable by experts.",
+      "cta": "Explore Utilities & Infrastructure",
+      "image": "utilities-infrastructure",
+      "example": [
+        "Utilities & Infrastructure",
+        "Where are coverage gaps, nearby risks, or access constraints around assets and services?",
+        "Coverage/proximity map + affected assets + table."
+      ],
+      "matrix": [
+        "Utilities & Critical Infrastructure",
+        "Asset proximity, service coverage, nearest facility, routing, infrastructure context",
+        "Network/proximity; buffer/intersect; coverage; routing; attribute analysis",
+        "Coverage map, route/nearest result, affected assets, service-gap layer"
+      ],
+      "relatedUseCases": [
+        "coverage",
+        "hydrology",
+        "flood-coastal"
+      ],
+      "publicationStatus": "Published",
+      "indexStatus": "Index",
+      "featured": true,
+      "order": 3,
+      "detailUrl": null,
+      "url": "/industries/#utilities-critical-infrastructure",
+      "plannedDetailUrl": "/industries/utilities-critical-infrastructure/",
+      "lastVerified": null,
+      "teaserQuestion": "Where are coverage gaps, nearby risks, or access constraints around assets and services?"
+    },
+    {
+      "id": "location-intelligence",
+      "short": "Location & Portfolio",
+      "name": "Location & Portfolio Intelligence",
+      "copy": "Compare locations, surrounding conditions, access, exposure, and spatial trade-offs to support site and portfolio decisions.",
+      "cta": "Explore Location Intelligence",
+      "image": "location-intelligence",
+      "example": [
+        "Location & Portfolio",
+        "Which locations best match the spatial criteria for a new site or portfolio review?",
+        "Comparative map + site metrics + shortlisted locations."
+      ],
+      "matrix": [
+        "Location & Portfolio Intelligence",
+        "Site comparison, access, surrounding conditions, portfolio screening, spatial trade-offs",
+        "Suitability-style screening; proximity; overlay; location comparison; attribute analysis",
+        "Site comparison map, location metrics, shortlist, supporting layers"
+      ],
+      "relatedUseCases": [
+        "site-selection",
+        "coverage",
+        "flood-coastal"
+      ],
+      "publicationStatus": "Published",
+      "indexStatus": "Index",
+      "featured": true,
+      "order": 4,
+      "detailUrl": null,
+      "url": "/industries/#location-intelligence",
+      "plannedDetailUrl": "/industries/location-intelligence/",
+      "lastVerified": null,
+      "teaserQuestion": "Which locations match the spatial criteria for a new site or portfolio review?"
+    }
+  ],
+  "pattern": {
+    "title": "Different industries. A familiar geospatial pattern.",
+    "paragraphs": [
+      "Environmental consultants, resilience teams, utilities, and location-intelligence teams ask different business questions, but the work often repeats the same underlying pattern: find or bring the right data, prepare it, run spatial analysis, check assumptions, review the result, and communicate what the map means for the decision.",
+      "GriidAi is designed to connect those steps so expert methods do not have to be rebuilt from scratch for every new project or location."
+    ],
+    "stages": [
+      "Question",
+      "Data",
+      "Analysis",
+      "Review",
+      "Result",
+      "Reuse"
+    ]
+  },
+  "matrix": {
+    "title": "See the kinds of spatial questions GriidAi can support",
+    "headers": [
+      "Industry",
+      "Typical spatial questions",
+      "Relevant analysis families",
+      "Likely outputs"
+    ]
+  },
+  "process": {
+    "title": "Keep the industry context. Keep the expert in control.",
+    "copy": "Industry context changes the data, assumptions, thresholds, and interpretation of a spatial analysis. GriidAi can help organize the work and execute supported geospatial steps, but the expert still reviews the plan, checks whether the selected data and method make sense, and validates the outcome before it informs a decision.",
+    "headers": [
+      "Step",
+      "What happens",
+      "Industry-specific responsibility"
+    ],
+    "steps": [
+      [
+        "1. Define",
+        "The user describes the business or spatial question.",
+        "Clarify the decision, geography, time window, and constraints."
+      ],
+      [
+        "2. Bring / discover data",
+        "Relevant uploaded or discoverable data is brought into the workspace.",
+        "Confirm sources, coverage, currency, and suitability."
+      ],
+      [
+        "3. Plan",
+        "GriidAi proposes supported analytical steps and expected outputs.",
+        "Review method, assumptions, parameters, and validation strategy."
+      ],
+      [
+        "4. Execute",
+        "Approved spatial operations run in the cloud workspace.",
+        "Stay within supported operations and documented boundaries."
+      ],
+      [
+        "5. Validate",
+        "Maps, tables, statistics, and outputs are inspected.",
+        "Decide whether the result is defensible for the intended use."
+      ],
+      [
+        "6. Communicate / reuse",
+        "Outputs are exported and successful methods can inform future work.",
+        "Preserve context, provenance, and domain judgment."
+      ]
+    ]
+  },
+  "useCases": {
+    "title": "Common decisions across industries",
+    "records": [
+      {
+        "id": "flood-coastal",
+        "name": "Flood Risk Analysis",
+        "industryRelevance": "Climate; AEC; infrastructure; portfolio",
+        "publicationStatus": "Published",
+        "indexStatus": "Noindex",
+        "hubFeatureOverride": true,
+        "featured": true,
+        "url": "/use-cases/#flood-coastal"
+      },
+      {
+        "id": "site-selection",
+        "name": "Site Selection",
+        "industryRelevance": "Location intelligence; AEC; infrastructure",
+        "publicationStatus": "Published",
+        "indexStatus": "Noindex",
+        "hubFeatureOverride": true,
+        "featured": true,
+        "url": "/use-cases/#site-selection"
+      },
+      {
+        "id": "coverage",
+        "name": "Coverage Gap Analysis",
+        "industryRelevance": "Utilities; critical infrastructure; public-service examples",
+        "publicationStatus": "Published",
+        "indexStatus": "Noindex",
+        "hubFeatureOverride": true,
+        "featured": true,
+        "url": "/use-cases/#coverage"
+      },
+      {
+        "id": "hydrology",
+        "name": "Hydrology Analysis",
+        "industryRelevance": "AEC/environmental; climate; infrastructure",
+        "publicationStatus": "Published",
+        "indexStatus": "Noindex",
+        "hubFeatureOverride": true,
+        "featured": true,
+        "url": "/use-cases/#hydrology"
+      },
+      {
+        "id": "vegetation",
+        "name": "Vegetation & NDVI",
+        "industryRelevance": "Environmental; climate; land/asset screening",
+        "publicationStatus": "Published",
+        "indexStatus": "Noindex",
+        "hubFeatureOverride": true,
+        "featured": true,
+        "url": "/use-cases/#vegetation"
+      }
+    ],
+    "cta": "Explore All Use Cases"
+  },
+  "workflows": {
+    "title": "See industry questions become spatial workflows",
+    "rows": [
+      [
+        "DEM Hydrology & Stream Network",
+        "AEC/environmental; climate; infrastructure",
+        "Shows terrain/hydrology depth and a clear multi-step analytical sequence."
+      ],
+      [
+        "NDVI Analysis",
+        "Environmental; climate",
+        "Shows remote-sensing/raster analysis tied to vegetation condition."
+      ],
+      [
+        "Fire Station Coverage",
+        "Utilities/critical infrastructure; public-service coverage",
+        "Shows network/proximity and coverage-gap reasoning."
+      ],
+      [
+        "Sea-Level Rise",
+        "Climate resilience; infrastructure; portfolio",
+        "Shows scenario-based coastal exposure."
+      ],
+      [
+        "Storm Surge",
+        "Climate resilience; infrastructure",
+        "Shows coastal hazard/exposure workflow."
+      ]
+    ]
+  },
+  "review": {
+    "title": "Spatial decisions need more than a plausible map",
+    "copy": "A spatial result can look convincing even when a projection, join, unit, time window, dataset, or assumption is wrong. That risk matters even more when the output supports environmental review, infrastructure, climate risk, or portfolio decisions. GriidAi’s human-guided approach keeps plan review and result validation visible instead of treating the first generated output as the final decision.",
+    "checks": [
+      [
+        "Data",
+        "Are the source, geography, time period, resolution, and attributes appropriate for this decision?"
+      ],
+      [
+        "Method",
+        "Are the spatial operations, parameters, CRS, units, and assumptions appropriate?"
+      ],
+      [
+        "Validation",
+        "What checks should be performed before the result is accepted?"
+      ],
+      [
+        "Use",
+        "Is the output a screening result, analytical result, or decision-ready deliverable, and what additional expert review is required?"
+      ]
+    ]
+  },
+  "audience": {
+    "title": "Start with one workflow. Scale the methods that prove useful.",
+    "table": [
+      [
+        "Self-serve professionals",
+        "Enterprise teams"
+      ],
+      [
+        "GIS professionals, consultants, researchers, and adjacent analysts can start with their own data, prompts, and supported workflows.",
+        "GIS teams, consulting groups, asset/risk/operations teams, and their leaders need repeatability, governance, integration, and domain-specific deployment patterns."
+      ],
+      [
+        "Primary CTA: Start for Free",
+        "Primary CTA: Talk to Sales"
+      ],
+      [
+        "Secondary: Explore Workflows",
+        "Secondary: Explore Enterprise"
+      ]
+    ]
+  },
+  "final": {
+    "title": "Find the industry path that matches your next spatial decision.",
+    "copy": "Explore the industry pages, open a relevant workflow, or start with your own geospatial question in GriidAi.",
+    "primaryCTA": "Start for Free",
+    "secondaryCTA": "Talk to Sales",
+    "textLink": "Explore All Solutions"
+  },
+  "seo": {
+    "title": "Industries | Geospatial Workflows for AEC, Climate, Utilities & Location Intelligence | GriidAi",
+    "description": "Explore how GriidAi supports geospatial workflows for AEC and environmental consulting, climate resilience, utilities and critical infrastructure, and location intelligence."
+  },
+  "answerQuestions": [
+    [
+      "Which industries can use GriidAi?",
+      "Opening paragraph + industry selector"
+    ],
+    [
+      "How can GriidAi support environmental and AEC work?",
+      "AEC card + linked industry page"
+    ],
+    [
+      "How can GriidAi support climate resilience and physical-risk analysis?",
+      "Climate card + linked industry page"
+    ],
+    [
+      "How can GriidAi support utilities and critical infrastructure?",
+      "Utilities card + linked industry page"
+    ],
+    [
+      "How can GriidAi support location and portfolio decisions?",
+      "Location card + linked industry page"
+    ],
+    [
+      "Does GriidAi replace industry experts?",
+      "Human-guided reliability section"
+    ],
+    [
+      "Can the same geospatial workflow be used in different industries?",
+      "Shared geospatial pattern section"
+    ],
+    [
+      "Can I use my own industry data?",
+      "Question-to-output section with link to /data/upload/"
+    ]
+  ]
+}

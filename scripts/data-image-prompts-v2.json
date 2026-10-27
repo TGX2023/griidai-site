@@ -1,0 +1,56 @@
+{
+  "mode": "built-in image_gen",
+  "intent": "generate",
+  "assets": [
+    {
+      "key": "connected-data",
+      "prompt": "Use case: stylized-concept. Asset type: one landscape hero illustration for GriidAi’s Data webpage, replacing two software screenshots. Primary request: show bringing different geospatial datasets into a shared spatial analysis context. Subject: a refined isometric miniature landscape study, with three small source sheets on the left—a parcel-boundary vector map, a gridded elevation raster, and an abstract tabular data sheet—gently connected by thin teal paths to one coherent terrain map on the right with a winding stream, subtle contour lines and a few land parcels. Make this one integrated scene, not a collage or multiple bordered panels. Style: premium editorial paper-and-clay sculpture with fine natural surface texture and restrained detail, matching muted sage-green and deep-teal geospatial illustrations. Background: plain warm ivory, soft diffuse studio lighting, subtle shadows, calm spacious composition. Framing: wide landscape 3:2, main subject centered with breathing room, clear enough at a modest 480-pixel display width. Constraints: purely conceptual, no computer or phone, no software interface, no screenshots, no logos, no lettering or numbers, no watermark, no decorative frame. Abstract table cells may contain short unlettered strokes only. No cybersecurity motifs, no glowing neon or futuristic holograms.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-67c743c6-0cb2-4b90-b5e9-29d8a27d281d.png",
+      "paths": [
+        "dist/assets/data/illustrations/connected-data-v1.png",
+        "dist/assets/data/illustrations/connected-data-v1-640.webp",
+        "dist/assets/data/illustrations/connected-data-v1-1280.webp"
+      ]
+    },
+    {
+      "key": "data-upload",
+      "prompt": "Use case: stylized-concept. Asset type: compact editorial illustration for GriidAi’s geospatial Data webpage. Style: refined isometric miniature paper-and-clay sculpture with natural surface texture, muted sage green, deep teal and warm ivory, soft diffuse studio lighting and subtle shadows. Landscape 3:2 composition, one integrated centered scene, generous breathing room, clear at 420px wide. Plain warm ivory background. No software UI, computer, phone, dialog boxes, screenshots, logos, lettering, numbers or watermark. No neon, holograms, cybersecurity motifs or decorative borders. Subject: bringing your own spatial data into analysis. Three small source sheets, a parcel-boundary map, a gridded elevation raster and an abstract table with unlettered strokes, sit beside an open sculpted ivory folder. A restrained upward teal ribbon rises from the sheets into a small organized stack of spatial layers above the folder. Communicate selecting and uploading a prepared dataset, using physical miniature objects rather than a screen.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-bad9aa5b-2646-4d18-a4b2-033c190ac3b7.png",
+      "paths": [
+        "dist/assets/data/illustrations/data-upload-v1.png",
+        "dist/assets/data/illustrations/data-upload-v1-640.webp",
+        "dist/assets/data/illustrations/data-upload-v1-1280.webp"
+      ]
+    },
+    {
+      "key": "dataset-handoff",
+      "prompt": "Use case: stylized-concept. Asset type: compact editorial illustration for GriidAi’s geospatial Data webpage. Style: refined isometric miniature paper-and-clay sculpture with natural surface texture, muted sage green, deep teal and warm ivory, soft diffuse studio lighting and subtle shadows. Landscape 3:2 composition, one integrated centered scene, generous breathing room, clear at 420px wide. Plain warm ivory background. No software UI, computer, phone, dialog boxes, screenshots, logos, lettering, numbers or watermark. No neon, holograms, cybersecurity motifs or decorative borders. Subject: exporting an analytical dataset for use elsewhere. A small terrain tile with teal derived stream lines and a handful of outlined land parcels sits beside two separated flat deliverable sheets, one gridded raster tile and one clean vector parcel sheet. A single slim teal path leads from the terrain result to the detached deliverables, communicating a portable analytical handoff. No folders, no app interfaces, no text or format labels.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-90cb4f9f-00ca-4028-9ca3-bfae4547e1f5.png",
+      "paths": [
+        "dist/assets/data/illustrations/dataset-handoff-v1.png",
+        "dist/assets/data/illustrations/dataset-handoff-v1-640.webp",
+        "dist/assets/data/illustrations/dataset-handoff-v1-1280.webp"
+      ]
+    },
+    {
+      "key": "workspace-layers",
+      "prompt": "Use case: stylized-concept. Asset type: compact editorial illustration for GriidAi’s geospatial Data webpage. Style: refined isometric miniature paper-and-clay sculpture with natural surface texture, muted sage green, deep teal and warm ivory, soft diffuse studio lighting and subtle shadows. Landscape 3:2 composition, one integrated centered scene, generous breathing room, clear at 420px wide. Plain warm ivory background. No software UI, computer, phone, dialog boxes, screenshots, logos, lettering, numbers or watermark. No neon, holograms, cybersecurity motifs or decorative borders. Subject: inspecting spatial layers and their linked attributes. A small valley terrain study sits under two gently separated transparent map sheets, one with parcel boundaries and another with a teal stream network. Beside the stack is a single abstract ivory table sheet with orderly rows of simple teal bars. One parcel is subtly highlighted on the map and a matching row on the table. Show the visual relationship between map layers and attribute records, not a software workspace.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-bd5f3e12-22ae-4675-9040-57193042e63a.png",
+      "paths": [
+        "dist/assets/data/illustrations/workspace-layers-v1.png",
+        "dist/assets/data/illustrations/workspace-layers-v1-640.webp",
+        "dist/assets/data/illustrations/workspace-layers-v1-1280.webp"
+      ]
+    },
+    {
+      "key": "raster-inspection",
+      "prompt": "Use case: stylized-concept. Asset type: compact editorial illustration for GriidAi’s geospatial Data webpage. Style: refined isometric miniature paper-and-clay sculpture with natural surface texture, muted sage green, deep teal and warm ivory, soft diffuse studio lighting and subtle shadows. Landscape 3:2 composition, one integrated centered scene, generous breathing room, clear at 420px wide. Plain warm ivory background. No software UI, computer, phone, dialog boxes, screenshots, logos, lettering, numbers or watermark. No neon, holograms, cybersecurity motifs or decorative borders. Subject: checking raster structure and spatial context before analysis. A precise square gridded elevation terrain tile with a subtly stepped hillside sits next to a thin framed square coordinate-grid sheet and a small physical measuring ruler with unnumbered tick marks. One clearly missing pale raster cell communicates missing data. A restrained teal magnifying glass inspects a corner of the grid. Calm simple composition focused on grid structure, alignment and careful inspection; no mathematical labels or text.",
+      "source": "C:\\Users\\tomas\\.codex\\generated_images\\01a11ac1-1553-78d2-be28-4e5bb4f9fdd1\\exec-745ff8b2-f269-494d-99c0-4356cd28ebc1.png",
+      "paths": [
+        "dist/assets/data/illustrations/raster-inspection-v1.png",
+        "dist/assets/data/illustrations/raster-inspection-v1-640.webp",
+        "dist/assets/data/illustrations/raster-inspection-v1-1280.webp"
+      ]
+    }
+  ]
+}

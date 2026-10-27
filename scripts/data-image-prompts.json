@@ -1,0 +1,37 @@
+{
+  "tool": "Built-in ImageGen",
+  "created": "2026-10-20",
+  "userDirection": "Create conceptual images instead of the unavailable demo recordings. Match the existing site theme; retain source copy.",
+  "assets": [
+    {
+      "id": "discovery-terrain",
+      "prompt": "Use case: stylized-concept. Asset: compact editorial website illustration for GriidAI Data page. Landscape 16:9. Match a quiet premium geospatial site: warm cream #fcfcf8 background, pale sage terrain and matte off-white miniature forms, restrained muted teal #287588 analytical overlays, dark teal #173c3e fine details. Refined realistic architectural model photography, elevated isometric aerial perspective, soft natural studio light, no exaggerated shadows, consistent materials. Generous empty margins. No text, numbers, labels, logo, watermark, software UI, floating windows, charts or fake screenshots. This is a conceptual illustration, not measured evidence. Subject: one coherent small coastal terrain study tile, gently undulating relief meeting a calm water edge, a thin teal rectangular boundary selecting a study area, and a few aligned transparent elevation contour layers rising subtly above the terrain. A separate small derived relief tile beside it shows the same hills encoded in restrained teal slope shading. The central idea is choosing a study area, obtaining elevation data and inspecting terrain. Geographically generic, no claim to accurately depict Miami, no satellite or provider branding. Keep the scene simple and readable at 420 pixels wide.",
+      "original": "dist/assets/data/illustrations/discovery-terrain-v1.png",
+      "responsive": [
+        "dist/assets/data/illustrations/discovery-terrain-v1-640.webp",
+        "dist/assets/data/illustrations/discovery-terrain-v1-1280.webp"
+      ],
+      "classification": "Illustrative; not an executed product result"
+    },
+    {
+      "id": "building-buffer",
+      "prompt": "Use case: stylized-concept. Asset: compact editorial website illustration for GriidAI Data page. Landscape 16:9. Match a quiet premium geospatial site: warm cream #fcfcf8 background, pale sage terrain and matte off-white miniature forms, restrained muted teal #287588 analytical overlays, dark teal #173c3e fine details. Refined realistic architectural model photography, elevated isometric aerial perspective, soft natural studio light, no exaggerated shadows, consistent materials. Generous empty margins. No text, numbers, labels, logo, watermark, software UI, floating windows, charts or fake screenshots. This is a conceptual illustration, not measured evidence. Subject: precise miniature urban block of low off-white buildings on pale sage ground. One clearly selected central building has a dark teal footprint; a translucent teal buffer band with a uniform offset around its footprint highlights neighboring buildings that intersect the band. Several outer buildings beyond the band remain muted. Fine neutral street lines establish plan context. Slightly oblique aerial view, almost plan view, so selected footprint and buffer overlap are immediately clear. Concept of checking nearby buildings with an explicit distance buffer and intersection, no numeric distance or real property claim.",
+      "original": "dist/assets/data/illustrations/building-buffer-v1.png",
+      "responsive": [
+        "dist/assets/data/illustrations/building-buffer-v1-640.webp",
+        "dist/assets/data/illustrations/building-buffer-v1-1280.webp"
+      ],
+      "classification": "Illustrative; not an executed product result"
+    },
+    {
+      "id": "session-reuse",
+      "prompt": "Use case: stylized-concept. Asset: compact editorial website illustration for GriidAI Data page. Landscape 16:9. Match a quiet premium geospatial site: warm cream #fcfcf8 background, pale sage terrain and matte off-white miniature forms, restrained muted teal #287588 analytical overlays, dark teal #173c3e fine details. Refined realistic architectural model photography, elevated isometric aerial perspective, soft natural studio light, no exaggerated shadows, consistent materials. Generous empty margins. No text, numbers, labels, logo, watermark, software UI, floating windows, charts or fake screenshots. This is a conceptual illustration, not measured evidence. Subject: two small separate matching square spatial-study tiles on a cream tabletop, representing separate analysis contexts. In the middle a neat stack of three thin translucent geospatial layers with a teal boundary footprint is retained as a source. A clearly separate matching copy of the same three layers sits aligned over the second study tile; a restrained dotted teal path visually connects the source and copy. One study tile has a few simple off-white building blocks, the other subtle terrain contours. Convey intentionally reusing selected project inputs across analysis contexts, not live synchronization or co-editing. Keep exactly two contexts and no people, network cloud icons or corporate office scene.",
+      "original": "dist/assets/data/illustrations/session-reuse-v1.png",
+      "responsive": [
+        "dist/assets/data/illustrations/session-reuse-v1-640.webp",
+        "dist/assets/data/illustrations/session-reuse-v1-1280.webp"
+      ],
+      "classification": "Illustrative; not an executed product result"
+    }
+  ]
+}

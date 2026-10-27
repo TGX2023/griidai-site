@@ -7,7 +7,7 @@ source "${SCRIPT_DIR}/_common.sh"
 load_config "${1:-}"
 require_gcloud
 
-gcloud_project run services describe "${SERVICE_NAME}" --region="${REGION}" >/dev/null
+gcloud_project run services describe "${SITE_INSTANCE}" --region="${REGION}" >/dev/null
 
 ensure_dns_authorization() {
   local name="$1"
@@ -71,7 +71,7 @@ if ! ensure_exists "serverless NEG ${NEG_NAME}" \
   gcloud_project compute network-endpoint-groups create "${NEG_NAME}" \
     --region="${REGION}" \
     --network-endpoint-type=serverless \
-    --cloud-run-service="${SERVICE_NAME}"
+    --cloud-run-service="${SITE_INSTANCE}"
 fi
 
 NEG_URL="https://www.googleapis.com/compute/v1/projects/${PROJECT_ID}/regions/${REGION}/networkEndpointGroups/${NEG_NAME}"

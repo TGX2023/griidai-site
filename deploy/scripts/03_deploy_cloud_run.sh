@@ -25,15 +25,12 @@ const projectRoot = process.argv[2];
 const outputFile = process.argv[3];
 const {getPricingUrls} = require(path.join(projectRoot, 'scripts/env-config.cjs'));
 const urls = getPricingUrls(projectRoot);
-const contents = [
-  `PRICING_EMBED_URL: ${JSON.stringify(urls.production)}`,
-  `PRICING_LOCAL_EMBED_URL: ${JSON.stringify(urls.local)}`,
-].join('\n') + '\n';
+const contents = `PRICING_EMBED_URL: ${JSON.stringify(urls.production)}\n`;
 fs.writeFileSync(outputFile, contents, {mode: 0o600});
 NODE
 
-echo "Deploying ${IMAGE_REF} to ${PROJECT_ID}/${REGION}/${SERVICE_NAME}."
-gcloud_project run deploy "${SERVICE_NAME}" \
+echo "Deploying ${IMAGE_REF} to ${PROJECT_ID}/${REGION}/${SITE_INSTANCE}."
+gcloud_project run deploy "${SITE_INSTANCE}" \
   --image="${IMAGE_REF}" \
   --region="${REGION}" \
   --platform=managed \
@@ -50,6 +47,6 @@ gcloud_project run deploy "${SERVICE_NAME}" \
   --allow-unauthenticated \
   --quiet
 
-gcloud_project run services describe "${SERVICE_NAME}" \
+gcloud_project run services describe "${SITE_INSTANCE}" \
   --region="${REGION}" \
   --format='yaml(status.latestReadyRevisionName,status.url,status.conditions)'

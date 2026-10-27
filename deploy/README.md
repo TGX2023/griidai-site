@@ -7,7 +7,7 @@ These scripts deploy the static marketing site in `dist/` as a public Node.js se
 | Target | GCP project | Website hostname |
 | --- | --- | --- |
 | `prod` | `griidai-prod` | `griidai.com` and `www.griidai.com` |
-| `dev` | `griidai-dev` | `dev-griidai.com` |
+| `dev` | `griidai-dev` | `devsite.griidai.com` in the current local config |
 
 Each target has its own deployment configuration. The scripts select files in this order:
 
@@ -20,23 +20,27 @@ The example configs contain these settings:
 | --- | --- | --- |
 | `PROJECT_ID` | `griidai-prod` | `griidai-dev` |
 | `REGION` | `us-east1` | `us-east1` |
-| `SERVICE_NAME` | `griidai-site` | `griidai-site` |
+| `APP_NAME` | `griidai` | `griidai` |
+| `ENVIRONMENT` | `prod` | `dev` |
+| `RESOURCE_PREFIX` | `griidai-prod` | `griidai-dev` |
+| `SITE_INSTANCE` (Cloud Run service) | `griidai-prod-site` | `griidai-dev-site` |
 | Artifact Registry repository / image | `griidai-site` | `griidai-site` |
 | `RUNTIME_SERVICE_ACCOUNT` | `griidai-site-runtime` | `griidai-site-runtime` |
-| `DOMAIN` | `griidai.com` | `dev-griidai.com` |
+| `PRICING_EMBED_URL` | Production FastAPI pricing URL | Set in dev config; defaults to production URL |
+| `DOMAIN` | `griidai.com` | `devsite.griidai.com` (example default: `dev-griidai.com`) |
 | `WWW_DOMAIN` | `www.griidai.com` | empty (no `www` hostname) |
 
-Both targets also use 0 minimum and 4 maximum instances, 1 CPU, 512 MiB memory, concurrency 80, a 60-second timeout, and `all` ingress. The optional load-balancer resource prefix is `griidai-site` for prod and `griidai-site-dev` for dev.
+Both targets also use 0 minimum and 4 maximum instances, 1 CPU, 512 MiB memory, concurrency 80, a 60-second timeout, and `all` ingress. The optional load-balancer resource prefix is derived from `APP_NAME` and `ENVIRONMENT` (`griidai-prod` for prod and `griidai-dev` for dev).
 
 The current `deploy/config.env` is the production config. To create a local dev override, copy `deploy/config.dev.env.example` to `deploy/config.dev.env` if that file does not already exist, then edit it. The scripts pass the selected `PROJECT_ID` directly to `gcloud`, so changing the active `gcloud` project does not change their target.
 
-The image reference is saved separately for each target in `.last_build.prod.env` or `.last_build.dev.env`. Always build and deploy with the same target argument.
+The service name is derived in each config as `RESOURCE_PREFIX="${APP_NAME}-${ENVIRONMENT}"` and `SITE_INSTANCE="${RESOURCE_PREFIX}-site"`. The optional load-balancer resource names use `RESOURCE_PREFIX`. The image reference is saved separately for each target in `.last_build.prod.env` or `.last_build.dev.env`. Always build and deploy with the same target argument.
 
 ## Requirements
 
 - Bash, Node.js 18 or newer, `gcloud`, `git`, and `curl`.
 - An authenticated Google account with permissions to enable APIs, create Artifact Registry and service accounts, submit Cloud Build jobs, deploy Cloud Run, and manage domain mappings in both projects.
-- A local root `.env` containing `PRICING_EMBED_URL` (create it with `npm run env:local` after cloning), or set that variable in the deployment shell. `.env` is ignored by Git and is not included in the image.
+- The selected deployment config file, containing `PRICING_EMBED_URL`. `.env` is not required for deployment.
 
 The optional global load balancer scripts also require permissions to manage Compute Engine load-balancer resources and Certificate Manager resources.
 
@@ -75,12 +79,7 @@ ADC commands configure credentials for local applications that use Google client
 
 ### Pricing environment file
 
-There are two different kinds of environment files:
-
-- `deploy/config.dev.env` (or its example fallback) configures the dev GCP project and service. Production uses `deploy/config.env` (or its example fallback).
-- The website's root `.env` contains `PRICING_EMBED_URL`. The deploy script reads this same root file for both environments and injects only that value into Cloud Run. It does not copy `.env` into the image or send other `.env` values to GCP.
-
-For dev, the deployment settings come from whichever config file is selected by the rule above, and the pricing URLs come from the root `.env`. The dev website uses the same FastAPI pricing endpoint as production unless `PRICING_EMBED_URL` is overridden in the environment when running `03_deploy_cloud_run.sh dev`.
+The selected deployment config is also the source of `PRICING_EMBED_URL`: `deploy/config.env` for prod, or `deploy/config.dev.env` for dev, with the matching `.example` file used when a local config is absent. The dev example defaults to the production FastAPI URL; change `PRICING_EMBED_URL` in `deploy/config.dev.env` if dev should use a separate FastAPI deployment. The deploy script injects only that URL into Cloud Run. It does not require, copy, or send the root `.env` file to GCP.
 
 Run the build script again after updating website files in `dist/`. The image reference is saved separately as `deploy/.last_build.prod.env` or `deploy/.last_build.dev.env`; build and deploy with the same target argument.
 
@@ -88,7 +87,7 @@ Each deploy command prints the Cloud Run service URL and ready revision. Once de
 
 ## Optional global load balancer path
 
-Scripts `04_setup_domain_edge.sh`, `05_check_domain_readiness.sh`, and `06_verify_before_dns_cutover.sh` configure and check a global external Application Load Balancer with Certificate Manager. This is separate from direct Cloud Run domain mapping. If using that path, pass the same `prod` or `dev` argument to each script. The dev profile configures only `dev-griidai.com`.
+Scripts `04_setup_domain_edge.sh`, `05_check_domain_readiness.sh`, and `06_verify_before_dns_cutover.sh` configure and check a global external Application Load Balancer with Certificate Manager. This is separate from direct Cloud Run domain mapping. If using that path, pass the same `prod` or `dev` argument to each script. The selected profile's `DOMAIN` and `WWW_DOMAIN` values determine which hostnames it configures.
 
 ## Local preview
 

@@ -15,6 +15,12 @@ fi
 # shellcheck disable=SC1090
 source "${STATE_FILE}"
 : "${IMAGE_REF:?IMAGE_REF missing from ${STATE_FILE}}"
+: "${SITE_URL:?Set the public website origin before deployment}"
+: "${STRAPI_URL:?Set the Strapi origin reachable by the website server}"
+: "${STRAPI_PUBLIC_URL:?Set the public HTTPS Strapi origin}"
+: "${CMS_TOKEN_SECRET:?Set the Secret Manager name:version for the read token}"
+: "${CMS_PREVIEW_SECRET:?Set the Secret Manager name:version for the shared preview secret}"
+export SITE_URL STRAPI_URL STRAPI_PUBLIC_URL
 
 PRICING_ENV_FILE="$(mktemp "${TMPDIR:-/tmp}/griidai-pricing-env.XXXXXX.yaml")"
 trap 'rm -f "${PRICING_ENV_FILE}"' EXIT
@@ -25,7 +31,12 @@ const projectRoot = process.argv[2];
 const outputFile = process.argv[3];
 const {getPricingUrls} = require(path.join(projectRoot, 'scripts/env-config.cjs'));
 const urls = getPricingUrls(projectRoot);
-const contents = `PRICING_EMBED_URL: ${JSON.stringify(urls.production)}\n`;
+const values = {PRICING_EMBED_URL: urls.production, SITE_URL: process.env.SITE_URL, STRAPI_URL: process.env.STRAPI_URL, STRAPI_PUBLIC_URL: process.env.STRAPI_PUBLIC_URL};
+for (const key of ['SITE_URL', 'STRAPI_URL', 'STRAPI_PUBLIC_URL']) {
+  const url = new URL(values[key]);
+  if (url.protocol !== 'https:' || url.username || url.password) throw new Error(`${key} must be a deployment HTTPS origin without credentials.`);
+}
+const contents = Object.entries(values).map(([key,value]) => `${key}: ${JSON.stringify(value)}`).join('\n') + '\n';
 fs.writeFileSync(outputFile, contents, {mode: 0o600});
 NODE
 
@@ -44,6 +55,7 @@ gcloud_project run deploy "${SITE_INSTANCE}" \
   --timeout="${RUN_TIMEOUT:-60s}" \
   --ingress="${RUN_INGRESS:-internal-and-cloud-load-balancing}" \
   --env-vars-file="${PRICING_ENV_FILE}" \
+  --set-secrets="STRAPI_API_TOKEN=${CMS_TOKEN_SECRET},PREVIEW_SECRET=${CMS_PREVIEW_SECRET}" \
   --allow-unauthenticated \
   --quiet
 

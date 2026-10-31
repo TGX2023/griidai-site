@@ -1,6 +1,8 @@
 # GriidAi website deployment
 
-These scripts deploy the static marketing site in `dist/` as a public Node.js service on Cloud Run. They deploy the website only; they do not deploy the FastAPI service or other GriidAi platform services.
+These scripts deploy the CMS-connected website through `cms-server.cjs` as a public Node.js service on Cloud Run. They deploy the website only; Strapi is delivered on the dashboard branch and deployed as a separate service. See [CMS deployment](../docs/CMS-DEPLOYMENT.md).
+
+Before running step 03, export `SITE_URL`, `STRAPI_URL` and `STRAPI_PUBLIC_URL` with the real HTTPS origins. Set `CMS_TOKEN_SECRET` and `CMS_PREVIEW_SECRET` to Secret Manager `name:version` references. The runtime service account needs permission to read those two secrets. Step 03 deliberately refuses to deploy without them. It injects the read token and preview secret using `--set-secrets`, not a committed environment file. Do not use the developer's keys.
 
 ## Targets
 

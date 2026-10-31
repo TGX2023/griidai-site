@@ -1,3 +1,9 @@
+# Current CMS-connected website
+
+The dev branch now runs through `npm start` → `cms-server.cjs`. Start with [CMS deployment and environment setup](docs/CMS-DEPLOYMENT.md). Strapi code and the content-only import bundle are on the dashboard branch under `dashboard/`. Real `.env` files and API secrets remain ignored. Static-only previews below do not execute the CMS integration.
+
+---
+
 # GriidAi Website
 
 A static marketing website for GriidAi, including platform, spatial analysis, solutions, team, pricing and the Data, Industries, Use Cases, Ecosystem and Enterprise hubs. Workflows are currently hidden. All site code and images are included. Running locally requires no dependency installation or build step.

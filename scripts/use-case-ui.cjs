@@ -1,0 +1,8 @@
+const {esc,rich}=require('../shared/content.cjs');
+const link=(label,url,cls='text-link')=>`<a class="${cls}" href="${esc(url)}">${esc(label)} <span aria-hidden="true">↗</span></a>`;
+const button=(label,url,primary=true)=>link(label,url,'button '+(primary?'primary':'secondary'));
+const paragraphs=txt=>typeof txt==='object'&&!Array.isArray(txt)?rich(txt):(Array.isArray(txt)?txt:[txt]).map(t=>`<p>${esc(t)}</p>`).join('');
+function section(id,kicker,title,body,{pale=false,intro='',cls=''}={}){return `<section class="hub-section ${pale?'pale':''} ${cls}"${id?` id="${id}"`:''}><div class="container"><div class="hub-section-heading"><span class="eyebrow">${esc(kicker)}</span><h2>${esc(title)}</h2>${intro?paragraphs(intro):''}</div>${body}</div></section>`;}
+function jump(items){return `<div class="hub-jump"><div class="container"><details open><summary>On this page</summary><div class="hub-jump-links">${items.map(([name,id])=>`<a href="#${id}">${esc(name)}</a>`).join('')}</div></details></div></div>`;}
+function hero(name,title,copy,actions,visual,meta,formatted={}){return `<section class="container hub-hero"><div class="hub-breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><span>${esc(name)}</span></div><div class="hub-hero-grid"><div><span class="eyebrow">${esc(meta||name)}</span><h1>${formatted.title||esc(title)}</h1>${formatted.summary?`<div class="cms-formatted-summary uc-part-copy">${formatted.summary}</div>`:paragraphs(copy)}${formatted.tags||''}<div class="actions">${actions}</div></div>${visual}</div></section>`;}
+module.exports={esc,rich,link,button,paragraphs,section,jump,hero};

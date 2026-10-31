@@ -10,3 +10,9 @@ node_modules/
 *.tar
 *.tar.gz
 .DS_Store
+# CMS-connected runtime configuration
+.env
+.env.*
+!.env.example
+node_modules/
+artifacts/

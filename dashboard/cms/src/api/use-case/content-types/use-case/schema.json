@@ -1,0 +1,178 @@
+{
+  "kind": "collectionType",
+  "collectionName": "use_cases",
+  "info": {
+    "singularName": "use-case",
+    "pluralName": "use-cases",
+    "displayName": "Use Case",
+    "description": "Fixed GriidAi template. Save a draft, preview, then publish."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 160
+    },
+    "classification": {
+      "type": "string",
+      "required": true,
+      "default": "Full demo",
+      "maxLength": 80
+    },
+    "summary": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1000
+    },
+    "slug": {
+      "type": "customField",
+      "customField": "global::managed-slug",
+      "required": true
+    },
+    "mediaType": {
+      "type": "enumeration",
+      "enum": [
+        "video",
+        "image"
+      ],
+      "required": true,
+      "default": "video"
+    },
+    "videoUrl": {
+      "type": "customField",
+      "customField": "global::video-text"
+    },
+    "videoTitle": {
+      "type": "customField",
+      "customField": "global::video-text"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "coverAlt": {
+      "type": "string",
+      "required": true,
+      "maxLength": 500
+    },
+    "coverFocus": {
+      "type": "customField",
+      "customField": "global::cover-focus"
+    },
+    "renderedCover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "overview": {
+      "type": "customField",
+      "customField": "global::limited-richtext"
+    },
+    "parts": {
+      "type": "customField",
+      "customField": "global::content-parts"
+    },
+    "contentOrder": {
+      "type": "json"
+    },
+    "seo": {
+      "type": "customField",
+      "customField": "global::seo-settings"
+    },
+    "sharingImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "editorial": {
+      "type": "customField",
+      "customField": "global::editorial-details"
+    },
+    "inputs": {
+      "type": "component",
+      "component": "use-case.item",
+      "repeatable": true
+    },
+    "steps": {
+      "type": "component",
+      "component": "use-case.item",
+      "repeatable": true
+    },
+    "outputs": {
+      "type": "component",
+      "component": "use-case.item",
+      "repeatable": true
+    },
+    "review": {
+      "type": "component",
+      "component": "use-case.item",
+      "repeatable": true
+    },
+    "topics": {
+      "type": "component",
+      "component": "use-case.topic",
+      "repeatable": true
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "showInSolutions": {
+      "type": "boolean",
+      "default": true
+    },
+    "publishedSlug": {
+      "type": "string",
+      "private": true
+    },
+    "importKey": {
+      "type": "string",
+      "private": true
+    },
+    "renderedFrom": {
+      "type": "string",
+      "private": true
+    },
+    "coverSourceVideo": {
+      "type": "string",
+      "private": true
+    },
+    "titleFormatting": {
+      "type": "customField",
+      "customField": "global::intro-richtext"
+    },
+    "summaryFormatting": {
+      "type": "customField",
+      "customField": "global::intro-richtext"
+    },
+    "tags": {
+      "type": "customField",
+      "customField": "global::content-tags",
+      "default": []
+    },
+    "featureOnHomepage": {
+      "type": "boolean",
+      "default": false
+    },
+    "homepageOrder": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "max": 9999
+    }
+  }
+}

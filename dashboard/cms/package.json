@@ -1,0 +1,52 @@
+{
+  "name": "cms",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "node scripts/cli.cjs build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "node scripts/cli.cjs develop",
+    "develop": "node scripts/cli.cjs develop",
+    "start": "node scripts/cli.cjs start",
+    "strapi": "strapi",
+    "upgrade": "npx @strapi/upgrade latest",
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+  },
+  "dependencies": {
+    "@strapi/database": "5.59.0",
+    "@strapi/plugin-cloud": "5.59.0",
+    "@strapi/plugin-users-permissions": "5.59.0",
+    "@strapi/strapi": "5.59.0",
+    "@tiptap/core": "^3.32.0",
+    "@tiptap/extension-highlight": "3.32.0",
+    "@tiptap/extension-link": "^3.0.0",
+    "@tiptap/extension-list": "3.32.0",
+    "@tiptap/extension-placeholder": "^3.0.0",
+    "@tiptap/extension-subscript": "3.32.0",
+    "@tiptap/extension-superscript": "3.32.0",
+    "@tiptap/extension-table": "3.32.0",
+    "@tiptap/react": "^3.0.0",
+    "@tiptap/starter-kit": "^3.0.0",
+    "better-sqlite3": "12.11.1",
+    "ipaddr.js": "2.2.0",
+    "pg": "8.23.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.30.3",
+    "sharp": "0.34.5",
+    "styled-components": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0 <=26.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "d8be979c-21a3-4383-872c-a3978e0d54d0",
+    "installId": "4d3490a8c45ff61a537e5b919f128282fb004464ee6126be9c27aa899500a57f"
+  },
+  "overrides": {
+    "sharp": "0.34.5"
+  }
+}

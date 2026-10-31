@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_use_case_topics",
+  "info": {
+    "displayName": "Topic"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "customField",
+      "customField": "global::limited-richtext",
+      "required": true
+    }
+  }
+}

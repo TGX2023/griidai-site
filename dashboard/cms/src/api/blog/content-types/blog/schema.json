@@ -1,0 +1,132 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog",
+    "description": "Articles shown in the GriidAi blog."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 240
+    },
+    "slug": {
+      "type": "customField",
+      "customField": "global::managed-slug",
+      "required": true,
+      "maxLength": 180
+    },
+    "summary": {
+      "type": "text",
+      "required": true,
+      "maxLength": 1200
+    },
+    "category": {
+      "type": "string",
+      "default": "Geospatial AI",
+      "maxLength": 80
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "coverAlt": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "coverFocus": {
+      "type": "customField",
+      "customField": "global::cover-focus"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "global::blog-body"
+    },
+    "authorName": {
+      "type": "string",
+      "required": true,
+      "maxLength": 160
+    },
+    "authorLinkedIn": {
+      "type": "string",
+      "maxLength": 500
+    },
+    "authorPhoto": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "publicationDate": {
+      "type": "datetime",
+      "required": true
+    },
+    "sourceUrl": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "seo": {
+      "type": "customField",
+      "customField": "global::seo-settings"
+    },
+    "sharingImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "renderedCover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "renderedFrom": {
+      "type": "string",
+      "private": true
+    },
+    "publishedSlug": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "importKey": {
+      "type": "string",
+      "private": true
+    },
+    "titleFormatting": {
+      "type": "customField",
+      "customField": "global::intro-richtext"
+    },
+    "summaryFormatting": {
+      "type": "customField",
+      "customField": "global::intro-richtext"
+    },
+    "tags": {
+      "type": "customField",
+      "customField": "global::content-tags",
+      "default": []
+    },
+    "featureOnHomepage": {
+      "type": "boolean",
+      "default": false
+    },
+    "homepageOrder": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "max": 9999
+    }
+  }
+}

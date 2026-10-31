@@ -1,0 +1,12 @@
+{
+  "name": "griidai-dashboard",
+  "private": true,
+  "scripts": {
+    "setup": "node scripts/setup.cjs",
+    "dev": "npm run develop --prefix cms",
+    "build": "npm run build --prefix cms",
+    "start": "npm start --prefix cms",
+    "seed": "node scripts/portable-content.cjs import seed",
+    "test": "node --test tests/*.test.cjs"
+  }
+}

@@ -1,0 +1,13 @@
+**/node_modules/
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.production.example
+**/.tmp/
+**/.cache/
+**/.strapi/
+cms/dist/
+cms/build/
+cms/public/uploads/*
+!cms/public/uploads/.gitkeep
+*.log

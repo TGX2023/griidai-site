@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_use_case_items",
+  "info": {
+    "displayName": "Text item",
+    "description": "Add, remove or reorder items. The site controls numbering."
+  },
+  "attributes": {
+    "content": {
+      "type": "customField",
+      "customField": "global::limited-richtext",
+      "required": true
+    }
+  }
+}

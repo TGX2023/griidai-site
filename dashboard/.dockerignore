@@ -1,0 +1,11 @@
+**/node_modules
+**/.env
+**/.env.*
+**/.tmp
+**/.cache
+**/.strapi
+cms/dist
+cms/build
+cms/public/uploads/*
+seed
+.git

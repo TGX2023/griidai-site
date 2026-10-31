@@ -1,0 +1,24 @@
+/* Hide only the two optional sidebar entries; keep all tools and permissions intact. */
+#strapi nav li:has(a[href="/admin/plugins/cloud"]),
+#strapi nav li:has(a[href="/admin/plugins/cloud/"]),
+#strapi nav li:has(a[href="https://market.strapi.io"]),
+#strapi nav li:has(a[href="https://market.strapi.io/"]) {
+  display: none !important;
+}
+
+/* Settings belongs to the Super Admin only, including the mobile menu. */
+body:not(.griidai-super-admin) #strapi a[href="/admin/settings"],
+body:not(.griidai-super-admin) #strapi a[href^="/admin/settings/"],
+body:not(.griidai-super-admin) #strapi nav li:has(a[href="/admin/settings"]) {
+  display: none !important;
+}
+
+/* Restrict only repeatable-component actions; keep Add and text editing. */
+body.griidai-content-editor.griidai-use-case-page #strapi h3[data-state][data-orientation="vertical"] > span > button {
+  display: none !important;
+}
+
+/* Home widget actions are separate from repeatable content actions. */
+body:not(.griidai-super-admin) #strapi [data-strapi-widget-id] > header > div:has(> button) {
+  display: none !important;
+}

@@ -1,0 +1,19 @@
+{
+  "site-selection": "sports-facility-site-selection",
+  "coverage": null,
+  "flood-coastal": "sea-level-rise",
+  "vegetation": "vector-raster-analysis",
+  "hydrology": null,
+  "vegetation-ndvi": "vector-raster-analysis",
+  "building-coastal-proximity": "vector-raster-analysis",
+  "building-elevation": "vector-raster-analysis",
+  "hurricane-power-line-prioritization": null,
+  "cairo-coffee-shop-site-selection": null,
+  "bangladesh-flood-vulnerability": null,
+  "crop-freeze-damage": null,
+  "service-area-coverage": null,
+  "population-mapping": null,
+  "ambulance-station-planning": null,
+  "crime-pattern-analysis": null,
+  "spatial-thinking-exercises": null
+}

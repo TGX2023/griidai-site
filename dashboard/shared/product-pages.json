@@ -1,0 +1,7 @@
+[
+ {"kind":"page","id":"platform","name":"The GriidAi platform","detailUrl":"/platform/"},
+ {"kind":"page","id":"data","name":"Geospatial data","detailUrl":"/data/"},
+ {"kind":"page","id":"enterprise","name":"GriidAi for enterprise","detailUrl":"/enterprise/"},
+ {"kind":"page","id":"pricing","name":"Plans and pricing","detailUrl":"/pricing/"},
+ {"kind":"page","id":"ecosystem","name":"The GriidAi ecosystem","detailUrl":"/ecosystem/"}
+]
